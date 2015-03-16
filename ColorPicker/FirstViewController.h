@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  FirstViewController.h
 //  ColorPicker
 //
 //  Created by Terry Bu on 3/16/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface FirstViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property IBOutlet UIImageView *imageView;
 

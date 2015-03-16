@@ -11,11 +11,12 @@
 		D919D2ED1AB7495200D77F6C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D919D2EC1AB7495200D77F6C /* QuartzCore.framework */; };
 		D947AB101AB7289C00AEFEC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D947AB0F1AB7289C00AEFEC9 /* main.m */; };
 		D947AB131AB7289C00AEFEC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D947AB121AB7289C00AEFEC9 /* AppDelegate.m */; };
-		D947AB161AB7289C00AEFEC9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D947AB151AB7289C00AEFEC9 /* ViewController.m */; };
+		D947AB161AB7289C00AEFEC9 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D947AB151AB7289C00AEFEC9 /* FirstViewController.m */; };
 		D947AB191AB7289C00AEFEC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D947AB171AB7289C00AEFEC9 /* Main.storyboard */; };
 		D947AB1B1AB7289C00AEFEC9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D947AB1A1AB7289C00AEFEC9 /* Images.xcassets */; };
 		D947AB1E1AB7289C00AEFEC9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D947AB1C1AB7289C00AEFEC9 /* LaunchScreen.xib */; };
 		D947AB2A1AB7289C00AEFEC9 /* ColorPickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D947AB291AB7289C00AEFEC9 /* ColorPickerTests.m */; };
+		D99CA9FA1AB75A4100715D3C /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D99CA9F91AB75A4100715D3C /* ResultViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,14 +38,16 @@
 		D947AB0F1AB7289C00AEFEC9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D947AB111AB7289C00AEFEC9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D947AB121AB7289C00AEFEC9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D947AB141AB7289C00AEFEC9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D947AB151AB7289C00AEFEC9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D947AB141AB7289C00AEFEC9 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		D947AB151AB7289C00AEFEC9 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		D947AB181AB7289C00AEFEC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D947AB1A1AB7289C00AEFEC9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D947AB1D1AB7289C00AEFEC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D947AB231AB7289C00AEFEC9 /* ColorPickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorPickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D947AB281AB7289C00AEFEC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D947AB291AB7289C00AEFEC9 /* ColorPickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorPickerTests.m; sourceTree = "<group>"; };
+		D99CA9F81AB75A4100715D3C /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
+		D99CA9F91AB75A4100715D3C /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +93,10 @@
 			children = (
 				D947AB111AB7289C00AEFEC9 /* AppDelegate.h */,
 				D947AB121AB7289C00AEFEC9 /* AppDelegate.m */,
-				D947AB141AB7289C00AEFEC9 /* ViewController.h */,
-				D947AB151AB7289C00AEFEC9 /* ViewController.m */,
+				D947AB141AB7289C00AEFEC9 /* FirstViewController.h */,
+				D947AB151AB7289C00AEFEC9 /* FirstViewController.m */,
+				D99CA9F81AB75A4100715D3C /* ResultViewController.h */,
+				D99CA9F91AB75A4100715D3C /* ResultViewController.m */,
 				D919D2E91AB7494500D77F6C /* UIView+ColorOfPoint.h */,
 				D919D2EA1AB7494500D77F6C /* UIView+ColorOfPoint.m */,
 				D947AB171AB7289C00AEFEC9 /* Main.storyboard */,
@@ -228,9 +233,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D947AB161AB7289C00AEFEC9 /* ViewController.m in Sources */,
+				D947AB161AB7289C00AEFEC9 /* FirstViewController.m in Sources */,
 				D947AB131AB7289C00AEFEC9 /* AppDelegate.m in Sources */,
 				D919D2EB1AB7494500D77F6C /* UIView+ColorOfPoint.m in Sources */,
+				D99CA9FA1AB75A4100715D3C /* ResultViewController.m in Sources */,
 				D947AB101AB7289C00AEFEC9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
