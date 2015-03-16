@@ -17,6 +17,7 @@
 		D947AB1E1AB7289C00AEFEC9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D947AB1C1AB7289C00AEFEC9 /* LaunchScreen.xib */; };
 		D947AB2A1AB7289C00AEFEC9 /* ColorPickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D947AB291AB7289C00AEFEC9 /* ColorPickerTests.m */; };
 		D99CA9FA1AB75A4100715D3C /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D99CA9F91AB75A4100715D3C /* ResultViewController.m */; };
+		D99CA9FD1AB767F400715D3C /* TouchPixelColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = D99CA9FC1AB767F400715D3C /* TouchPixelColorView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		D947AB291AB7289C00AEFEC9 /* ColorPickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorPickerTests.m; sourceTree = "<group>"; };
 		D99CA9F81AB75A4100715D3C /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
 		D99CA9F91AB75A4100715D3C /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
+		D99CA9FB1AB767F400715D3C /* TouchPixelColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchPixelColorView.h; sourceTree = "<group>"; };
+		D99CA9FC1AB767F400715D3C /* TouchPixelColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchPixelColorView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,8 @@
 				D947AB121AB7289C00AEFEC9 /* AppDelegate.m */,
 				D947AB141AB7289C00AEFEC9 /* FirstViewController.h */,
 				D947AB151AB7289C00AEFEC9 /* FirstViewController.m */,
+				D99CA9FB1AB767F400715D3C /* TouchPixelColorView.h */,
+				D99CA9FC1AB767F400715D3C /* TouchPixelColorView.m */,
 				D99CA9F81AB75A4100715D3C /* ResultViewController.h */,
 				D99CA9F91AB75A4100715D3C /* ResultViewController.m */,
 				D919D2E91AB7494500D77F6C /* UIView+ColorOfPoint.h */,
@@ -236,6 +241,7 @@
 				D947AB161AB7289C00AEFEC9 /* FirstViewController.m in Sources */,
 				D947AB131AB7289C00AEFEC9 /* AppDelegate.m in Sources */,
 				D919D2EB1AB7494500D77F6C /* UIView+ColorOfPoint.m in Sources */,
+				D99CA9FD1AB767F400715D3C /* TouchPixelColorView.m in Sources */,
 				D99CA9FA1AB75A4100715D3C /* ResultViewController.m in Sources */,
 				D947AB101AB7289C00AEFEC9 /* main.m in Sources */,
 			);
