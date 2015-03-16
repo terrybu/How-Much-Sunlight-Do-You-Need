@@ -23,7 +23,7 @@
 
 /* Begin PBXFileReference section */
 		D919D2EC1AB7495200D77F6C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		D947AB0A1AB7289C00AEFEC9 /* ColorDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D947AB0A1AB7289C00AEFEC9 /* FitzpatrickSkinTypeDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitzpatrickSkinTypeDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D99CA9FE1AB76E5F00715D3C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ColorDetector/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		D99CA9FF1AB76E5F00715D3C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ColorDetector/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		D99CAA041AB76E5F00715D3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		D947AB011AB7289C00AEFEC9 = {
 			isa = PBXGroup;
 			children = (
-				D99CAA1A1AB76EC600715D3C /* ColorDetector */,
+				D99CAA1A1AB76EC600715D3C /* FitzpatrickSkinTypeDetector */,
 				D919D2EC1AB7495200D77F6C /* QuartzCore.framework */,
 				D947AB0B1AB7289C00AEFEC9 /* Products */,
 			);
@@ -69,7 +69,7 @@
 		D947AB0B1AB7289C00AEFEC9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D947AB0A1AB7289C00AEFEC9 /* ColorDetector.app */,
+				D947AB0A1AB7289C00AEFEC9 /* FitzpatrickSkinTypeDetector.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,7 +86,7 @@
 			path = ColorPicker;
 			sourceTree = "<group>";
 		};
-		D99CAA1A1AB76EC600715D3C /* ColorDetector */ = {
+		D99CAA1A1AB76EC600715D3C /* FitzpatrickSkinTypeDetector */ = {
 			isa = PBXGroup;
 			children = (
 				D99CA9FE1AB76E5F00715D3C /* AppDelegate.h */,
@@ -101,7 +101,7 @@
 				D99CAA1B1AB7705500715D3C /* Custom */,
 				D947AB0D1AB7289C00AEFEC9 /* Supporting Files */,
 			);
-			name = ColorDetector;
+			name = FitzpatrickSkinTypeDetector;
 			sourceTree = "<group>";
 		};
 		D99CAA1B1AB7705500715D3C /* Custom */ = {
@@ -120,9 +120,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D947AB091AB7289C00AEFEC9 /* ColorDetector */ = {
+		D947AB091AB7289C00AEFEC9 /* FitzpatrickSkinTypeDetector */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D947AB2D1AB7289C00AEFEC9 /* Build configuration list for PBXNativeTarget "ColorDetector" */;
+			buildConfigurationList = D947AB2D1AB7289C00AEFEC9 /* Build configuration list for PBXNativeTarget "FitzpatrickSkinTypeDetector" */;
 			buildPhases = (
 				D947AB061AB7289C00AEFEC9 /* Sources */,
 				D947AB071AB7289C00AEFEC9 /* Frameworks */,
@@ -132,9 +132,9 @@
 			);
 			dependencies = (
 			);
-			name = ColorDetector;
+			name = FitzpatrickSkinTypeDetector;
 			productName = ColorPicker;
-			productReference = D947AB0A1AB7289C00AEFEC9 /* ColorDetector.app */;
+			productReference = D947AB0A1AB7289C00AEFEC9 /* FitzpatrickSkinTypeDetector.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -151,7 +151,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D947AB051AB7289C00AEFEC9 /* Build configuration list for PBXProject "ColorDetector" */;
+			buildConfigurationList = D947AB051AB7289C00AEFEC9 /* Build configuration list for PBXProject "FitzpatrickSkinTypeDetector" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -164,7 +164,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D947AB091AB7289C00AEFEC9 /* ColorDetector */,
+				D947AB091AB7289C00AEFEC9 /* FitzpatrickSkinTypeDetector */,
 			);
 		};
 /* End PBXProject section */
@@ -305,7 +305,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/ColorDetector/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = ColorDetector;
+				PRODUCT_NAME = FitzpatrickSkinTypeDetector;
 			};
 			name = Debug;
 		};
@@ -315,14 +315,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/ColorDetector/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = ColorDetector;
+				PRODUCT_NAME = FitzpatrickSkinTypeDetector;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D947AB051AB7289C00AEFEC9 /* Build configuration list for PBXProject "ColorDetector" */ = {
+		D947AB051AB7289C00AEFEC9 /* Build configuration list for PBXProject "FitzpatrickSkinTypeDetector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D947AB2B1AB7289C00AEFEC9 /* Debug */,
@@ -331,7 +331,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D947AB2D1AB7289C00AEFEC9 /* Build configuration list for PBXNativeTarget "ColorDetector" */ = {
+		D947AB2D1AB7289C00AEFEC9 /* Build configuration list for PBXNativeTarget "FitzpatrickSkinTypeDetector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D947AB2E1AB7289C00AEFEC9 /* Debug */,
