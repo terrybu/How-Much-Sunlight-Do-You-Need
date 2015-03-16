@@ -29,6 +29,33 @@
 }
 
 - (IBAction)cameraButton:(id)sender {
+    
+    UIActionSheet *actionSheet = [[UIActionSheet alloc]
+                                  initWithTitle:@"Please select one from menu"
+                                  delegate:self
+                                  cancelButtonTitle:@"No"
+                                  destructiveButtonTitle:@"Cancel"
+                                  otherButtonTitles:@"Use Camera to take Photo", @"Use Existing Photos", nil];
+    
+    [actionSheet showInView:self.view];  
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    switch (buttonIndex) {
+        case 0:
+            break;
+        case 1:
+            [self showCamera];
+            break;
+        case 2:
+            [self showPhotosAlbum];
+            break;
+        default:
+            break;
+    }
+}
+
+- (void) showCamera {
     if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
         UIImagePickerController *imagePickerController = [[UIImagePickerController alloc]init];
         imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
@@ -43,6 +70,17 @@
     }
 }
 
+- (void) showPhotosAlbum {
+    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc]init];
+    imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    imagePickerController.allowsEditing = NO;
+    imagePickerController.editing = NO;
+    imagePickerController.delegate = self;
+    
+    [self presentViewController:imagePickerController animated:YES completion:nil];
+}
+
+// This method is called when an image has been chosen from the library or taken from the camera.
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
     UIImage *img = [info objectForKey:UIImagePickerControllerOriginalImage];
     if (img) {
