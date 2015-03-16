@@ -32,7 +32,7 @@
                     <navigationItem key="navigationItem" title="Tap on your skin on the photo" id="Uof-Me-Ek2"/>
                     <connections>
                         <outlet property="imageView" destination="l1C-Se-gPM" id="fWq-EK-17n"/>
-                        <segue destination="qA9-J9-bhR" kind="presentation" identifier="resultSegue" modalTransitionStyle="flipHorizontal" id="ViD-jj-pdF"/>
+                        <segue destination="4hl-3F-abS" kind="presentation" identifier="resultSegue" modalTransitionStyle="flipHorizontal" id="m0s-gX-bfc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -51,27 +51,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w55-CD-3Xg">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="Result" id="mbt-ZK-wIt">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="9xZ-Zx-DP3"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ATA-yr-Yln">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="75Z-Xl-6DQ"/>
+                                    <constraint firstAttribute="height" constant="300" id="WJZ-pv-kfo"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="w55-CD-3Xg" firstAttribute="top" secondItem="T7K-Tp-qLw" secondAttribute="bottom" id="6J7-in-qqz"/>
-                            <constraint firstAttribute="trailing" secondItem="w55-CD-3Xg" secondAttribute="trailing" id="MAd-Rd-reA"/>
-                            <constraint firstItem="w55-CD-3Xg" firstAttribute="leading" secondItem="Q80-nb-frz" secondAttribute="leading" id="TM1-k8-5zc"/>
+                            <constraint firstAttribute="centerX" secondItem="ATA-yr-Yln" secondAttribute="centerX" id="B66-pV-77f"/>
+                            <constraint firstAttribute="centerY" secondItem="ATA-yr-Yln" secondAttribute="centerY" id="cPG-SV-89r"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Result" id="ahi-QV-NTL">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="nn6-Zk-wdr">
+                            <connections>
+                                <action selector="backButton:" destination="qA9-J9-bhR" id="9dV-0P-Xap"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="ATA-yr-Yln" id="nnQ-O5-KXt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uzj-YB-vl9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1952" y="271"/>
+            <point key="canvasLocation" x="2686" y="265"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Dpc-xy-Lq7">
@@ -89,7 +97,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fjt-4U-5bh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="270" y="271"/>
+            <point key="canvasLocation" x="198" y="265"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Clu-VZ-psC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4hl-3F-abS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OWK-ib-WzA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qA9-J9-bhR" kind="relationship" relationship="rootViewController" id="Yfa-ik-TZc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7fO-dQ-HsV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1900" y="265"/>
         </scene>
     </scenes>
 </document>

@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ResultViewController : UIViewController
+@interface ResultViewController : UIViewController <UINavigationBarDelegate>
+
+@property (strong, nonatomic) UIColor *pickedColor;
+
+
+@property IBOutlet UIImageView *imageView;
+
+
+- (IBAction) backButton:(id)sender;
 
 @end

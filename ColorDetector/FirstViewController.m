@@ -11,6 +11,7 @@
 #import "TouchPixelColorView.h"
 #import "ColorConstants.h"
 #import "FitzpatrickType.h"
+#import "ResultViewController.h"
 
 @interface FirstViewController ()
 
@@ -196,11 +197,22 @@
     NSLog(@"%@", mostSimilarType.typeName);
 }
 
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"resultSegue"])
+    {
+        UINavigationController *destination = segue.destinationViewController;
+        ResultViewController *rvc = (ResultViewController *) destination.topViewController;
+        rvc.pickedColor = self.pickedColor;
+    }
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 
 @end
