@@ -23,10 +23,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    UIBarButtonItem *cameraButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(cameraButton:)];
+    self.navigationItem.rightBarButtonItem = cameraButton;
+    
     _touchPixelRectView = [[TouchPixelColorView alloc]initWithFrame:CGRectMake(10, 64, self.view.frame.size.width/5, self.view.frame.size.height/5)];
     _touchPixelRectView.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:_touchPixelRectView];
 }
+
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    
+    if (self.imageView.image != nil) {
+        UIBarButtonItem *doneButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButton)];
+        self.navigationItem.rightBarButtonItems = @[self.navigationItem.rightBarButtonItem, doneButton];
+    }
+}
+
 
 - (IBAction)cameraButton:(id)sender {
     
@@ -35,9 +48,13 @@
                                   delegate:self
                                   cancelButtonTitle:@"No"
                                   destructiveButtonTitle:@"Cancel"
-                                  otherButtonTitles:@"Use Camera to take Photo", @"Use Existing Photos", nil];
+                                  otherButtonTitles:@"Use Camera to Take Photo", @"Use Existing Photos", nil];
     
     [actionSheet showInView:self.view];  
+}
+
+- (void) doneButton {
+    [self performSegueWithIdentifier:@"resultSegue" sender:nil];
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {

@@ -9,15 +9,14 @@
 /* Begin PBXBuildFile section */
 		D919D2ED1AB7495200D77F6C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D919D2EC1AB7495200D77F6C /* QuartzCore.framework */; };
 		D99CAA101AB76E5F00715D3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D99CA9FF1AB76E5F00715D3C /* AppDelegate.m */; };
-		D99CAA111AB76E5F00715D3C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D99CAA011AB76E5F00715D3C /* LaunchScreen.xib */; };
-		D99CAA121AB76E5F00715D3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D99CAA031AB76E5F00715D3C /* Main.storyboard */; };
 		D99CAA131AB76E5F00715D3C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D99CAA061AB76E5F00715D3C /* FirstViewController.m */; };
 		D99CAA141AB76E5F00715D3C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D99CAA071AB76E5F00715D3C /* Images.xcassets */; };
-		D99CAA151AB76E5F00715D3C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D99CAA081AB76E5F00715D3C /* Info.plist */; };
 		D99CAA161AB76E5F00715D3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D99CAA091AB76E5F00715D3C /* main.m */; };
 		D99CAA171AB76E5F00715D3C /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D99CAA0B1AB76E5F00715D3C /* ResultViewController.m */; };
 		D99CAA181AB76E5F00715D3C /* TouchPixelColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = D99CAA0D1AB76E5F00715D3C /* TouchPixelColorView.m */; };
 		D99CAA191AB76E5F00715D3C /* UIView+ColorOfPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = D99CAA0F1AB76E5F00715D3C /* UIView+ColorOfPoint.m */; };
+		D99CAA1C1AB7720100715D3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D99CAA031AB76E5F00715D3C /* Main.storyboard */; };
+		D99CAA1F1AB7722400715D3C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D99CAA1D1AB7722400715D3C /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		D947AB0A1AB7289C00AEFEC9 /* ColorDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D99CA9FE1AB76E5F00715D3C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ColorDetector/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		D99CA9FF1AB76E5F00715D3C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ColorDetector/AppDelegate.m; sourceTree = SOURCE_ROOT; };
-		D99CAA021AB76E5F00715D3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		D99CAA041AB76E5F00715D3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		D99CAA051AB76E5F00715D3C /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = ColorDetector/FirstViewController.h; sourceTree = SOURCE_ROOT; };
 		D99CAA061AB76E5F00715D3C /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = ColorDetector/FirstViewController.m; sourceTree = SOURCE_ROOT; };
@@ -38,6 +36,7 @@
 		D99CAA0D1AB76E5F00715D3C /* TouchPixelColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TouchPixelColorView.m; path = ColorDetector/TouchPixelColorView.m; sourceTree = SOURCE_ROOT; };
 		D99CAA0E1AB76E5F00715D3C /* UIView+ColorOfPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+ColorOfPoint.h"; path = "ColorDetector/UIView+ColorOfPoint.h"; sourceTree = SOURCE_ROOT; };
 		D99CAA0F1AB76E5F00715D3C /* UIView+ColorOfPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+ColorOfPoint.m"; path = "ColorDetector/UIView+ColorOfPoint.m"; sourceTree = SOURCE_ROOT; };
+		D99CAA1E1AB7722400715D3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = ColorDetector/Base.lproj/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +71,8 @@
 		D947AB0D1AB7289C00AEFEC9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D99CAA071AB76E5F00715D3C /* Images.xcassets */,
+				D99CAA1D1AB7722400715D3C /* LaunchScreen.xib */,
 				D99CAA081AB76E5F00715D3C /* Info.plist */,
 				D99CAA091AB76E5F00715D3C /* main.m */,
 			);
@@ -86,18 +87,24 @@
 				D99CA9FF1AB76E5F00715D3C /* AppDelegate.m */,
 				D99CAA051AB76E5F00715D3C /* FirstViewController.h */,
 				D99CAA061AB76E5F00715D3C /* FirstViewController.m */,
-				D99CAA071AB76E5F00715D3C /* Images.xcassets */,
-				D99CAA011AB76E5F00715D3C /* LaunchScreen.xib */,
-				D99CAA031AB76E5F00715D3C /* Main.storyboard */,
 				D99CAA0A1AB76E5F00715D3C /* ResultViewController.h */,
 				D99CAA0B1AB76E5F00715D3C /* ResultViewController.m */,
+				D99CAA031AB76E5F00715D3C /* Main.storyboard */,
+				D99CAA1B1AB7705500715D3C /* Custom Views Categories */,
+				D947AB0D1AB7289C00AEFEC9 /* Supporting Files */,
+			);
+			name = ColorDetector;
+			sourceTree = "<group>";
+		};
+		D99CAA1B1AB7705500715D3C /* Custom Views Categories */ = {
+			isa = PBXGroup;
+			children = (
 				D99CAA0C1AB76E5F00715D3C /* TouchPixelColorView.h */,
 				D99CAA0D1AB76E5F00715D3C /* TouchPixelColorView.m */,
 				D99CAA0E1AB76E5F00715D3C /* UIView+ColorOfPoint.h */,
 				D99CAA0F1AB76E5F00715D3C /* UIView+ColorOfPoint.m */,
-				D947AB0D1AB7289C00AEFEC9 /* Supporting Files */,
 			);
-			name = ColorDetector;
+			name = "Custom Views Categories";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,10 +164,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D99CAA111AB76E5F00715D3C /* LaunchScreen.xib in Resources */,
-				D99CAA121AB76E5F00715D3C /* Main.storyboard in Resources */,
+				D99CAA1C1AB7720100715D3C /* Main.storyboard in Resources */,
+				D99CAA1F1AB7722400715D3C /* LaunchScreen.xib in Resources */,
 				D99CAA141AB76E5F00715D3C /* Images.xcassets in Resources */,
-				D99CAA151AB76E5F00715D3C /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,15 +189,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D99CAA011AB76E5F00715D3C /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D99CAA021AB76E5F00715D3C /* Base */,
-			);
-			name = LaunchScreen.xib;
-			path = ColorDetector/Base.lproj;
-			sourceTree = "<group>";
-		};
 		D99CAA031AB76E5F00715D3C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -199,6 +196,14 @@
 			);
 			name = Main.storyboard;
 			path = ColorDetector/Base.lproj;
+			sourceTree = "<group>";
+		};
+		D99CAA1D1AB7722400715D3C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D99CAA1E1AB7722400715D3C /* Base */,
+			);
+			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
