@@ -9,6 +9,8 @@
 #import "FirstViewController.h"
 #import "UIView+ColorOfPoint.h"
 #import "TouchPixelColorView.h"
+#import "ColorConstants.h"
+#import "FitzpatrickType.h"
 
 @interface FirstViewController ()
 
@@ -145,7 +147,55 @@
     //But if you want to add a label INSIDE that subview and say initWithFrame(0,64), it refers to go 0 pixels from left-most point of the SUBVIEW and then go 64 pixels down from the top of the SUBVIEW ... and not vc's self.view
     
     //So for this example, note that the green label goes 20 pixels down from the top of the rectView, anod not just 20 pixels down from the parent view (which would be covered by the navbar and not shown anyways)
+    
+    [self comparePickedColorToFitzpatrickTypes:self.pickedColor];
 }
+
+- (void) comparePickedColorToFitzpatrickTypes: (UIColor *) pickedColor {
+    CGFloat r1, g1, b1, a1, r2, g2, b2, a2;
+    [pickedColor getRed:&r1 green:&g1 blue:&b1 alpha:&a1];
+    //I'm going to get the CGFLoat RGB values (0 being black and 1 being white) of the picked Color
+    
+    //this is a float to count the differences between the pickedColor and a Fitzpatrick Type.
+    //if the score is the smallest, that type is the one we will say the MOST SIMILAR to the picked Color
+    float disparityScore = 0;
+    
+    //Instantiate FitzpatrickType objects
+    FitzpatrickType *type1 = [[FitzpatrickType alloc]initWithType:Type1];
+    FitzpatrickType *type2 = [[FitzpatrickType alloc]initWithType:Type2];
+    FitzpatrickType *type3 = [[FitzpatrickType alloc]initWithType:Type3];
+    FitzpatrickType *type4 = [[FitzpatrickType alloc]initWithType:Type4];
+    FitzpatrickType *type5 = [[FitzpatrickType alloc]initWithType:Type5];
+    FitzpatrickType *type6 = [[FitzpatrickType alloc]initWithType:Type6];
+
+    //Get all the types into an array
+    NSArray *fitzpatrickArray = @[  type1, type2, type3, type4, type5, type6 ];
+    NSMutableArray *scoresArray = [[NSMutableArray alloc]init];
+    
+    //we are going to get sum of the abs value difference between pickedColor and FitzpatrickTypes.
+    for (int i=0; i < fitzpatrickArray.count; i++) {
+        FitzpatrickType *fitz = fitzpatrickArray[i];
+        UIColor *colorToCheck = fitz.uiColor;
+        [colorToCheck getRed:&r2 green:&g2 blue:&b2 alpha:&a2];
+        if (disparityScore == 0) {
+            disparityScore = fabs(r1-r2) + fabs(g1-g2) + fabs(b1-b2);
+            [scoresArray addObject:[NSNumber numberWithFloat:disparityScore]];
+        }
+        else {
+            float temp = fabs(r1-r2) + fabs(g1-g2) + fabs(b1-b2);
+            disparityScore = fminf(disparityScore, temp);
+            [scoresArray addObject:[NSNumber numberWithFloat:temp]];
+        }
+    }
+    
+    //The scoresArray is to keep track of WHICH TYPE had the lowest disparity score.
+    NSNumber *disparityScoreWrapped = [NSNumber numberWithFloat:disparityScore];
+    int indexOfDisparity = [scoresArray indexOfObject:disparityScoreWrapped];
+    FitzpatrickType *mostSimilarType = fitzpatrickArray[indexOfDisparity];
+    
+    NSLog(@"%@", mostSimilarType.typeName);
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

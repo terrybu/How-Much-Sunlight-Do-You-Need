@@ -17,6 +17,8 @@
 		D99CAA191AB76E5F00715D3C /* UIView+ColorOfPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = D99CAA0F1AB76E5F00715D3C /* UIView+ColorOfPoint.m */; };
 		D99CAA1C1AB7720100715D3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D99CAA031AB76E5F00715D3C /* Main.storyboard */; };
 		D99CAA1F1AB7722400715D3C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D99CAA1D1AB7722400715D3C /* LaunchScreen.xib */; };
+		D99CAA221AB77F8900715D3C /* ColorConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D99CAA211AB77F8900715D3C /* ColorConstants.m */; };
+		D99CAA251AB7897600715D3C /* FitzpatrickType.m in Sources */ = {isa = PBXBuildFile; fileRef = D99CAA241AB7897600715D3C /* FitzpatrickType.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,10 @@
 		D99CAA0E1AB76E5F00715D3C /* UIView+ColorOfPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+ColorOfPoint.h"; path = "ColorDetector/UIView+ColorOfPoint.h"; sourceTree = SOURCE_ROOT; };
 		D99CAA0F1AB76E5F00715D3C /* UIView+ColorOfPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+ColorOfPoint.m"; path = "ColorDetector/UIView+ColorOfPoint.m"; sourceTree = SOURCE_ROOT; };
 		D99CAA1E1AB7722400715D3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = ColorDetector/Base.lproj/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
+		D99CAA201AB77F8900715D3C /* ColorConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorConstants.h; sourceTree = "<group>"; };
+		D99CAA211AB77F8900715D3C /* ColorConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorConstants.m; sourceTree = "<group>"; };
+		D99CAA231AB7897600715D3C /* FitzpatrickType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitzpatrickType.h; sourceTree = "<group>"; };
+		D99CAA241AB7897600715D3C /* FitzpatrickType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitzpatrickType.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,24 +93,28 @@
 				D99CA9FF1AB76E5F00715D3C /* AppDelegate.m */,
 				D99CAA051AB76E5F00715D3C /* FirstViewController.h */,
 				D99CAA061AB76E5F00715D3C /* FirstViewController.m */,
+				D99CAA231AB7897600715D3C /* FitzpatrickType.h */,
+				D99CAA241AB7897600715D3C /* FitzpatrickType.m */,
 				D99CAA0A1AB76E5F00715D3C /* ResultViewController.h */,
 				D99CAA0B1AB76E5F00715D3C /* ResultViewController.m */,
 				D99CAA031AB76E5F00715D3C /* Main.storyboard */,
-				D99CAA1B1AB7705500715D3C /* Custom Views Categories */,
+				D99CAA1B1AB7705500715D3C /* Custom */,
 				D947AB0D1AB7289C00AEFEC9 /* Supporting Files */,
 			);
 			name = ColorDetector;
 			sourceTree = "<group>";
 		};
-		D99CAA1B1AB7705500715D3C /* Custom Views Categories */ = {
+		D99CAA1B1AB7705500715D3C /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				D99CAA201AB77F8900715D3C /* ColorConstants.h */,
+				D99CAA211AB77F8900715D3C /* ColorConstants.m */,
 				D99CAA0C1AB76E5F00715D3C /* TouchPixelColorView.h */,
 				D99CAA0D1AB76E5F00715D3C /* TouchPixelColorView.m */,
 				D99CAA0E1AB76E5F00715D3C /* UIView+ColorOfPoint.h */,
 				D99CAA0F1AB76E5F00715D3C /* UIView+ColorOfPoint.m */,
 			);
-			name = "Custom Views Categories";
+			name = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,12 +187,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D99CAA221AB77F8900715D3C /* ColorConstants.m in Sources */,
 				D99CAA181AB76E5F00715D3C /* TouchPixelColorView.m in Sources */,
 				D99CAA171AB76E5F00715D3C /* ResultViewController.m in Sources */,
 				D99CAA191AB76E5F00715D3C /* UIView+ColorOfPoint.m in Sources */,
 				D99CAA101AB76E5F00715D3C /* AppDelegate.m in Sources */,
 				D99CAA161AB76E5F00715D3C /* main.m in Sources */,
 				D99CAA131AB76E5F00715D3C /* FirstViewController.m in Sources */,
+				D99CAA251AB7897600715D3C /* FitzpatrickType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

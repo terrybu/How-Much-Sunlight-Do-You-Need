@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
-        <!--TBu Color Picker-->
+        <!--FirstViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="FirstViewController" sceneMemberID="viewController">
+                <viewController title="FirstViewController" id="BYZ-38-t0r" customClass="FirstViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -29,10 +29,10 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="TBu Color Picker" id="Uof-Me-Ek2"/>
+                    <navigationItem key="navigationItem" title="Tap on your skin on the photo" id="Uof-Me-Ek2"/>
                     <connections>
                         <outlet property="imageView" destination="l1C-Se-gPM" id="fWq-EK-17n"/>
-                        <segue destination="qA9-J9-bhR" kind="show" identifier="resultSegue" id="ViD-jj-pdF"/>
+                        <segue destination="qA9-J9-bhR" kind="presentation" identifier="resultSegue" modalTransitionStyle="flipHorizontal" id="ViD-jj-pdF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -50,8 +50,24 @@
                     <view key="view" contentMode="scaleToFill" id="Q80-nb-frz">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w55-CD-3Xg">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Result" id="mbt-ZK-wIt">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="9xZ-Zx-DP3"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="w55-CD-3Xg" firstAttribute="top" secondItem="T7K-Tp-qLw" secondAttribute="bottom" id="6J7-in-qqz"/>
+                            <constraint firstAttribute="trailing" secondItem="w55-CD-3Xg" secondAttribute="trailing" id="MAd-Rd-reA"/>
+                            <constraint firstItem="w55-CD-3Xg" firstAttribute="leading" secondItem="Q80-nb-frz" secondAttribute="leading" id="TM1-k8-5zc"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uzj-YB-vl9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
