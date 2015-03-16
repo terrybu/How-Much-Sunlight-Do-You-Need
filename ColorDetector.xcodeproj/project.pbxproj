@@ -1,0 +1,329 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D919D2ED1AB7495200D77F6C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D919D2EC1AB7495200D77F6C /* QuartzCore.framework */; };
+		D99CAA101AB76E5F00715D3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D99CA9FF1AB76E5F00715D3C /* AppDelegate.m */; };
+		D99CAA111AB76E5F00715D3C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D99CAA011AB76E5F00715D3C /* LaunchScreen.xib */; };
+		D99CAA121AB76E5F00715D3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D99CAA031AB76E5F00715D3C /* Main.storyboard */; };
+		D99CAA131AB76E5F00715D3C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D99CAA061AB76E5F00715D3C /* FirstViewController.m */; };
+		D99CAA141AB76E5F00715D3C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D99CAA071AB76E5F00715D3C /* Images.xcassets */; };
+		D99CAA151AB76E5F00715D3C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D99CAA081AB76E5F00715D3C /* Info.plist */; };
+		D99CAA161AB76E5F00715D3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D99CAA091AB76E5F00715D3C /* main.m */; };
+		D99CAA171AB76E5F00715D3C /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D99CAA0B1AB76E5F00715D3C /* ResultViewController.m */; };
+		D99CAA181AB76E5F00715D3C /* TouchPixelColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = D99CAA0D1AB76E5F00715D3C /* TouchPixelColorView.m */; };
+		D99CAA191AB76E5F00715D3C /* UIView+ColorOfPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = D99CAA0F1AB76E5F00715D3C /* UIView+ColorOfPoint.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D919D2EC1AB7495200D77F6C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D947AB0A1AB7289C00AEFEC9 /* ColorDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D99CA9FE1AB76E5F00715D3C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ColorDetector/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		D99CA9FF1AB76E5F00715D3C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ColorDetector/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		D99CAA021AB76E5F00715D3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		D99CAA041AB76E5F00715D3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		D99CAA051AB76E5F00715D3C /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = ColorDetector/FirstViewController.h; sourceTree = SOURCE_ROOT; };
+		D99CAA061AB76E5F00715D3C /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = ColorDetector/FirstViewController.m; sourceTree = SOURCE_ROOT; };
+		D99CAA071AB76E5F00715D3C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ColorDetector/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		D99CAA081AB76E5F00715D3C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ColorDetector/Info.plist; sourceTree = SOURCE_ROOT; };
+		D99CAA091AB76E5F00715D3C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ColorDetector/main.m; sourceTree = SOURCE_ROOT; };
+		D99CAA0A1AB76E5F00715D3C /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultViewController.h; path = ColorDetector/ResultViewController.h; sourceTree = SOURCE_ROOT; };
+		D99CAA0B1AB76E5F00715D3C /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultViewController.m; path = ColorDetector/ResultViewController.m; sourceTree = SOURCE_ROOT; };
+		D99CAA0C1AB76E5F00715D3C /* TouchPixelColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TouchPixelColorView.h; path = ColorDetector/TouchPixelColorView.h; sourceTree = SOURCE_ROOT; };
+		D99CAA0D1AB76E5F00715D3C /* TouchPixelColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TouchPixelColorView.m; path = ColorDetector/TouchPixelColorView.m; sourceTree = SOURCE_ROOT; };
+		D99CAA0E1AB76E5F00715D3C /* UIView+ColorOfPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+ColorOfPoint.h"; path = "ColorDetector/UIView+ColorOfPoint.h"; sourceTree = SOURCE_ROOT; };
+		D99CAA0F1AB76E5F00715D3C /* UIView+ColorOfPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+ColorOfPoint.m"; path = "ColorDetector/UIView+ColorOfPoint.m"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D947AB071AB7289C00AEFEC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D919D2ED1AB7495200D77F6C /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D947AB011AB7289C00AEFEC9 = {
+			isa = PBXGroup;
+			children = (
+				D99CAA1A1AB76EC600715D3C /* ColorDetector */,
+				D919D2EC1AB7495200D77F6C /* QuartzCore.framework */,
+				D947AB0B1AB7289C00AEFEC9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D947AB0B1AB7289C00AEFEC9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D947AB0A1AB7289C00AEFEC9 /* ColorDetector.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D947AB0D1AB7289C00AEFEC9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D99CAA081AB76E5F00715D3C /* Info.plist */,
+				D99CAA091AB76E5F00715D3C /* main.m */,
+			);
+			name = "Supporting Files";
+			path = ColorPicker;
+			sourceTree = "<group>";
+		};
+		D99CAA1A1AB76EC600715D3C /* ColorDetector */ = {
+			isa = PBXGroup;
+			children = (
+				D99CA9FE1AB76E5F00715D3C /* AppDelegate.h */,
+				D99CA9FF1AB76E5F00715D3C /* AppDelegate.m */,
+				D99CAA051AB76E5F00715D3C /* FirstViewController.h */,
+				D99CAA061AB76E5F00715D3C /* FirstViewController.m */,
+				D99CAA071AB76E5F00715D3C /* Images.xcassets */,
+				D99CAA011AB76E5F00715D3C /* LaunchScreen.xib */,
+				D99CAA031AB76E5F00715D3C /* Main.storyboard */,
+				D99CAA0A1AB76E5F00715D3C /* ResultViewController.h */,
+				D99CAA0B1AB76E5F00715D3C /* ResultViewController.m */,
+				D99CAA0C1AB76E5F00715D3C /* TouchPixelColorView.h */,
+				D99CAA0D1AB76E5F00715D3C /* TouchPixelColorView.m */,
+				D99CAA0E1AB76E5F00715D3C /* UIView+ColorOfPoint.h */,
+				D99CAA0F1AB76E5F00715D3C /* UIView+ColorOfPoint.m */,
+				D947AB0D1AB7289C00AEFEC9 /* Supporting Files */,
+			);
+			name = ColorDetector;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D947AB091AB7289C00AEFEC9 /* ColorDetector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D947AB2D1AB7289C00AEFEC9 /* Build configuration list for PBXNativeTarget "ColorDetector" */;
+			buildPhases = (
+				D947AB061AB7289C00AEFEC9 /* Sources */,
+				D947AB071AB7289C00AEFEC9 /* Frameworks */,
+				D947AB081AB7289C00AEFEC9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ColorDetector;
+			productName = ColorPicker;
+			productReference = D947AB0A1AB7289C00AEFEC9 /* ColorDetector.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D947AB021AB7289C00AEFEC9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Terry Bu";
+				TargetAttributes = {
+					D947AB091AB7289C00AEFEC9 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+				};
+			};
+			buildConfigurationList = D947AB051AB7289C00AEFEC9 /* Build configuration list for PBXProject "ColorDetector" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D947AB011AB7289C00AEFEC9;
+			productRefGroup = D947AB0B1AB7289C00AEFEC9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D947AB091AB7289C00AEFEC9 /* ColorDetector */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D947AB081AB7289C00AEFEC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D99CAA111AB76E5F00715D3C /* LaunchScreen.xib in Resources */,
+				D99CAA121AB76E5F00715D3C /* Main.storyboard in Resources */,
+				D99CAA141AB76E5F00715D3C /* Images.xcassets in Resources */,
+				D99CAA151AB76E5F00715D3C /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D947AB061AB7289C00AEFEC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D99CAA181AB76E5F00715D3C /* TouchPixelColorView.m in Sources */,
+				D99CAA171AB76E5F00715D3C /* ResultViewController.m in Sources */,
+				D99CAA191AB76E5F00715D3C /* UIView+ColorOfPoint.m in Sources */,
+				D99CAA101AB76E5F00715D3C /* AppDelegate.m in Sources */,
+				D99CAA161AB76E5F00715D3C /* main.m in Sources */,
+				D99CAA131AB76E5F00715D3C /* FirstViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D99CAA011AB76E5F00715D3C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D99CAA021AB76E5F00715D3C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			path = ColorDetector/Base.lproj;
+			sourceTree = "<group>";
+		};
+		D99CAA031AB76E5F00715D3C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D99CAA041AB76E5F00715D3C /* Base */,
+			);
+			name = Main.storyboard;
+			path = ColorDetector/Base.lproj;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D947AB2B1AB7289C00AEFEC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D947AB2C1AB7289C00AEFEC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D947AB2E1AB7289C00AEFEC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/ColorDetector/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = ColorDetector;
+			};
+			name = Debug;
+		};
+		D947AB2F1AB7289C00AEFEC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/ColorDetector/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = ColorDetector;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D947AB051AB7289C00AEFEC9 /* Build configuration list for PBXProject "ColorDetector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D947AB2B1AB7289C00AEFEC9 /* Debug */,
+				D947AB2C1AB7289C00AEFEC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D947AB2D1AB7289C00AEFEC9 /* Build configuration list for PBXNativeTarget "ColorDetector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D947AB2E1AB7289C00AEFEC9 /* Debug */,
+				D947AB2F1AB7289C00AEFEC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D947AB021AB7289C00AEFEC9 /* Project object */;
+}
