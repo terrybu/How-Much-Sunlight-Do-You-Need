@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
+@property IBOutlet UIImageView *imageView;
+
+
+- (IBAction)cameraButton:(id)sender;
 
 @end
 

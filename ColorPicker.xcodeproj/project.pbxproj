@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D919D2EB1AB7494500D77F6C /* UIView+ColorOfPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = D919D2EA1AB7494500D77F6C /* UIView+ColorOfPoint.m */; };
+		D919D2ED1AB7495200D77F6C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D919D2EC1AB7495200D77F6C /* QuartzCore.framework */; };
 		D947AB101AB7289C00AEFEC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D947AB0F1AB7289C00AEFEC9 /* main.m */; };
 		D947AB131AB7289C00AEFEC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D947AB121AB7289C00AEFEC9 /* AppDelegate.m */; };
 		D947AB161AB7289C00AEFEC9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D947AB151AB7289C00AEFEC9 /* ViewController.m */; };
@@ -27,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D919D2E91AB7494500D77F6C /* UIView+ColorOfPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ColorOfPoint.h"; sourceTree = "<group>"; };
+		D919D2EA1AB7494500D77F6C /* UIView+ColorOfPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ColorOfPoint.m"; sourceTree = "<group>"; };
+		D919D2EC1AB7495200D77F6C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D947AB0A1AB7289C00AEFEC9 /* ColorPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D947AB0E1AB7289C00AEFEC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D947AB0F1AB7289C00AEFEC9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -47,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D919D2ED1AB7495200D77F6C /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,7 @@
 		D947AB011AB7289C00AEFEC9 = {
 			isa = PBXGroup;
 			children = (
+				D919D2EC1AB7495200D77F6C /* QuartzCore.framework */,
 				D947AB0C1AB7289C00AEFEC9 /* ColorPicker */,
 				D947AB261AB7289C00AEFEC9 /* ColorPickerTests */,
 				D947AB0B1AB7289C00AEFEC9 /* Products */,
@@ -85,6 +92,8 @@
 				D947AB121AB7289C00AEFEC9 /* AppDelegate.m */,
 				D947AB141AB7289C00AEFEC9 /* ViewController.h */,
 				D947AB151AB7289C00AEFEC9 /* ViewController.m */,
+				D919D2E91AB7494500D77F6C /* UIView+ColorOfPoint.h */,
+				D919D2EA1AB7494500D77F6C /* UIView+ColorOfPoint.m */,
 				D947AB171AB7289C00AEFEC9 /* Main.storyboard */,
 				D947AB1A1AB7289C00AEFEC9 /* Images.xcassets */,
 				D947AB1C1AB7289C00AEFEC9 /* LaunchScreen.xib */,
@@ -221,6 +230,7 @@
 			files = (
 				D947AB161AB7289C00AEFEC9 /* ViewController.m in Sources */,
 				D947AB131AB7289C00AEFEC9 /* AppDelegate.m in Sources */,
+				D919D2EB1AB7494500D77F6C /* UIView+ColorOfPoint.m in Sources */,
 				D947AB101AB7289C00AEFEC9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +424,7 @@
 				D947AB2F1AB7289C00AEFEC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D947AB301AB7289C00AEFEC9 /* Build configuration list for PBXNativeTarget "ColorPickerTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +433,7 @@
 				D947AB321AB7289C00AEFEC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
