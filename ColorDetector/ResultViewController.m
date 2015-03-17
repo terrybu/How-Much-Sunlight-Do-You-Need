@@ -21,7 +21,7 @@
     self.typeLabel.text = self.pickedFitzType.typeName;
     
     self.selectionView.backgroundColor = self.pickedColor;
-    self.selectionView.layer.borderColor = [UIColor grayColor].CGColor;
+    self.selectionView.layer.borderColor = [UIColor blackColor].CGColor;
     self.selectionView.layer.borderWidth = 1.5;
     
     self.resultMessageLabel.text = self.pickedFitzType.resultMessage;

@@ -58,15 +58,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result Messages Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SR7-Tf-nZu">
-                                <rect key="frame" x="0.0" y="490" width="600" height="110"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="110" id="eN6-DA-JE6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="25"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ATA-yr-Yln">
                                 <rect key="frame" x="56" y="267" width="150" height="150"/>
                                 <constraints>
@@ -84,7 +75,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z40-8x-UIz">
-                                <rect key="frame" x="414" y="267" width="150" height="150"/>
+                                <rect key="frame" x="419" y="267" width="150" height="150"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="FMc-Bw-jcE"/>
@@ -92,7 +83,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ActualTypeColorLabel" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="HTr-K4-xOo">
-                                <rect key="frame" x="413" y="234" width="152" height="25"/>
+                                <rect key="frame" x="423" y="234" width="142" height="25"/>
                                 <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -106,6 +97,12 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result Messages Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SR7-Tf-nZu">
+                                <rect key="frame" x="0.0" y="447" width="600" height="110"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -113,28 +110,33 @@
                             <constraint firstItem="tdQ-a0-5yw" firstAttribute="top" secondItem="T7K-Tp-qLw" secondAttribute="bottom" constant="8" symbolic="YES" id="6O0-Kr-GJN"/>
                             <constraint firstItem="tdQ-a0-5yw" firstAttribute="leading" secondItem="SR7-Tf-nZu" secondAttribute="leading" id="EKR-fA-lWK"/>
                             <constraint firstItem="cJo-gK-eW3" firstAttribute="trailing" secondItem="ATA-yr-Yln" secondAttribute="trailing" id="Esa-bA-dOV"/>
-                            <constraint firstItem="SR7-Tf-nZu" firstAttribute="bottom" secondItem="tsJ-nh-mlq" secondAttribute="top" id="Fr8-nu-fIq"/>
+                            <constraint firstItem="SR7-Tf-nZu" firstAttribute="centerX" secondItem="k4o-dW-Y4i" secondAttribute="centerX" id="FMO-l7-JI9"/>
+                            <constraint firstItem="SR7-Tf-nZu" firstAttribute="leading" secondItem="Q80-nb-frz" secondAttribute="leading" id="GTa-cE-JF0"/>
                             <constraint firstItem="tsJ-nh-mlq" firstAttribute="top" secondItem="ATA-yr-Yln" secondAttribute="bottom" constant="183" id="HtT-DZ-wzW"/>
-                            <constraint firstItem="SR7-Tf-nZu" firstAttribute="leading" secondItem="Q80-nb-frz" secondAttribute="leading" id="JO0-Bi-9oP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HTr-K4-xOo" secondAttribute="trailing" constant="19" id="M1i-j2-OSc"/>
                             <constraint firstItem="ATA-yr-Yln" firstAttribute="leading" secondItem="Q80-nb-frz" secondAttribute="leadingMargin" constant="40" id="QS7-c1-ujB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="z40-8x-UIz" secondAttribute="trailing" constant="20" id="VJF-kg-vYF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="z40-8x-UIz" secondAttribute="trailing" constant="15" id="VJF-kg-vYF"/>
                             <constraint firstItem="cJo-gK-eW3" firstAttribute="leading" secondItem="ATA-yr-Yln" secondAttribute="leading" id="WJh-wi-9k8"/>
                             <constraint firstItem="cJo-gK-eW3" firstAttribute="top" secondItem="tdQ-a0-5yw" secondAttribute="bottom" constant="87" id="XaA-F5-dQn"/>
-                            <constraint firstItem="SR7-Tf-nZu" firstAttribute="centerX" secondItem="k4o-dW-Y4i" secondAttribute="centerX" id="bHs-7o-QyQ"/>
+                            <constraint firstItem="SR7-Tf-nZu" firstAttribute="leading" secondItem="tdQ-a0-5yw" secondAttribute="leading" id="Znb-9a-Jqe"/>
                             <constraint firstItem="cJo-gK-eW3" firstAttribute="centerX" secondItem="ATA-yr-Yln" secondAttribute="centerX" id="eHh-s1-ecG"/>
+                            <constraint firstItem="SR7-Tf-nZu" firstAttribute="top" secondItem="z40-8x-UIz" secondAttribute="bottom" constant="30" id="gv2-DW-gCC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HTr-K4-xOo" secondAttribute="trailing" constant="29" id="gxl-P8-uRE"/>
                             <constraint firstAttribute="centerX" secondItem="k4o-dW-Y4i" secondAttribute="centerX" id="hab-iz-Xtc"/>
                             <constraint firstItem="k4o-dW-Y4i" firstAttribute="top" secondItem="tdQ-a0-5yw" secondAttribute="bottom" constant="2" id="ktM-b2-KG7"/>
                             <constraint firstItem="tdQ-a0-5yw" firstAttribute="trailing" secondItem="SR7-Tf-nZu" secondAttribute="trailing" id="ljY-lY-nQl"/>
                             <constraint firstItem="z40-8x-UIz" firstAttribute="bottom" secondItem="ATA-yr-Yln" secondAttribute="bottom" id="lpG-2b-bXk"/>
+                            <constraint firstItem="tsJ-nh-mlq" firstAttribute="top" secondItem="SR7-Tf-nZu" secondAttribute="bottom" constant="43" id="tsQ-pW-XbG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="z40-8x-UIz" secondAttribute="trailing" constant="54" id="vX1-uU-iif"/>
                             <constraint firstItem="z40-8x-UIz" firstAttribute="top" secondItem="HTr-K4-xOo" secondAttribute="bottom" constant="8" symbolic="YES" id="x9z-CO-Lr3"/>
                             <constraint firstItem="cJo-gK-eW3" firstAttribute="centerY" secondItem="HTr-K4-xOo" secondAttribute="centerY" id="xpc-IL-l2U"/>
-                            <constraint firstItem="z40-8x-UIz" firstAttribute="leading" secondItem="ATA-yr-Yln" secondAttribute="trailing" priority="250" constant="50" id="zSd-rg-rFV"/>
+                            <constraint firstItem="SR7-Tf-nZu" firstAttribute="trailing" secondItem="tdQ-a0-5yw" secondAttribute="trailing" id="xqS-qv-d7O"/>
+                            <constraint firstItem="z40-8x-UIz" firstAttribute="leading" secondItem="ATA-yr-Yln" secondAttribute="trailing" priority="250" constant="75" id="zSd-rg-rFV"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="EKR-fA-lWK"/>
+                                <exclude reference="ljY-lY-nQl"/>
                                 <exclude reference="eHh-s1-ecG"/>
                                 <exclude reference="gxl-P8-uRE"/>
                                 <exclude reference="vX1-uU-iif"/>
