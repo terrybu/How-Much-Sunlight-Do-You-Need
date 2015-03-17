@@ -32,7 +32,8 @@
     cameraButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(cameraButton:)];
     self.navigationItem.rightBarButtonItem = cameraButton;
     
-    _touchPixelRectView = [[TouchPixelColorView alloc]initWithFrame:CGRectMake(0, 64, self.view.frame.size.width/8, self.view.frame.size.width/8 )];
+    float sameSize = self.view.frame.size.width/6;
+    _touchPixelRectView = [[TouchPixelColorView alloc]initWithFrame:CGRectMake(0, 64, sameSize, sameSize )];
     _touchPixelRectView.backgroundColor = [UIColor blackColor];
     [self.view addSubview:_touchPixelRectView];
 }
@@ -48,6 +49,15 @@
     else if (self.imageView.image != nil) {
         self.title = @"Tap on your skin";
         _touchPixelRectView.hidden = NO;
+        //border
+        _touchPixelRectView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+        _touchPixelRectView.layer.borderWidth = 1.5f;
+        // drop shadow
+        [_touchPixelRectView.layer setShadowColor:[UIColor grayColor].CGColor];
+        [_touchPixelRectView.layer setShadowOpacity:3.0];
+        [_touchPixelRectView.layer setShadowRadius:3.0];
+        [_touchPixelRectView.layer setShadowOffset:CGSizeMake(3.0, 3.0)];
+        
         UIBarButtonItem *doneButton = [[UIBarButtonItem alloc]initWithTitle:@"Show Result" style:UIBarButtonItemStyleDone target:self action:@selector(showResultButton)];
         self.navigationItem.leftBarButtonItem = cameraButton;
         self.navigationItem.rightBarButtonItem = doneButton;
