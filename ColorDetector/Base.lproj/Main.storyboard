@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lcx-wc-jan">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--FirstViewController-->
@@ -81,28 +82,42 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your selection suggests that according to the Fitzpatrick scale, your skin is closest to: " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdQ-a0-5yw">
+                                <rect key="frame" x="16" y="72" width="568" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BMW-VJ-7z7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="tdQ-a0-5yw" firstAttribute="top" secondItem="T7K-Tp-qLw" secondAttribute="bottom" constant="8" symbolic="YES" id="04m-G4-m3W"/>
                             <constraint firstItem="ATA-yr-Yln" firstAttribute="top" secondItem="k4o-dW-Y4i" secondAttribute="bottom" constant="8" id="1hj-8g-FoK"/>
                             <constraint firstItem="SR7-Tf-nZu" firstAttribute="centerX" secondItem="k4o-dW-Y4i" secondAttribute="centerX" id="9GG-md-j9E"/>
                             <constraint firstAttribute="centerY" secondItem="ATA-yr-Yln" secondAttribute="centerY" constant="56" id="PST-mD-aQv"/>
                             <constraint firstItem="SR7-Tf-nZu" firstAttribute="bottom" secondItem="tsJ-nh-mlq" secondAttribute="top" id="QIL-av-hz7"/>
+                            <constraint firstItem="tdQ-a0-5yw" firstAttribute="leading" secondItem="Q80-nb-frz" secondAttribute="leadingMargin" id="SYt-0H-WWH"/>
+                            <constraint firstItem="tdQ-a0-5yw" firstAttribute="centerX" secondItem="k4o-dW-Y4i" secondAttribute="centerX" id="Vx4-iX-RGk"/>
                             <constraint firstAttribute="trailing" secondItem="SR7-Tf-nZu" secondAttribute="trailing" id="Z90-aS-lLI"/>
                             <constraint firstItem="SR7-Tf-nZu" firstAttribute="top" secondItem="ATA-yr-Yln" secondAttribute="bottom" constant="52" id="cfc-EY-J1S"/>
                             <constraint firstItem="SR7-Tf-nZu" firstAttribute="centerX" secondItem="ATA-yr-Yln" secondAttribute="centerX" id="gpf-Er-Mgt"/>
                             <constraint firstAttribute="centerY" secondItem="k4o-dW-Y4i" secondAttribute="centerY" constant="187.5" id="lJc-mJ-UyH"/>
+                            <constraint firstItem="tdQ-a0-5yw" firstAttribute="leading" secondItem="Q80-nb-frz" secondAttribute="leadingMargin" constant="52" id="sF1-B6-ox6"/>
                             <constraint firstItem="SR7-Tf-nZu" firstAttribute="leading" secondItem="Q80-nb-frz" secondAttribute="leading" id="tI6-v1-cki"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="sF1-B6-ox6"/>
                                 <exclude reference="lJc-mJ-UyH"/>
                             </mask>
                         </variation>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Result" id="ahi-QV-NTL">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="nn6-Zk-wdr">
+                        <barButtonItem key="leftBarButtonItem" title="Back" style="done" id="nn6-Zk-wdr">
                             <connections>
                                 <action selector="backButton:" destination="qA9-J9-bhR" id="9dV-0P-Xap"/>
                             </connections>
