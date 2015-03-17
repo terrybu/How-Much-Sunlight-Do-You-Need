@@ -15,9 +15,10 @@
 @property (strong, nonatomic) UIColor *pickedColor;
 
 @property IBOutlet UILabel *typeLabel;
-@property IBOutlet UIImageView *imageView;
+@property IBOutlet UIImageView *selectionView;
 @property IBOutlet UILabel *resultMessageLabel;
-
+@property IBOutlet UILabel *actualTypeColorLabel;
+@property IBOutlet UIView *actualTypeColorView;
 
 - (IBAction) backButton:(id)sender;
 

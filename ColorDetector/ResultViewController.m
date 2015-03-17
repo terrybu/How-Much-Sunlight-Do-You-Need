@@ -19,9 +19,17 @@
     // Do any additional setup after loading the view.
     
     self.typeLabel.text = self.pickedFitzType.typeName;
-    self.imageView.backgroundColor = self.pickedColor;
-    self.resultMessageLabel.text = self.pickedFitzType.resultMessage;
     
+    self.selectionView.backgroundColor = self.pickedColor;
+    self.selectionView.layer.borderColor = [UIColor grayColor].CGColor;
+    self.selectionView.layer.borderWidth = 1.5;
+    
+    self.resultMessageLabel.text = self.pickedFitzType.resultMessage;
+    self.actualTypeColorLabel.text = self.pickedFitzType.typeName;
+    
+    self.actualTypeColorView.backgroundColor = self.pickedFitzType.uiColor;
+    self.actualTypeColorView.layer.borderColor = [UIColor blackColor].CGColor;
+    self.actualTypeColorView.layer.borderWidth = 1.5;
 }
 
 - (void)didReceiveMemoryWarning {
