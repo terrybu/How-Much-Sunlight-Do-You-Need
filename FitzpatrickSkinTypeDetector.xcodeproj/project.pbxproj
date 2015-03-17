@@ -43,6 +43,7 @@
 		D99CAA211AB77F8900715D3C /* ColorConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorConstants.m; sourceTree = "<group>"; };
 		D99CAA231AB7897600715D3C /* FitzpatrickType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitzpatrickType.h; sourceTree = "<group>"; };
 		D99CAA241AB7897600715D3C /* FitzpatrickType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitzpatrickType.m; sourceTree = "<group>"; };
+		D9B42B601AB86FFC00F3679C /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 		D947AB011AB7289C00AEFEC9 = {
 			isa = PBXGroup;
 			children = (
+				D9B42B601AB86FFC00F3679C /* CoreText.framework */,
 				D99CAA1A1AB76EC600715D3C /* FitzpatrickSkinTypeDetector */,
 				D919D2EC1AB7495200D77F6C /* QuartzCore.framework */,
 				D947AB0B1AB7289C00AEFEC9 /* Products */,

@@ -29,7 +29,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Tap on your skin on the photo" id="Uof-Me-Ek2"/>
+                    <navigationItem key="navigationItem" title="Tap on Photo" id="Uof-Me-Ek2"/>
                     <connections>
                         <outlet property="imageView" destination="l1C-Se-gPM" id="fWq-EK-17n"/>
                         <segue destination="4hl-3F-abS" kind="presentation" identifier="resultSegue" modalTransitionStyle="flipHorizontal" id="m0s-gX-bfc"/>
@@ -52,18 +52,69 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ATA-yr-Yln">
-                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <rect key="frame" x="225" y="225" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="75Z-Xl-6DQ"/>
-                                    <constraint firstAttribute="height" constant="300" id="WJZ-pv-kfo"/>
+                                    <constraint firstAttribute="width" constant="150" id="13u-5M-ZZf"/>
+                                    <constraint firstAttribute="height" constant="150" id="4uA-Ea-97p"/>
+                                    <constraint firstAttribute="width" constant="150" id="5MN-6h-mrh"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="13u-5M-ZZf"/>
+                                    </mask>
+                                </variation>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result Messages Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SR7-Tf-nZu">
+                                <rect key="frame" x="0.0" y="371" width="600" height="229"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="229" id="VAN-0U-8Wc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4o-dW-Y4i">
+                                <rect key="frame" x="167" y="72" width="266" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="266" id="4vI-uK-sYr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="ATA-yr-Yln" secondAttribute="centerX" id="B66-pV-77f"/>
-                            <constraint firstAttribute="centerY" secondItem="ATA-yr-Yln" secondAttribute="centerY" id="cPG-SV-89r"/>
+                            <constraint firstItem="k4o-dW-Y4i" firstAttribute="top" secondItem="T7K-Tp-qLw" secondAttribute="bottom" constant="8" symbolic="YES" id="0Zp-WF-qjW"/>
+                            <constraint firstItem="ATA-yr-Yln" firstAttribute="centerX" secondItem="SR7-Tf-nZu" secondAttribute="centerX" id="7eO-Uh-d13"/>
+                            <constraint firstItem="ATA-yr-Yln" firstAttribute="top" secondItem="k4o-dW-Y4i" secondAttribute="bottom" constant="60" id="9QE-TG-Yy3"/>
+                            <constraint firstItem="tsJ-nh-mlq" firstAttribute="top" secondItem="ATA-yr-Yln" secondAttribute="bottom" constant="225" id="I46-OB-xI8"/>
+                            <constraint firstItem="k4o-dW-Y4i" firstAttribute="centerX" secondItem="ATA-yr-Yln" secondAttribute="centerX" id="Jkz-hU-5PX"/>
+                            <constraint firstAttribute="centerY" secondItem="ATA-yr-Yln" secondAttribute="centerY" id="bd5-lE-1Cb"/>
+                            <constraint firstAttribute="centerX" secondItem="ATA-yr-Yln" secondAttribute="centerX" id="cES-9b-cXI"/>
+                            <constraint firstItem="k4o-dW-Y4i" firstAttribute="centerX" secondItem="ATA-yr-Yln" secondAttribute="centerX" id="dlG-MJ-H3q"/>
+                            <constraint firstAttribute="centerY" secondItem="k4o-dW-Y4i" secondAttribute="centerY" constant="181.5" id="fHm-sd-KdR"/>
+                            <constraint firstItem="ATA-yr-Yln" firstAttribute="centerY" secondItem="Q80-nb-frz" secondAttribute="centerY" id="h1M-vk-ovq"/>
+                            <constraint firstItem="ATA-yr-Yln" firstAttribute="top" secondItem="k4o-dW-Y4i" secondAttribute="bottom" constant="60" id="hdY-NA-N9R"/>
+                            <constraint firstAttribute="centerX" secondItem="k4o-dW-Y4i" secondAttribute="centerX" id="iWx-e0-uec"/>
+                            <constraint firstAttribute="centerY" secondItem="k4o-dW-Y4i" secondAttribute="centerY" constant="167" id="ifF-mX-8Pw"/>
+                            <constraint firstItem="SR7-Tf-nZu" firstAttribute="leading" secondItem="Q80-nb-frz" secondAttribute="leading" id="iw1-0R-m4M"/>
+                            <constraint firstItem="SR7-Tf-nZu" firstAttribute="bottom" secondItem="tsJ-nh-mlq" secondAttribute="top" id="mfb-ti-FtH"/>
+                            <constraint firstAttribute="trailing" secondItem="SR7-Tf-nZu" secondAttribute="trailing" id="rnX-nV-iOm"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Jkz-hU-5PX"/>
+                                <exclude reference="dlG-MJ-H3q"/>
+                                <exclude reference="fHm-sd-KdR"/>
+                                <exclude reference="ifF-mX-8Pw"/>
+                                <exclude reference="7eO-Uh-d13"/>
+                                <exclude reference="9QE-TG-Yy3"/>
+                                <exclude reference="h1M-vk-ovq"/>
+                                <exclude reference="hdY-NA-N9R"/>
+                                <exclude reference="I46-OB-xI8"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Result" id="ahi-QV-NTL">
@@ -75,6 +126,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="ATA-yr-Yln" id="nnQ-O5-KXt"/>
+                        <outlet property="resultMessageLabel" destination="SR7-Tf-nZu" id="yCj-Uo-lNG"/>
+                        <outlet property="typeLabel" destination="k4o-dW-Y4i" id="ts1-xk-RTr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uzj-YB-vl9" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -17,8 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
+    
+    self.typeLabel.text = self.pickedFitzType.typeName;
     self.imageView.backgroundColor = self.pickedColor;
+    self.resultMessageLabel.text = self.pickedFitzType.resultMessage;
     
 }
 

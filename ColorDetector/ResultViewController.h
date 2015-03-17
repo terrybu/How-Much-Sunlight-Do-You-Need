@@ -7,13 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FitzpatrickType.h"
 
 @interface ResultViewController : UIViewController <UINavigationBarDelegate>
 
+@property (strong, nonatomic) FitzpatrickType *pickedFitzType;
 @property (strong, nonatomic) UIColor *pickedColor;
 
-
+@property IBOutlet UILabel *typeLabel;
 @property IBOutlet UIImageView *imageView;
+@property IBOutlet UILabel *resultMessageLabel;
 
 
 - (IBAction) backButton:(id)sender;
