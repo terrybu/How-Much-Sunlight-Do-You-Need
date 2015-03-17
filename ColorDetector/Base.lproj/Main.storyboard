@@ -51,68 +51,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4o-dW-Y4i">
+                                <rect key="frame" x="213" y="117" width="174" height="44"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="35"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result Messages Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SR7-Tf-nZu">
+                                <rect key="frame" x="0.0" y="371" width="600" height="229"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="229" id="UNE-te-1Pb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ATA-yr-Yln">
-                                <rect key="frame" x="225" y="225" width="150" height="150"/>
+                                <rect key="frame" x="225" y="169" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="13u-5M-ZZf"/>
-                                    <constraint firstAttribute="height" constant="150" id="4uA-Ea-97p"/>
-                                    <constraint firstAttribute="width" constant="150" id="5MN-6h-mrh"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="37c-Xp-OdG"/>
+                                    <constraint firstAttribute="width" constant="150" id="Iag-ca-nQW"/>
+                                    <constraint firstAttribute="height" constant="150" id="U0U-lM-g41"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="13u-5M-ZZf"/>
+                                        <exclude reference="37c-Xp-OdG"/>
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result Messages Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SR7-Tf-nZu">
-                                <rect key="frame" x="0.0" y="371" width="600" height="229"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="229" id="VAN-0U-8Wc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="25"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4o-dW-Y4i">
-                                <rect key="frame" x="167" y="72" width="266" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="266" id="4vI-uK-sYr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="25"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="k4o-dW-Y4i" firstAttribute="top" secondItem="T7K-Tp-qLw" secondAttribute="bottom" constant="8" symbolic="YES" id="0Zp-WF-qjW"/>
-                            <constraint firstItem="ATA-yr-Yln" firstAttribute="centerX" secondItem="SR7-Tf-nZu" secondAttribute="centerX" id="7eO-Uh-d13"/>
-                            <constraint firstItem="ATA-yr-Yln" firstAttribute="top" secondItem="k4o-dW-Y4i" secondAttribute="bottom" constant="60" id="9QE-TG-Yy3"/>
-                            <constraint firstItem="tsJ-nh-mlq" firstAttribute="top" secondItem="ATA-yr-Yln" secondAttribute="bottom" constant="225" id="I46-OB-xI8"/>
-                            <constraint firstItem="k4o-dW-Y4i" firstAttribute="centerX" secondItem="ATA-yr-Yln" secondAttribute="centerX" id="Jkz-hU-5PX"/>
-                            <constraint firstAttribute="centerY" secondItem="ATA-yr-Yln" secondAttribute="centerY" id="bd5-lE-1Cb"/>
-                            <constraint firstAttribute="centerX" secondItem="ATA-yr-Yln" secondAttribute="centerX" id="cES-9b-cXI"/>
-                            <constraint firstItem="k4o-dW-Y4i" firstAttribute="centerX" secondItem="ATA-yr-Yln" secondAttribute="centerX" id="dlG-MJ-H3q"/>
-                            <constraint firstAttribute="centerY" secondItem="k4o-dW-Y4i" secondAttribute="centerY" constant="181.5" id="fHm-sd-KdR"/>
-                            <constraint firstItem="ATA-yr-Yln" firstAttribute="centerY" secondItem="Q80-nb-frz" secondAttribute="centerY" id="h1M-vk-ovq"/>
-                            <constraint firstItem="ATA-yr-Yln" firstAttribute="top" secondItem="k4o-dW-Y4i" secondAttribute="bottom" constant="60" id="hdY-NA-N9R"/>
-                            <constraint firstAttribute="centerX" secondItem="k4o-dW-Y4i" secondAttribute="centerX" id="iWx-e0-uec"/>
-                            <constraint firstAttribute="centerY" secondItem="k4o-dW-Y4i" secondAttribute="centerY" constant="167" id="ifF-mX-8Pw"/>
-                            <constraint firstItem="SR7-Tf-nZu" firstAttribute="leading" secondItem="Q80-nb-frz" secondAttribute="leading" id="iw1-0R-m4M"/>
-                            <constraint firstItem="SR7-Tf-nZu" firstAttribute="bottom" secondItem="tsJ-nh-mlq" secondAttribute="top" id="mfb-ti-FtH"/>
-                            <constraint firstAttribute="trailing" secondItem="SR7-Tf-nZu" secondAttribute="trailing" id="rnX-nV-iOm"/>
+                            <constraint firstItem="ATA-yr-Yln" firstAttribute="top" secondItem="k4o-dW-Y4i" secondAttribute="bottom" constant="8" id="1hj-8g-FoK"/>
+                            <constraint firstItem="SR7-Tf-nZu" firstAttribute="centerX" secondItem="k4o-dW-Y4i" secondAttribute="centerX" id="9GG-md-j9E"/>
+                            <constraint firstAttribute="centerY" secondItem="ATA-yr-Yln" secondAttribute="centerY" constant="56" id="PST-mD-aQv"/>
+                            <constraint firstItem="SR7-Tf-nZu" firstAttribute="bottom" secondItem="tsJ-nh-mlq" secondAttribute="top" id="QIL-av-hz7"/>
+                            <constraint firstAttribute="trailing" secondItem="SR7-Tf-nZu" secondAttribute="trailing" id="Z90-aS-lLI"/>
+                            <constraint firstItem="SR7-Tf-nZu" firstAttribute="top" secondItem="ATA-yr-Yln" secondAttribute="bottom" constant="52" id="cfc-EY-J1S"/>
+                            <constraint firstItem="SR7-Tf-nZu" firstAttribute="centerX" secondItem="ATA-yr-Yln" secondAttribute="centerX" id="gpf-Er-Mgt"/>
+                            <constraint firstAttribute="centerY" secondItem="k4o-dW-Y4i" secondAttribute="centerY" constant="187.5" id="lJc-mJ-UyH"/>
+                            <constraint firstItem="SR7-Tf-nZu" firstAttribute="leading" secondItem="Q80-nb-frz" secondAttribute="leading" id="tI6-v1-cki"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="Jkz-hU-5PX"/>
-                                <exclude reference="dlG-MJ-H3q"/>
-                                <exclude reference="fHm-sd-KdR"/>
-                                <exclude reference="ifF-mX-8Pw"/>
-                                <exclude reference="7eO-Uh-d13"/>
-                                <exclude reference="9QE-TG-Yy3"/>
-                                <exclude reference="h1M-vk-ovq"/>
-                                <exclude reference="hdY-NA-N9R"/>
-                                <exclude reference="I46-OB-xI8"/>
+                                <exclude reference="lJc-mJ-UyH"/>
                             </mask>
                         </variation>
                     </view>

@@ -48,7 +48,7 @@
     else if (self.imageView.image != nil) {
         self.title = @"Tap on your skin";
         _touchPixelRectView.hidden = NO;
-        UIBarButtonItem *doneButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButton)];
+        UIBarButtonItem *doneButton = [[UIBarButtonItem alloc]initWithTitle:@"Show Result" style:UIBarButtonItemStyleDone target:self action:@selector(showResultButton)];
         self.navigationItem.leftBarButtonItem = cameraButton;
         self.navigationItem.rightBarButtonItem = doneButton;
     }
@@ -74,7 +74,7 @@
 }
 
 
-- (void) doneButton {
+- (void) showResultButton {
     [self performSegueWithIdentifier:@"resultSegue" sender:nil];
 }
 
