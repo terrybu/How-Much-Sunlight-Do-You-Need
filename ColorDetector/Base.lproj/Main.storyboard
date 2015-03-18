@@ -53,20 +53,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="300" text="Type Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4o-dW-Y4i">
-                                <rect key="frame" x="213" y="158" width="174" height="44"/>
+                                <rect key="frame" x="211" y="158" width="178" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="haj-nh-INM"/>
+                                    <constraint firstAttribute="height" constant="55" id="haj-nh-INM"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="35"/>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="35"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="40"/>
+                                </variation>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ATA-yr-Yln">
-                                <rect key="frame" x="49" y="276" width="100" height="100"/>
+                                <rect key="frame" x="49" y="287" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="Rkb-Mk-HoJ"/>
+                                    <constraint firstAttribute="width" constant="100" id="LCY-NC-XHJ">
+                                        <variation key="widthClass=regular" constant="250"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="100" id="Rkb-Mk-HoJ">
+                                        <variation key="widthClass=regular" constant="250"/>
+                                    </constraint>
                                     <constraint firstAttribute="width" constant="100" id="XHk-bk-rDC"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="LCY-NC-XHJ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="LCY-NC-XHJ"/>
+                                        <exclude reference="XHk-bk-rDC"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your selection suggests that according to the Fitzpatrick scale, your skin is closest to: " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdQ-a0-5yw" userLabel="selectionDescriptionLabel">
                                 <rect key="frame" x="16" y="72" width="568" height="70"/>
@@ -82,17 +101,24 @@
                                         <exclude reference="IIQ-LV-W5r"/>
                                     </mask>
                                 </variation>
+                                <variation key="widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="24"/>
+                                </variation>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z40-8x-UIz">
-                                <rect key="frame" x="453" y="276" width="100" height="100"/>
+                                <rect key="frame" x="453" y="287" width="100" height="100"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="B5m-0F-AXI"/>
-                                    <constraint firstAttribute="width" constant="100" id="B7s-hJ-4FD"/>
+                                    <constraint firstAttribute="height" constant="100" id="B5m-0F-AXI">
+                                        <variation key="widthClass=regular" constant="250"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="100" id="B7s-hJ-4FD">
+                                        <variation key="widthClass=regular" constant="250"/>
+                                    </constraint>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ActualTypeLabel" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="HTr-K4-xOo" userLabel="ActualTypeLabel">
-                                <rect key="frame" x="432" y="243" width="142" height="25"/>
+                                <rect key="frame" x="432" y="254" width="142" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="gY4-C5-EW5"/>
                                     <constraint firstAttribute="width" constant="142" id="h5W-uM-ZeC">
@@ -104,7 +130,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Your Selection" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="cJo-gK-eW3">
-                                <rect key="frame" x="26" y="243" width="146" height="25"/>
+                                <rect key="frame" x="26" y="254" width="146" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="146" id="SGc-DH-iDc">
                                         <variation key="widthClass=regular" constant="150"/>
@@ -122,7 +148,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Result Messages Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SR7-Tf-nZu">
-                                <rect key="frame" x="16" y="406" width="568" height="32"/>
+                                <rect key="frame" x="16" y="417" width="568" height="32"/>
                                 <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="25"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -131,7 +157,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cJo-gK-eW3" firstAttribute="leading" secondItem="k4o-dW-Y4i" secondAttribute="leading" constant="-287" id="0CE-aO-7Rk">
-                                <variation key="widthClass=regular" constant="-50"/>
+                                <variation key="widthClass=regular" constant="-75"/>
                             </constraint>
                             <constraint firstItem="z40-8x-UIz" firstAttribute="bottom" secondItem="ATA-yr-Yln" secondAttribute="bottom" id="1IP-GK-4Rc"/>
                             <constraint firstItem="cJo-gK-eW3" firstAttribute="leading" secondItem="Q80-nb-frz" secondAttribute="leadingMargin" constant="10" id="1w4-ob-Dgx"/>
@@ -143,6 +169,7 @@
                             <constraint firstItem="HTr-K4-xOo" firstAttribute="leading" secondItem="cJo-gK-eW3" secondAttribute="trailing" constant="16" id="LLW-QV-m3O"/>
                             <constraint firstItem="z40-8x-UIz" firstAttribute="centerX" secondItem="HTr-K4-xOo" secondAttribute="centerX" id="PzR-84-UGe"/>
                             <constraint firstItem="z40-8x-UIz" firstAttribute="top" secondItem="HTr-K4-xOo" secondAttribute="bottom" constant="8" symbolic="YES" id="R4x-sh-meE"/>
+                            <constraint firstItem="k4o-dW-Y4i" firstAttribute="trailing" secondItem="cJo-gK-eW3" secondAttribute="trailing" constant="99" id="Rgx-4t-A6S"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HTr-K4-xOo" secondAttribute="trailing" constant="10" id="Tri-jO-3Ef"/>
                             <constraint firstItem="SR7-Tf-nZu" firstAttribute="leading" secondItem="Q80-nb-frz" secondAttribute="leadingMargin" id="URO-Ww-2qS"/>
                             <constraint firstItem="tsJ-nh-mlq" firstAttribute="top" secondItem="SR7-Tf-nZu" secondAttribute="bottom" constant="8" symbolic="YES" id="Urb-BH-xX4"/>
@@ -163,12 +190,19 @@
                             <constraint firstItem="SR7-Tf-nZu" firstAttribute="top" secondItem="z40-8x-UIz" secondAttribute="bottom" constant="34" id="w9H-XI-dFg"/>
                             <constraint firstItem="SR7-Tf-nZu" firstAttribute="leading" secondItem="Q80-nb-frz" secondAttribute="leading" id="wG8-q6-YAb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SR7-Tf-nZu" secondAttribute="trailing" id="wgO-GU-zKb"/>
+                            <constraint firstItem="HTr-K4-xOo" firstAttribute="trailing" secondItem="k4o-dW-Y4i" secondAttribute="trailing" constant="61" id="wzf-0F-d40">
+                                <variation key="widthClass=regular" constant="75"/>
+                            </constraint>
+                            <constraint firstItem="z40-8x-UIz" firstAttribute="leading" secondItem="ATA-yr-Yln" secondAttribute="trailing" constant="-76" id="zbX-NK-iC5">
+                                <variation key="widthClass=regular" constant="20"/>
+                            </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="tdQ-a0-5yw" secondAttribute="trailing" id="zff-V0-stR"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="0CE-aO-7Rk"/>
                                 <exclude reference="G6F-Fh-fud"/>
+                                <exclude reference="Rgx-4t-A6S"/>
                                 <exclude reference="Wnl-um-c8s"/>
                                 <exclude reference="p18-Mf-Rqg"/>
                                 <exclude reference="pnU-LV-kqK"/>
@@ -178,6 +212,8 @@
                                 <exclude reference="8Qd-zF-Myy"/>
                                 <exclude reference="LLW-QV-m3O"/>
                                 <exclude reference="vMx-yd-R0r"/>
+                                <exclude reference="wzf-0F-d40"/>
+                                <exclude reference="zbX-NK-iC5"/>
                                 <exclude reference="Urb-BH-xX4"/>
                             </mask>
                         </variation>
@@ -185,8 +221,11 @@
                             <mask key="constraints">
                                 <include reference="0CE-aO-7Rk"/>
                                 <exclude reference="1w4-ob-Dgx"/>
+                                <exclude reference="Rgx-4t-A6S"/>
                                 <exclude reference="Tri-jO-3Ef"/>
-                                <include reference="vMx-yd-R0r"/>
+                                <exclude reference="vMx-yd-R0r"/>
+                                <include reference="wzf-0F-d40"/>
+                                <include reference="zbX-NK-iC5"/>
                             </mask>
                         </variation>
                     </view>
