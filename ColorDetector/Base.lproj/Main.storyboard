@@ -311,7 +311,7 @@
         <scene sceneID="Dpc-xy-Lq7">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lcx-wc-jan" userLabel="NavFirst" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Camera" id="fMW-I9-yiZ"/>
+                    <tabBarItem key="tabBarItem" title="" image="camera30" id="fMW-I9-yiZ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="ZXP-HW-7lk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -433,4 +433,7 @@
             <point key="canvasLocation" x="205.5" y="611"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera30" width="30" height="30"/>
+    </resources>
 </document>
