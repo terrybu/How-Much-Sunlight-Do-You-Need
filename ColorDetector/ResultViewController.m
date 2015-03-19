@@ -18,7 +18,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.fbShimmerView.contentView = self.typeLabel;
     self.typeLabel.text = self.pickedFitzType.typeName;
+    self.fbShimmerView.shimmering = YES;
+    self.fbShimmerView.shimmeringAnimationOpacity = 0.2; //makes the shimmer dramatic lower the value
     
     self.selectionView.backgroundColor = self.pickedColor;
     self.selectionView.layer.borderColor = [UIColor blackColor].CGColor;

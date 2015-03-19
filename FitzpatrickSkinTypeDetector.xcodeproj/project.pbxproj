@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D919D2ED1AB7495200D77F6C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D919D2EC1AB7495200D77F6C /* QuartzCore.framework */; };
+		D94660F51ABB16800087D347 /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D94660F21ABB16800087D347 /* FBShimmeringLayer.m */; };
+		D94660F61ABB16800087D347 /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = D94660F41ABB16800087D347 /* FBShimmeringView.m */; };
 		D99CAA101AB76E5F00715D3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D99CA9FF1AB76E5F00715D3C /* AppDelegate.m */; };
 		D99CAA131AB76E5F00715D3C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D99CAA061AB76E5F00715D3C /* FirstViewController.m */; };
 		D99CAA141AB76E5F00715D3C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D99CAA071AB76E5F00715D3C /* Images.xcassets */; };
@@ -23,6 +25,12 @@
 
 /* Begin PBXFileReference section */
 		D919D2EC1AB7495200D77F6C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D94660EF1ABB16800087D347 /* FBShimmering-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBShimmering-Prefix.pch"; sourceTree = "<group>"; };
+		D94660F01ABB16800087D347 /* FBShimmering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmering.h; sourceTree = "<group>"; };
+		D94660F11ABB16800087D347 /* FBShimmeringLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringLayer.h; sourceTree = "<group>"; };
+		D94660F21ABB16800087D347 /* FBShimmeringLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringLayer.m; sourceTree = "<group>"; };
+		D94660F31ABB16800087D347 /* FBShimmeringView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringView.h; sourceTree = "<group>"; };
+		D94660F41ABB16800087D347 /* FBShimmeringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringView.m; sourceTree = "<group>"; };
 		D947AB0A1AB7289C00AEFEC9 /* FitzpatrickSkinTypeDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitzpatrickSkinTypeDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D99CA9FE1AB76E5F00715D3C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ColorDetector/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		D99CA9FF1AB76E5F00715D3C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ColorDetector/AppDelegate.m; sourceTree = SOURCE_ROOT; };
@@ -58,6 +66,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D94660EE1ABB16800087D347 /* FBShimmering */ = {
+			isa = PBXGroup;
+			children = (
+				D94660EF1ABB16800087D347 /* FBShimmering-Prefix.pch */,
+				D94660F01ABB16800087D347 /* FBShimmering.h */,
+				D94660F11ABB16800087D347 /* FBShimmeringLayer.h */,
+				D94660F21ABB16800087D347 /* FBShimmeringLayer.m */,
+				D94660F31ABB16800087D347 /* FBShimmeringView.h */,
+				D94660F41ABB16800087D347 /* FBShimmeringView.m */,
+			);
+			path = FBShimmering;
+			sourceTree = "<group>";
+		};
 		D947AB011AB7289C00AEFEC9 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +130,7 @@
 		D99CAA1B1AB7705500715D3C /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				D94660EE1ABB16800087D347 /* FBShimmering */,
 				D99CAA201AB77F8900715D3C /* ColorConstants.h */,
 				D99CAA211AB77F8900715D3C /* ColorConstants.m */,
 				D99CAA0C1AB76E5F00715D3C /* TouchPixelColorView.h */,
@@ -189,8 +211,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D94660F51ABB16800087D347 /* FBShimmeringLayer.m in Sources */,
 				D99CAA221AB77F8900715D3C /* ColorConstants.m in Sources */,
 				D99CAA181AB76E5F00715D3C /* TouchPixelColorView.m in Sources */,
+				D94660F61ABB16800087D347 /* FBShimmeringView.m in Sources */,
 				D99CAA171AB76E5F00715D3C /* ResultViewController.m in Sources */,
 				D99CAA191AB76E5F00715D3C /* UIView+ColorOfPoint.m in Sources */,
 				D99CAA101AB76E5F00715D3C /* AppDelegate.m in Sources */,

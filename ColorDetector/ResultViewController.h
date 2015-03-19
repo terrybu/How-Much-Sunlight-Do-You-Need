@@ -8,13 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "FitzpatrickType.h"
+#import "FBShimmeringView.h"
 
 @interface ResultViewController : UIViewController <UINavigationBarDelegate>
 
 @property (strong, nonatomic) FitzpatrickType *pickedFitzType;
 @property (strong, nonatomic) UIColor *pickedColor;
 
+@property IBOutlet FBShimmeringView *fbShimmerView;
 @property IBOutlet UILabel *typeLabel;
+
 @property IBOutlet UIImageView *selectionView;
 @property IBOutlet UILabel *resultMessageLabel;
 @property IBOutlet UILabel *actualTypeColorLabel;

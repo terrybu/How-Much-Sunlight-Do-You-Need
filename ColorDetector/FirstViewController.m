@@ -242,7 +242,7 @@
     
     //The scoresArray is to keep track of WHICH TYPE had the lowest disparity score.
     NSNumber *disparityScoreWrapped = [NSNumber numberWithFloat:disparityScore];
-    int indexOfDisparity = [scoresArray indexOfObject:disparityScoreWrapped];
+    NSUInteger indexOfDisparity = [scoresArray indexOfObject:disparityScoreWrapped];
     _mostSimilarType = fitzpatrickArray[indexOfDisparity];
 }
 
