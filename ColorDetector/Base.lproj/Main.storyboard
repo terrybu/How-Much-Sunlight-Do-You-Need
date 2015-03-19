@@ -235,27 +235,27 @@
                                         <exclude reference="Y8f-Qr-gVD"/>
                                         <exclude reference="rr9-Vp-5fz"/>
                                         <exclude reference="ybQ-V4-aqK"/>
+                                        <exclude reference="9R1-Sf-qof"/>
+                                        <exclude reference="4IX-Hi-xs7"/>
                                         <exclude reference="KPC-JI-El7"/>
                                         <exclude reference="l77-ly-gb4"/>
                                         <exclude reference="wH8-KB-iyC"/>
-                                        <exclude reference="9R1-Sf-qof"/>
-                                        <exclude reference="4IX-Hi-xs7"/>
-                                        <exclude reference="Fm2-bv-72m"/>
-                                        <exclude reference="l9a-Tm-uad"/>
                                         <exclude reference="2ji-fF-ncj"/>
                                         <exclude reference="I3W-rj-Izd"/>
+                                        <exclude reference="Fm2-bv-72m"/>
+                                        <exclude reference="l9a-Tm-uad"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
                                     <mask key="constraints">
-                                        <exclude reference="E5d-o6-Qem"/>
-                                        <exclude reference="wH8-KB-iyC"/>
                                         <include reference="9R1-Sf-qof"/>
                                         <exclude reference="eEa-wg-3Eg"/>
-                                        <include reference="Fm2-bv-72m"/>
-                                        <exclude reference="l9a-Tm-uad"/>
+                                        <exclude reference="E5d-o6-Qem"/>
+                                        <exclude reference="wH8-KB-iyC"/>
                                         <exclude reference="2ji-fF-ncj"/>
                                         <exclude reference="I3W-rj-Izd"/>
+                                        <include reference="Fm2-bv-72m"/>
+                                        <exclude reference="l9a-Tm-uad"/>
                                     </mask>
                                 </variation>
                             </scrollView>

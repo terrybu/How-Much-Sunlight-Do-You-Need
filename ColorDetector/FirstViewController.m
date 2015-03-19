@@ -32,9 +32,21 @@
     cameraButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(cameraButton:)];
     self.navigationItem.rightBarButtonItem = cameraButton;
     
-    float sameSize = self.view.frame.size.width/6;
-    _touchPixelRectView = [[TouchPixelColorView alloc]initWithFrame:CGRectMake(0, 64, sameSize, sameSize )];
+    [self setUpPreviewRect];
+}
+
+- (void) setUpPreviewRect {
+    float sameLengthForRectSide = self.view.frame.size.width/6;
+    _touchPixelRectView = [[TouchPixelColorView alloc]initWithFrame:CGRectMake(0, 64, sameLengthForRectSide, sameLengthForRectSide )];
     _touchPixelRectView.backgroundColor = [UIColor blackColor];
+    //border
+    _touchPixelRectView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    _touchPixelRectView.layer.borderWidth = 1.5f;
+    // drop shadow
+    [_touchPixelRectView.layer setShadowColor:[UIColor grayColor].CGColor];
+    [_touchPixelRectView.layer setShadowOpacity:3.0];
+    [_touchPixelRectView.layer setShadowRadius:3.0];
+    [_touchPixelRectView.layer setShadowOffset:CGSizeMake(3.0, 3.0)];
     [self.view addSubview:_touchPixelRectView];
 }
 
@@ -48,19 +60,47 @@
     }
     else if (self.imageView.image != nil) {
         self.title = @"Tap on your skin";
-        _touchPixelRectView.hidden = NO;
-        //border
-        _touchPixelRectView.layer.borderColor = [UIColor lightGrayColor].CGColor;
-        _touchPixelRectView.layer.borderWidth = 1.5f;
-        // drop shadow
-        [_touchPixelRectView.layer setShadowColor:[UIColor grayColor].CGColor];
-        [_touchPixelRectView.layer setShadowOpacity:3.0];
-        [_touchPixelRectView.layer setShadowRadius:3.0];
-        [_touchPixelRectView.layer setShadowOffset:CGSizeMake(3.0, 3.0)];
-        
         UIBarButtonItem *doneButton = [[UIBarButtonItem alloc]initWithTitle:@"Show Result" style:UIBarButtonItemStyleDone target:self action:@selector(showResultButton)];
         self.navigationItem.leftBarButtonItem = cameraButton;
         self.navigationItem.rightBarButtonItem = doneButton;
+        
+        if (self.pickedColor == nil)
+            doneButton.enabled = NO;
+        else
+            doneButton.enabled = YES;
+    }
+}
+
+#pragma mark Touch and Navigation
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    if (self.imageView.image != nil) {
+        CGFloat red, green, blue, alpha;
+        UITouch *touch = [[event allTouches] anyObject];
+        CGPoint loc = [touch locationInView:self.view];
+        self.pickedColor = [self.view colorOfPoint:loc];
+        
+        [self.pickedColor getRed:&red green:&green blue:&blue alpha:&alpha];
+        NSLog(@"red %f green %f blue %f alpha %f", red, green, blue, alpha);
+        
+        self.touchPixelRectView.backgroundColor = self.pickedColor;
+        _touchPixelRectView.hidden = NO;
+        self.navigationItem.rightBarButtonItem.enabled = YES;
+        
+        [self comparePickedColorToFitzpatrickTypes:self.pickedColor];
+        
+        //    [self showRGBInPreview:red green:green blue:blue];
+    }
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"resultSegue"])
+    {
+        UINavigationController *destination = segue.destinationViewController;
+        ResultViewController *rvc = (ResultViewController *) destination.topViewController;
+        rvc.pickedColor = _pickedColor;
+        rvc.pickedFitzType = _mostSimilarType;
     }
 }
 
@@ -145,34 +185,7 @@
 
 
 
-#pragma mark Touch and Navigation
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    if (self.imageView.image != nil) {
-        CGFloat red, green, blue, alpha;
-        UITouch *touch = [[event allTouches] anyObject];
-        CGPoint loc = [touch locationInView:self.view];
-        self.pickedColor = [self.view colorOfPoint:loc];
-        
-        [self.pickedColor getRed:&red green:&green blue:&blue alpha:&alpha];
-        NSLog(@"red %f green %f blue %f alpha %f", red, green, blue, alpha);
-        
-        self.touchPixelRectView.backgroundColor = self.pickedColor;
-        //    [self showRGBInPreview:red green:green blue:blue];
-        [self comparePickedColorToFitzpatrickTypes:self.pickedColor];
-    }
-}
-
-- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"resultSegue"])
-    {
-        UINavigationController *destination = segue.destinationViewController;
-        ResultViewController *rvc = (ResultViewController *) destination.topViewController;
-        rvc.pickedColor = _pickedColor;
-        rvc.pickedFitzType = _mostSimilarType;
-    }
-}
 
 #pragma mark Custom Logic for Color Comparisons
 - (void)showRGBInPreview:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue {
