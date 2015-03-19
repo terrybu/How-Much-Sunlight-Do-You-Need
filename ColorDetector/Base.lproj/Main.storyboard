@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lcx-wc-jan">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--FirstViewController-->
@@ -40,208 +40,211 @@
             </objects>
             <point key="canvasLocation" x="1082" y="271"/>
         </scene>
-        <!--Result-->
+        <!--ResultViewController-->
         <scene sceneID="lZg-ki-GuA">
             <objects>
-                <viewController title="Result" id="qA9-J9-bhR" customClass="ResultViewController" sceneMemberID="viewController">
+                <viewController title="Result" id="qA9-J9-bhR" userLabel="ResultViewController" customClass="ResultViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="T7K-Tp-qLw"/>
                         <viewControllerLayoutGuide type="bottom" id="tsJ-nh-mlq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Q80-nb-frz">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ATA-yr-Yln">
-                                <rect key="frame" x="49" y="265" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="LCY-NC-XHJ">
-                                        <variation key="widthClass=regular" constant="250"/>
-                                    </constraint>
-                                    <constraint firstAttribute="height" constant="100" id="Rkb-Mk-HoJ">
-                                        <variation key="widthClass=regular" constant="250"/>
-                                    </constraint>
-                                    <constraint firstAttribute="width" constant="100" id="XHk-bk-rDC"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="LCY-NC-XHJ"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="LCY-NC-XHJ"/>
-                                        <exclude reference="XHk-bk-rDC"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your selection suggests that according to the Fitzpatrick scale, your skin is closest to: " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdQ-a0-5yw" userLabel="selectionDescriptionLabel">
-                                <rect key="frame" x="16" y="72" width="568" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="IIQ-LV-W5r"/>
-                                    <constraint firstAttribute="height" constant="70" id="cxa-K8-3zf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="IIQ-LV-W5r"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=regular">
-                                    <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="24"/>
-                                </variation>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z40-8x-UIz">
-                                <rect key="frame" x="453" y="265" width="100" height="100"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="B5m-0F-AXI">
-                                        <variation key="widthClass=regular" constant="250"/>
-                                    </constraint>
-                                    <constraint firstAttribute="width" constant="100" id="B7s-hJ-4FD">
-                                        <variation key="widthClass=regular" constant="250"/>
-                                    </constraint>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ActualTypeLabel" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="HTr-K4-xOo" userLabel="ActualTypeLabel">
-                                <rect key="frame" x="432" y="232" width="142" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="gY4-C5-EW5"/>
-                                    <constraint firstAttribute="width" constant="142" id="h5W-uM-ZeC">
-                                        <variation key="widthClass=regular" constant="150"/>
-                                    </constraint>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Your Selection" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="cJo-gK-eW3">
-                                <rect key="frame" x="26" y="232" width="146" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="146" id="SGc-DH-iDc">
-                                        <variation key="widthClass=regular" constant="150"/>
-                                    </constraint>
-                                    <constraint firstAttribute="height" constant="25" id="XmO-U6-VYc"/>
-                                    <constraint firstAttribute="width" constant="150" id="opX-hS-3MJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="opX-hS-3MJ"/>
-                                    </mask>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Result Messages Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SR7-Tf-nZu">
-                                <rect key="frame" x="16" y="405" width="568" height="32"/>
-                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="25"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMs-Di-gQD" customClass="FBShimmeringView">
-                                <rect key="frame" x="198" y="157" width="205" height="45"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dQ2-Zd-9F0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="300" text="Type Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4o-dW-Y4i">
-                                        <rect key="frame" x="0.0" y="0.0" width="205" height="45"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMs-Di-gQD" customClass="FBShimmeringView">
+                                        <rect key="frame" x="198" y="85" width="205" height="45"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="300" text="Type Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4o-dW-Y4i">
+                                                <rect key="frame" x="0.0" y="0.0" width="205" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="178" id="XJu-dC-gcW"/>
+                                                    <constraint firstAttribute="height" constant="55" id="haj-nh-INM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="35"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="XJu-dC-gcW"/>
+                                                        <exclude reference="haj-nh-INM"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="40"/>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="178" id="XJu-dC-gcW"/>
-                                            <constraint firstAttribute="height" constant="55" id="haj-nh-INM"/>
+                                            <constraint firstAttribute="centerY" secondItem="k4o-dW-Y4i" secondAttribute="centerY" id="16L-dV-pLz"/>
+                                            <constraint firstAttribute="height" constant="55" id="Dq5-6a-Y96"/>
+                                            <constraint firstAttribute="bottom" secondItem="k4o-dW-Y4i" secondAttribute="bottom" id="mYW-Yd-pbl"/>
+                                            <constraint firstAttribute="width" constant="205" id="nFM-fx-ubi"/>
+                                            <constraint firstAttribute="trailing" secondItem="k4o-dW-Y4i" secondAttribute="trailing" id="tjv-H4-SXY"/>
+                                            <constraint firstItem="k4o-dW-Y4i" firstAttribute="leading" secondItem="rMs-Di-gQD" secondAttribute="leading" id="tnz-a0-nbt"/>
+                                            <constraint firstAttribute="centerX" secondItem="k4o-dW-Y4i" secondAttribute="centerX" id="uB3-gW-Rf6"/>
+                                            <constraint firstItem="k4o-dW-Y4i" firstAttribute="top" secondItem="rMs-Di-gQD" secondAttribute="top" id="zgR-sE-yE1"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="35"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Dq5-6a-Y96"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ATA-yr-Yln" userLabel="YourSelectionColorRectView">
+                                        <rect key="frame" x="171" y="193" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="LCY-NC-XHJ">
+                                                <variation key="widthClass=regular" constant="250"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="100" id="Rkb-Mk-HoJ">
+                                                <variation key="widthClass=regular" constant="250"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="100" id="XHk-bk-rDC"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="LCY-NC-XHJ"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="LCY-NC-XHJ"/>
+                                                <exclude reference="XHk-bk-rDC"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z40-8x-UIz" userLabel="ActualTypeColorRectView">
+                                        <rect key="frame" x="332" y="193" width="100" height="100"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="B5m-0F-AXI">
+                                                <variation key="widthClass=regular" constant="250"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="100" id="B7s-hJ-4FD">
+                                                <variation key="widthClass=regular" constant="250"/>
+                                            </constraint>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ActualTypeLabel" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="HTr-K4-xOo" userLabel="ActualTypeLabel">
+                                        <rect key="frame" x="311" y="160" width="142" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="gY4-C5-EW5"/>
+                                            <constraint firstAttribute="width" constant="142" id="h5W-uM-ZeC">
+                                                <variation key="widthClass=regular" constant="150"/>
+                                            </constraint>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="20"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Your Selection" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="cJo-gK-eW3" userLabel="YourSelectionLabel">
+                                        <rect key="frame" x="148" y="160" width="146" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="146" id="SGc-DH-iDc">
+                                                <variation key="widthClass=regular" constant="150"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="25" id="XmO-U6-VYc"/>
+                                            <constraint firstAttribute="width" constant="150" id="opX-hS-3MJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="XJu-dC-gcW"/>
-                                                <exclude reference="haj-nh-INM"/>
+                                                <exclude reference="opX-hS-3MJ"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Result Messages Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SR7-Tf-nZu">
+                                        <rect key="frame" x="0.0" y="333" width="600" height="32"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="25"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your selection suggests that according to the Fitzpatrick scale, your skin is closest to: " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdQ-a0-5yw" userLabel="TopExplanationLabel">
+                                        <rect key="frame" x="60" y="0.0" width="480" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="IIQ-LV-W5r"/>
+                                            <constraint firstAttribute="height" constant="70" id="cxa-K8-3zf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="IIQ-LV-W5r"/>
                                             </mask>
                                         </variation>
                                         <variation key="widthClass=regular">
-                                            <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="40"/>
+                                            <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="24"/>
                                         </variation>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="centerY" secondItem="k4o-dW-Y4i" secondAttribute="centerY" id="16L-dV-pLz"/>
-                                    <constraint firstAttribute="height" constant="55" id="Dq5-6a-Y96"/>
-                                    <constraint firstAttribute="bottom" secondItem="k4o-dW-Y4i" secondAttribute="bottom" id="mYW-Yd-pbl"/>
-                                    <constraint firstAttribute="width" constant="205" id="nFM-fx-ubi"/>
-                                    <constraint firstAttribute="trailing" secondItem="k4o-dW-Y4i" secondAttribute="trailing" id="tjv-H4-SXY"/>
-                                    <constraint firstItem="k4o-dW-Y4i" firstAttribute="leading" secondItem="rMs-Di-gQD" secondAttribute="leading" id="tnz-a0-nbt"/>
-                                    <constraint firstAttribute="centerX" secondItem="k4o-dW-Y4i" secondAttribute="centerX" id="uB3-gW-Rf6"/>
-                                    <constraint firstItem="k4o-dW-Y4i" firstAttribute="top" secondItem="rMs-Di-gQD" secondAttribute="top" id="zgR-sE-yE1"/>
+                                    <constraint firstItem="tdQ-a0-5yw" firstAttribute="top" secondItem="dQ2-Zd-9F0" secondAttribute="top" id="3eO-5R-Eww"/>
+                                    <constraint firstItem="rMs-Di-gQD" firstAttribute="leading" secondItem="ATA-yr-Yln" secondAttribute="leading" constant="149" id="4IX-Hi-xs7"/>
+                                    <constraint firstItem="rMs-Di-gQD" firstAttribute="top" secondItem="tdQ-a0-5yw" secondAttribute="bottom" constant="15" id="4dP-Rz-w1W"/>
+                                    <constraint firstItem="cJo-gK-eW3" firstAttribute="top" secondItem="rMs-Di-gQD" secondAttribute="bottom" constant="30" id="8Ex-pd-c8B"/>
+                                    <constraint firstItem="SR7-Tf-nZu" firstAttribute="top" secondItem="z40-8x-UIz" secondAttribute="bottom" constant="40" id="8gU-9h-Xt7"/>
+                                    <constraint firstItem="tdQ-a0-5yw" firstAttribute="width" secondItem="dQ2-Zd-9F0" secondAttribute="width" multiplier="0.8" id="9yc-h5-6Nv"/>
+                                    <constraint firstAttribute="height" constant="800" id="Bqk-vU-Ekd"/>
+                                    <constraint firstItem="cJo-gK-eW3" firstAttribute="leading" secondItem="rMs-Di-gQD" secondAttribute="leading" constant="-50" id="E5d-o6-Qem"/>
+                                    <constraint firstItem="z40-8x-UIz" firstAttribute="top" secondItem="HTr-K4-xOo" secondAttribute="bottom" constant="8" id="IEv-v8-NMj"/>
+                                    <constraint firstItem="cJo-gK-eW3" firstAttribute="top" secondItem="k4o-dW-Y4i" secondAttribute="bottom" constant="30" id="KPC-JI-El7"/>
+                                    <constraint firstItem="ATA-yr-Yln" firstAttribute="top" secondItem="cJo-gK-eW3" secondAttribute="bottom" constant="8" id="Nhh-p1-GqG"/>
+                                    <constraint firstAttribute="bottom" secondItem="SR7-Tf-nZu" secondAttribute="bottom" constant="50" id="QJf-Sw-nEw"/>
+                                    <constraint firstItem="SR7-Tf-nZu" firstAttribute="width" secondItem="dQ2-Zd-9F0" secondAttribute="width" id="QaX-0y-7Ao"/>
+                                    <constraint firstAttribute="centerX" secondItem="SR7-Tf-nZu" secondAttribute="centerX" id="Qpr-Tt-g1D"/>
+                                    <constraint firstItem="tdQ-a0-5yw" firstAttribute="leading" secondItem="dQ2-Zd-9F0" secondAttribute="leading" id="Xis-20-Jh3"/>
+                                    <constraint firstItem="tdQ-a0-5yw" firstAttribute="width" secondItem="dQ2-Zd-9F0" secondAttribute="width" id="Y8f-Qr-gVD"/>
+                                    <constraint firstItem="rMs-Di-gQD" firstAttribute="trailing" secondItem="HTr-K4-xOo" secondAttribute="trailing" constant="-50" id="eEa-wg-3Eg"/>
+                                    <constraint firstAttribute="centerX" secondItem="tdQ-a0-5yw" secondAttribute="centerX" id="fB9-fe-UBk"/>
+                                    <constraint firstItem="cJo-gK-eW3" firstAttribute="centerY" secondItem="HTr-K4-xOo" secondAttribute="centerY" id="k8t-D4-ESJ"/>
+                                    <constraint firstItem="cJo-gK-eW3" firstAttribute="leading" secondItem="k4o-dW-Y4i" secondAttribute="leading" id="l77-ly-gb4"/>
+                                    <constraint firstItem="z40-8x-UIz" firstAttribute="centerX" secondItem="HTr-K4-xOo" secondAttribute="centerX" id="maK-7V-2AY"/>
+                                    <constraint firstAttribute="trailing" secondItem="tdQ-a0-5yw" secondAttribute="trailing" id="rr9-Vp-5fz"/>
+                                    <constraint firstItem="cJo-gK-eW3" firstAttribute="centerX" secondItem="ATA-yr-Yln" secondAttribute="centerX" id="tRb-wK-2qb"/>
+                                    <constraint firstAttribute="trailing" secondItem="tdQ-a0-5yw" secondAttribute="trailing" constant="-51" id="ybQ-V4-aqK"/>
+                                    <constraint firstAttribute="centerX" secondItem="rMs-Di-gQD" secondAttribute="centerX" id="zvr-Ka-eTL"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="Dq5-6a-Y96"/>
+                                        <exclude reference="Bqk-vU-Ekd"/>
+                                        <exclude reference="Xis-20-Jh3"/>
+                                        <exclude reference="Y8f-Qr-gVD"/>
+                                        <exclude reference="rr9-Vp-5fz"/>
+                                        <exclude reference="ybQ-V4-aqK"/>
+                                        <exclude reference="4IX-Hi-xs7"/>
+                                        <exclude reference="KPC-JI-El7"/>
+                                        <exclude reference="l77-ly-gb4"/>
                                     </mask>
                                 </variation>
-                            </view>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="z40-8x-UIz" firstAttribute="bottom" secondItem="ATA-yr-Yln" secondAttribute="bottom" id="1IP-GK-4Rc"/>
-                            <constraint firstItem="cJo-gK-eW3" firstAttribute="leading" secondItem="Q80-nb-frz" secondAttribute="leadingMargin" constant="10" id="1w4-ob-Dgx"/>
-                            <constraint firstItem="tdQ-a0-5yw" firstAttribute="top" secondItem="T7K-Tp-qLw" secondAttribute="bottom" constant="8" symbolic="YES" id="6O0-Kr-GJN"/>
-                            <constraint firstItem="HTr-K4-xOo" firstAttribute="leading" secondItem="z40-8x-UIz" secondAttribute="leading" id="8Qd-zF-Myy"/>
-                            <constraint firstAttribute="centerX" secondItem="rMs-Di-gQD" secondAttribute="centerX" id="Bnw-Da-U4C"/>
-                            <constraint firstItem="rMs-Di-gQD" firstAttribute="top" secondItem="tdQ-a0-5yw" secondAttribute="bottom" constant="15" id="CRt-k7-exJ"/>
-                            <constraint firstItem="cJo-gK-eW3" firstAttribute="trailing" secondItem="ATA-yr-Yln" secondAttribute="trailing" id="G6F-Fh-fud"/>
-                            <constraint firstAttribute="centerX" secondItem="SR7-Tf-nZu" secondAttribute="centerX" id="Gen-8E-i5R"/>
-                            <constraint firstItem="HTr-K4-xOo" firstAttribute="leading" secondItem="cJo-gK-eW3" secondAttribute="trailing" constant="16" id="LLW-QV-m3O"/>
-                            <constraint firstItem="z40-8x-UIz" firstAttribute="centerX" secondItem="HTr-K4-xOo" secondAttribute="centerX" id="PzR-84-UGe"/>
-                            <constraint firstItem="z40-8x-UIz" firstAttribute="top" secondItem="HTr-K4-xOo" secondAttribute="bottom" constant="8" symbolic="YES" id="R4x-sh-meE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="HTr-K4-xOo" secondAttribute="trailing" constant="10" id="Tri-jO-3Ef"/>
-                            <constraint firstItem="SR7-Tf-nZu" firstAttribute="leading" secondItem="Q80-nb-frz" secondAttribute="leadingMargin" id="URO-Ww-2qS"/>
-                            <constraint firstItem="tsJ-nh-mlq" firstAttribute="top" secondItem="SR7-Tf-nZu" secondAttribute="bottom" constant="8" symbolic="YES" id="Urb-BH-xX4"/>
-                            <constraint firstItem="SR7-Tf-nZu" firstAttribute="top" secondItem="z40-8x-UIz" secondAttribute="bottom" constant="40" id="Y3z-dj-56B"/>
-                            <constraint firstItem="cJo-gK-eW3" firstAttribute="centerY" secondItem="HTr-K4-xOo" secondAttribute="centerY" id="ZuM-iA-r6Z"/>
-                            <constraint firstItem="SR7-Tf-nZu" firstAttribute="top" secondItem="rMs-Di-gQD" secondAttribute="bottom" constant="30" id="aRt-d8-umb"/>
-                            <constraint firstItem="cJo-gK-eW3" firstAttribute="top" secondItem="rMs-Di-gQD" secondAttribute="bottom" constant="30" id="ePV-EW-aZ3"/>
-                            <constraint firstItem="ATA-yr-Yln" firstAttribute="top" secondItem="cJo-gK-eW3" secondAttribute="bottom" constant="8" symbolic="YES" id="gqH-08-J6u"/>
-                            <constraint firstItem="ATA-yr-Yln" firstAttribute="centerX" secondItem="cJo-gK-eW3" secondAttribute="centerX" id="i1L-nU-dEI"/>
-                            <constraint firstItem="z40-8x-UIz" firstAttribute="top" secondItem="ATA-yr-Yln" secondAttribute="top" id="lgW-Zx-gZH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="SR7-Tf-nZu" secondAttribute="trailing" id="nIu-wF-AF4"/>
-                            <constraint firstItem="ATA-yr-Yln" firstAttribute="leading" secondItem="cJo-gK-eW3" secondAttribute="leading" id="p18-Mf-Rqg"/>
-                            <constraint firstItem="tdQ-a0-5yw" firstAttribute="leading" secondItem="Q80-nb-frz" secondAttribute="leadingMargin" id="rR0-Fy-YK0"/>
-                            <constraint firstItem="rMs-Di-gQD" firstAttribute="top" secondItem="T7K-Tp-qLw" secondAttribute="bottom" constant="10" id="vAz-TZ-PIb"/>
-                            <constraint firstItem="HTr-K4-xOo" firstAttribute="leading" secondItem="cJo-gK-eW3" secondAttribute="trailing" constant="460" id="vMx-yd-R0r">
-                                <variation key="widthClass=regular" constant="10"/>
-                            </constraint>
-                            <constraint firstItem="SR7-Tf-nZu" firstAttribute="top" secondItem="z40-8x-UIz" secondAttribute="bottom" constant="34" id="w9H-XI-dFg"/>
-                            <constraint firstItem="SR7-Tf-nZu" firstAttribute="leading" secondItem="Q80-nb-frz" secondAttribute="leading" id="wG8-q6-YAb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="SR7-Tf-nZu" secondAttribute="trailing" id="wgO-GU-zKb"/>
-                            <constraint firstItem="z40-8x-UIz" firstAttribute="leading" secondItem="ATA-yr-Yln" secondAttribute="trailing" constant="-76" id="zbX-NK-iC5">
-                                <variation key="widthClass=regular" constant="20"/>
-                            </constraint>
-                            <constraint firstAttribute="trailingMargin" secondItem="tdQ-a0-5yw" secondAttribute="trailing" id="zff-V0-stR"/>
+                            <constraint firstItem="dQ2-Zd-9F0" firstAttribute="top" secondItem="T7K-Tp-qLw" secondAttribute="bottom" id="46d-hk-43s"/>
+                            <constraint firstItem="dQ2-Zd-9F0" firstAttribute="top" secondItem="T7K-Tp-qLw" secondAttribute="bottom" id="DyO-cm-b7n"/>
+                            <constraint firstAttribute="bottom" secondItem="dQ2-Zd-9F0" secondAttribute="bottom" id="MAk-eF-HhQ"/>
+                            <constraint firstAttribute="trailing" secondItem="dQ2-Zd-9F0" secondAttribute="trailing" id="OFB-TF-3GT"/>
+                            <constraint firstAttribute="bottom" secondItem="dQ2-Zd-9F0" secondAttribute="bottom" id="R66-6s-pvG"/>
+                            <constraint firstItem="dQ2-Zd-9F0" firstAttribute="leading" secondItem="Q80-nb-frz" secondAttribute="leading" id="dcB-KK-KuG"/>
+                            <constraint firstItem="dQ2-Zd-9F0" firstAttribute="top" secondItem="T7K-Tp-qLw" secondAttribute="bottom" id="dyc-YW-qmU"/>
+                            <constraint firstItem="dQ2-Zd-9F0" firstAttribute="top" secondItem="Q80-nb-frz" secondAttribute="top" id="q99-nE-Qa3"/>
+                            <constraint firstItem="dQ2-Zd-9F0" firstAttribute="top" secondItem="Q80-nb-frz" secondAttribute="top" constant="64" id="rW6-7b-lvK"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="G6F-Fh-fud"/>
-                                <exclude reference="vAz-TZ-PIb"/>
-                                <exclude reference="p18-Mf-Rqg"/>
-                                <exclude reference="aRt-d8-umb"/>
-                                <exclude reference="w9H-XI-dFg"/>
-                                <exclude reference="wG8-q6-YAb"/>
-                                <exclude reference="wgO-GU-zKb"/>
-                                <exclude reference="8Qd-zF-Myy"/>
-                                <exclude reference="LLW-QV-m3O"/>
-                                <exclude reference="vMx-yd-R0r"/>
-                                <exclude reference="zbX-NK-iC5"/>
-                                <exclude reference="Urb-BH-xX4"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=regular">
-                            <mask key="constraints">
-                                <exclude reference="1w4-ob-Dgx"/>
-                                <exclude reference="Tri-jO-3Ef"/>
-                                <exclude reference="vMx-yd-R0r"/>
-                                <include reference="zbX-NK-iC5"/>
+                                <exclude reference="46d-hk-43s"/>
+                                <exclude reference="DyO-cm-b7n"/>
+                                <exclude reference="MAk-eF-HhQ"/>
+                                <exclude reference="dyc-YW-qmU"/>
+                                <exclude reference="rW6-7b-lvK"/>
                             </mask>
                         </variation>
                     </view>
@@ -253,11 +256,14 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="800"/>
                     <connections>
                         <outlet property="actualTypeColorLabel" destination="HTr-K4-xOo" id="Uv2-sI-CDG"/>
                         <outlet property="actualTypeColorView" destination="z40-8x-UIz" id="FGj-O5-OQX"/>
                         <outlet property="fbShimmerView" destination="rMs-Di-gQD" id="wu6-a2-gcH"/>
                         <outlet property="resultMessageLabel" destination="SR7-Tf-nZu" id="yCj-Uo-lNG"/>
+                        <outlet property="scrollView" destination="dQ2-Zd-9F0" id="3pU-kB-oDG"/>
                         <outlet property="selectionView" destination="ATA-yr-Yln" id="2DJ-n4-wZO"/>
                         <outlet property="typeLabel" destination="k4o-dW-Y4i" id="ts1-xk-RTr"/>
                     </connections>

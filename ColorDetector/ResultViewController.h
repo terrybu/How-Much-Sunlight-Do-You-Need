@@ -15,6 +15,12 @@
 @property (strong, nonatomic) FitzpatrickType *pickedFitzType;
 @property (strong, nonatomic) UIColor *pickedColor;
 
+
+
+
+@property IBOutlet UIScrollView *scrollView;
+
+
 @property IBOutlet FBShimmeringView *fbShimmerView;
 @property IBOutlet UILabel *typeLabel;
 
