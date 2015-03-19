@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lcx-wc-jan">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pIO-v6-fUv">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -311,6 +311,7 @@
         <scene sceneID="Dpc-xy-Lq7">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lcx-wc-jan" userLabel="NavFirst" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Camera" id="fMW-I9-yiZ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="ZXP-HW-7lk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -329,7 +330,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fjt-4U-5bh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="198" y="265"/>
+            <point key="canvasLocation" x="205.5" y="-95"/>
         </scene>
         <!--NavResult-->
         <scene sceneID="Clu-VZ-psC">
@@ -353,6 +354,80 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7fO-dQ-HsV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1900" y="265"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Mi4-JP-kFP">
+            <objects>
+                <tabBarController id="pIO-v6-fUv" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="mkE-0y-Typ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="lcx-wc-jan" kind="relationship" relationship="viewControllers" id="wIr-Tc-LTc"/>
+                        <segue destination="xyw-PL-n7Y" kind="relationship" relationship="viewControllers" id="u4i-2A-2cI"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qJz-SU-upk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-492" y="278"/>
+        </scene>
+        <!--Web-->
+        <scene sceneID="nW7-Jw-jLs">
+            <objects>
+                <viewController id="xyw-PL-n7Y" customClass="WKWebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xN8-QF-MFP"/>
+                        <viewControllerLayoutGuide type="bottom" id="SeL-X0-n18"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o2p-5u-PoE">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJB-XK-TDr">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iJB-XK-TDr" firstAttribute="leading" secondItem="o2p-5u-PoE" secondAttribute="leading" id="48M-Nb-uO1"/>
+                            <constraint firstItem="SeL-X0-n18" firstAttribute="top" secondItem="iJB-XK-TDr" secondAttribute="bottom" id="FcK-b0-gai"/>
+                            <constraint firstAttribute="trailing" secondItem="iJB-XK-TDr" secondAttribute="trailing" id="V0G-id-9gd"/>
+                            <constraint firstItem="iJB-XK-TDr" firstAttribute="top" secondItem="xN8-QF-MFP" secondAttribute="bottom" id="b5H-SN-o5N"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="iJB-XK-TDr"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="48M-Nb-uO1"/>
+                                <exclude reference="V0G-id-9gd"/>
+                                <exclude reference="b5H-SN-o5N"/>
+                                <exclude reference="FcK-b0-gai"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="iJB-XK-TDr"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="48M-Nb-uO1"/>
+                                <include reference="V0G-id-9gd"/>
+                                <include reference="b5H-SN-o5N"/>
+                                <include reference="FcK-b0-gai"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Web" id="5sC-Jq-JaO"/>
+                    <connections>
+                        <outlet property="containerViewForWeb" destination="o2p-5u-PoE" id="zlY-Wf-vbb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ivs-o6-e1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="205.5" y="611"/>
         </scene>
     </scenes>
 </document>

@@ -53,6 +53,7 @@
     [_touchPixelRectView.layer setShadowRadius:3.0];
     [_touchPixelRectView.layer setShadowOffset:CGSizeMake(3.0, 3.0)];
     [self.view addSubview:_touchPixelRectView];
+    
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -67,6 +68,7 @@
         self.title = @"Tap photo";
         self.navigationItem.leftBarButtonItem = cameraButton;
         doneButton = [[UIBarButtonItem alloc]initWithTitle:@"Calculate" style:UIBarButtonItemStyleDone target:self action:@selector(showResultButton)];
+        doneButton.tintColor = [UIColor blackColor];
         
         self.navigationItem.rightBarButtonItem = (self.pickedColor != nil) ? doneButton : nil;
         

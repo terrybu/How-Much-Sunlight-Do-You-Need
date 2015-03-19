@@ -88,7 +88,6 @@
             [scoresArray addObject:[NSNumber numberWithFloat:temp]];
         }
     }
-    
     //The scoresArray is to keep track of WHICH TYPE had the lowest disparity score.
     NSNumber *disparityScoreWrapped = [NSNumber numberWithFloat:disparityScore];
     NSUInteger indexOfDisparity = [scoresArray indexOfObject:disparityScoreWrapped];
