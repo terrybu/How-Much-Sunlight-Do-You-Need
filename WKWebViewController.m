@@ -20,9 +20,18 @@
     
     self.webView = [[WKWebView alloc] init];
     [self.webView loadRequest:[NSURLRequest requestWithURL: [NSURL URLWithString:@"http://nadir.nilu.no/~olaeng/fastrt/VitD-ez_quartMEDandMED_v2.html"]]];
+    self.webView.navigationDelegate = self;
     
     self.view = self.webView;
-    
+}
+
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
+    [self.webView evaluateJavaScript:@"document.getElementsByName(\"skin_index\")[1].checked = true" completionHandler:^(NSString *result, NSError *error) {
+        if (result || error) {
+            NSLog(@"result: %@", result);
+            NSLog(@"error: %@", error);
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

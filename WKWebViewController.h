@@ -10,7 +10,7 @@
 #import <WebKit/WebKit.h>
 
 
-@interface WKWebViewController : UIViewController
+@interface WKWebViewController : UIViewController <WKNavigationDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *containerViewForWeb;
 @property (strong, nonatomic) WKWebView* webView;
