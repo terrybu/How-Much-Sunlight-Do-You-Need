@@ -13,8 +13,11 @@
 #import "FitzpatrickType.h"
 #import "ResultViewController.h"
 
+#define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
+
 @interface FirstViewController () {
     UIBarButtonItem *cameraButton;
+    UIBarButtonItem *doneButton;
 }
 
 @property (strong, nonatomic) UIColor *pickedColor;
@@ -37,7 +40,7 @@
 
 - (void) setUpPreviewRect {
     float sameLengthForRectSide = self.view.frame.size.width/6;
-    _touchPixelRectView = [[TouchPixelColorView alloc]initWithFrame:CGRectMake(0, 64, sameLengthForRectSide, sameLengthForRectSide )];
+    _touchPixelRectView = [[TouchPixelColorView alloc]initWithFrame:CGRectMake(0, 0, sameLengthForRectSide, sameLengthForRectSide )];
     _touchPixelRectView.backgroundColor = [UIColor blackColor];
     //border
     _touchPixelRectView.layer.borderColor = [UIColor lightGrayColor].CGColor;
@@ -59,15 +62,12 @@
         [self showActionSheet];
     }
     else if (self.imageView.image != nil) {
-        self.title = @"Tap on your skin";
-        UIBarButtonItem *doneButton = [[UIBarButtonItem alloc]initWithTitle:@"Show Result" style:UIBarButtonItemStyleDone target:self action:@selector(showResultButton)];
+        self.title = @"Tap photo";
         self.navigationItem.leftBarButtonItem = cameraButton;
-        self.navigationItem.rightBarButtonItem = doneButton;
+        doneButton = [[UIBarButtonItem alloc]initWithTitle:@"Calculate" style:UIBarButtonItemStyleDone target:self action:@selector(showResultButton)];
         
-        if (self.pickedColor == nil)
-            doneButton.enabled = NO;
-        else
-            doneButton.enabled = YES;
+        self.navigationItem.rightBarButtonItem = (self.pickedColor != nil) ? doneButton : nil;
+        
     }
 }
 
@@ -85,7 +85,7 @@
         
         self.touchPixelRectView.backgroundColor = self.pickedColor;
         _touchPixelRectView.hidden = NO;
-        self.navigationItem.rightBarButtonItem.enabled = YES;
+        self.navigationItem.rightBarButtonItem = doneButton;
         
         [self comparePickedColorToFitzpatrickTypes:self.pickedColor];
         
@@ -113,34 +113,41 @@
 
 
 - (void) showActionSheet {
-    UIActionSheet *actionSheet = [[UIActionSheet alloc]
-                                  initWithTitle:@"Please select one from menu"
-                                  delegate:self
-                                  cancelButtonTitle:@"Cancel"
-                                  destructiveButtonTitle:nil
-                                  otherButtonTitles:@"Use Camera to Take Photo", @"Use Existing Photos", nil];
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:nil
+                                                                   message:nil
+                                                            preferredStyle:UIAlertControllerStyleActionSheet];
+    alert.view.tintColor = Rgb2UIColor(205, 50, 100);
     
-    [actionSheet showInView:self.view];
+    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel
+                                                          handler:^(UIAlertAction * action) {}];
+    
+    [alert addAction:cancelAction];
+    
+    
+    UIAlertAction* showCameraAction = [UIAlertAction actionWithTitle:@"Take new photo with camera" style:UIAlertActionStyleDefault
+                                                             handler:^(UIAlertAction * action)
+                                       {
+                                           [self showCamera];
+                                           
+                                       }];
+    
+    [alert addAction:showCameraAction];
+    
+    UIAlertAction* usePhotos = [UIAlertAction actionWithTitle:@"Use existing photos" style:UIAlertActionStyleDefault
+                                                             handler:^(UIAlertAction * action) {
+                                                                 [self showPhotosAlbum];
+                                                             }];
+    
+    [alert addAction:usePhotos];
+    
+    
+    [self presentViewController:alert animated:YES completion:nil];
+
 }
 
 
 - (void) showResultButton {
     [self performSegueWithIdentifier:@"resultSegue" sender:nil];
-}
-
-- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    switch (buttonIndex) {
-        case 0: //show camera
-            [self showCamera];
-            break;
-        case 1: //show photos
-            [self showPhotosAlbum];
-            break;
-        case 2: //cancel button
-            break;
-        default:
-            break;
-    }
 }
 
 

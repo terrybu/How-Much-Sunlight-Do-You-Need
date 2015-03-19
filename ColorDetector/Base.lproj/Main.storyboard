@@ -246,7 +246,8 @@
                                         <exclude reference="l9a-Tm-uad"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=regular">
+                                <variation key="widthClass=regular" ambiguous="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="736"/>
                                     <mask key="constraints">
                                         <include reference="9R1-Sf-qof"/>
                                         <exclude reference="eEa-wg-3Eg"/>
@@ -306,14 +307,20 @@
             </objects>
             <point key="canvasLocation" x="2686" y="265"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--NavFirst-->
         <scene sceneID="Dpc-xy-Lq7">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lcx-wc-jan" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lcx-wc-jan" userLabel="NavFirst" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZXP-HW-7lk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="ZXP-HW-7lk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.93725490196078431" green="0.72156862745098038" blue="0.74117647058823533" alpha="0.70000000000000007" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -324,14 +331,19 @@
             </objects>
             <point key="canvasLocation" x="198" y="265"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--NavResult-->
         <scene sceneID="Clu-VZ-psC">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4hl-3F-abS" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4hl-3F-abS" userLabel="NavResult" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OWK-ib-WzA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="OWK-ib-WzA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.93725490196078431" green="0.72156862745098038" blue="0.74117647058823533" alpha="0.70000000000000007" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
