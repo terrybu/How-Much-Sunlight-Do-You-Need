@@ -23,11 +23,11 @@ typedef enum {
 @property FitzpatrickTypeNum typeNumber;
 @property (strong, nonatomic) NSString* typeName;
 @property (strong, nonatomic) NSString* resultMessage;
-
 @property (strong, nonatomic) UIColor *uiColor;
 
 
 - (id) initWithType: (FitzpatrickTypeNum) typeNumber;
++ (FitzpatrickType *) comparePickedColorToFitzpatrickTypes:(UIColor *) color;
 
 
 @end

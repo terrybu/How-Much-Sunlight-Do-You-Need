@@ -11,9 +11,10 @@
 @interface FirstViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate>
 
 @property IBOutlet UIImageView *imageView;
-
-
 - (IBAction)cameraButton:(id)sender;
+
+
+
 
 @end
 

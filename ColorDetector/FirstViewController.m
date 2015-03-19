@@ -32,6 +32,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    self.imageView.backgroundColor = [UIColor blackColor];
+    
     cameraButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(cameraButton:)];
     self.navigationItem.rightBarButtonItem = cameraButton;
     
@@ -87,7 +89,7 @@
         _touchPixelRectView.hidden = NO;
         self.navigationItem.rightBarButtonItem = doneButton;
         
-        [self comparePickedColorToFitzpatrickTypes:self.pickedColor];
+        _mostSimilarType = [FitzpatrickType comparePickedColorToFitzpatrickTypes:self.pickedColor];
         
         //    [self showRGBInPreview:red green:green blue:blue];
     }
@@ -119,10 +121,9 @@
     alert.view.tintColor = Rgb2UIColor(205, 50, 100);
     
     UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel
-                                                          handler:^(UIAlertAction * action) {}];
+                                                         handler:^(UIAlertAction * action) {}];
     
     [alert addAction:cancelAction];
-    
     
     UIAlertAction* showCameraAction = [UIAlertAction actionWithTitle:@"Take new photo with camera" style:UIAlertActionStyleDefault
                                                              handler:^(UIAlertAction * action)
@@ -134,15 +135,14 @@
     [alert addAction:showCameraAction];
     
     UIAlertAction* usePhotos = [UIAlertAction actionWithTitle:@"Use existing photos" style:UIAlertActionStyleDefault
-                                                             handler:^(UIAlertAction * action) {
-                                                                 [self showPhotosAlbum];
-                                                             }];
+                                                      handler:^(UIAlertAction * action) {
+                                                          [self showPhotosAlbum];
+                                                      }];
     
     [alert addAction:usePhotos];
     
-    
     [self presentViewController:alert animated:YES completion:nil];
-
+    
 }
 
 
@@ -192,8 +192,6 @@
 
 
 
-
-
 #pragma mark Custom Logic for Color Comparisons
 - (void)showRGBInPreview:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue {
     if (self.touchPixelRectView.redLab == nil && self.touchPixelRectView.greenLab == nil && self.touchPixelRectView.blueLab == nil) {
@@ -220,52 +218,6 @@
     
     //So for this example, note that the green label goes 20 pixels down from the top of the rectView, anod not just 20 pixels down from the parent view (which would be covered by the navbar and not shown anyways)
 }
-
-
-
-- (void) comparePickedColorToFitzpatrickTypes: (UIColor *) pickedColor {
-    CGFloat r1, g1, b1, a1, r2, g2, b2, a2;
-    [pickedColor getRed:&r1 green:&g1 blue:&b1 alpha:&a1];
-    //I'm going to get the CGFLoat RGB values (0 being black and 1 being white) of the picked Color
-    
-    //this is a float to count the differences between the pickedColor and a Fitzpatrick Type.
-    //if the score is the smallest, that type is the one we will say the MOST SIMILAR to the picked Color
-    float disparityScore = 0;
-    
-    //Instantiate FitzpatrickType objects
-    FitzpatrickType *type1 = [[FitzpatrickType alloc]initWithType:Type1];
-    FitzpatrickType *type2 = [[FitzpatrickType alloc]initWithType:Type2];
-    FitzpatrickType *type3 = [[FitzpatrickType alloc]initWithType:Type3];
-    FitzpatrickType *type4 = [[FitzpatrickType alloc]initWithType:Type4];
-    FitzpatrickType *type5 = [[FitzpatrickType alloc]initWithType:Type5];
-    FitzpatrickType *type6 = [[FitzpatrickType alloc]initWithType:Type6];
-    
-    //Get all the types into an array
-    NSArray *fitzpatrickArray = @[  type1, type2, type3, type4, type5, type6 ];
-    NSMutableArray *scoresArray = [[NSMutableArray alloc]init];
-    
-    //we are going to get sum of the abs value difference between pickedColor and FitzpatrickTypes.
-    for (int i=0; i < fitzpatrickArray.count; i++) {
-        FitzpatrickType *fitz = fitzpatrickArray[i];
-        UIColor *colorToCheck = fitz.uiColor;
-        [colorToCheck getRed:&r2 green:&g2 blue:&b2 alpha:&a2];
-        if (disparityScore == 0) {
-            disparityScore = fabs(r1-r2) + fabs(g1-g2) + fabs(b1-b2);
-            [scoresArray addObject:[NSNumber numberWithFloat:disparityScore]];
-        }
-        else {
-            float temp = fabs(r1-r2) + fabs(g1-g2) + fabs(b1-b2);
-            disparityScore = fminf(disparityScore, temp);
-            [scoresArray addObject:[NSNumber numberWithFloat:temp]];
-        }
-    }
-    
-    //The scoresArray is to keep track of WHICH TYPE had the lowest disparity score.
-    NSNumber *disparityScoreWrapped = [NSNumber numberWithFloat:disparityScore];
-    NSUInteger indexOfDisparity = [scoresArray indexOfObject:disparityScoreWrapped];
-    _mostSimilarType = fitzpatrickArray[indexOfDisparity];
-}
-
 
 
 - (void)didReceiveMemoryWarning {
