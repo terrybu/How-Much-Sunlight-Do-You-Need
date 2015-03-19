@@ -14,10 +14,10 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l1C-Se-gPM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l1C-Se-gPM">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                             </imageView>
                         </subviews>
@@ -49,11 +49,11 @@
                         <viewControllerLayoutGuide type="bottom" id="tsJ-nh-mlq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Q80-nb-frz">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dQ2-Zd-9F0">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="736"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMs-Di-gQD" customClass="FBShimmeringView">
                                         <rect key="frame" x="198" y="85" width="205" height="45"/>
@@ -383,6 +383,7 @@
                         <viewControllerLayoutGuide type="bottom" id="SeL-X0-n18"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="o2p-5u-PoE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJB-XK-TDr">
@@ -395,17 +396,19 @@
                             <constraint firstItem="iJB-XK-TDr" firstAttribute="leading" secondItem="o2p-5u-PoE" secondAttribute="leading" id="48M-Nb-uO1"/>
                             <constraint firstItem="SeL-X0-n18" firstAttribute="top" secondItem="iJB-XK-TDr" secondAttribute="bottom" id="FcK-b0-gai"/>
                             <constraint firstAttribute="trailing" secondItem="iJB-XK-TDr" secondAttribute="trailing" id="V0G-id-9gd"/>
-                            <constraint firstItem="iJB-XK-TDr" firstAttribute="top" secondItem="xN8-QF-MFP" secondAttribute="bottom" id="b5H-SN-o5N"/>
+                            <constraint firstItem="iJB-XK-TDr" firstAttribute="top" secondItem="xN8-QF-MFP" secondAttribute="bottom" id="b5H-SN-o5N">
+                                <variation key="widthClass=regular" constant="0.0"/>
+                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="iJB-XK-TDr"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="FcK-b0-gai"/>
                                 <exclude reference="48M-Nb-uO1"/>
                                 <exclude reference="V0G-id-9gd"/>
                                 <exclude reference="b5H-SN-o5N"/>
-                                <exclude reference="FcK-b0-gai"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
@@ -413,10 +416,10 @@
                                 <include reference="iJB-XK-TDr"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="FcK-b0-gai"/>
                                 <include reference="48M-Nb-uO1"/>
                                 <include reference="V0G-id-9gd"/>
                                 <include reference="b5H-SN-o5N"/>
-                                <include reference="FcK-b0-gai"/>
                             </mask>
                         </variation>
                     </view>

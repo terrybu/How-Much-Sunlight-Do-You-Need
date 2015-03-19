@@ -31,6 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.title = @"Camera";
     
     self.imageView.backgroundColor = [UIColor blackColor];
     
@@ -60,12 +61,12 @@
     [super viewWillAppear:YES];
     
     if (self.imageView.image == nil) {
-        self.title = @"Select or take photo";
+        self.navigationItem.title = @"Select or take photo";
         _touchPixelRectView.hidden = YES;
         [self showActionSheet];
     }
     else if (self.imageView.image != nil) {
-        self.title = @"Tap photo";
+        self.navigationItem.title = @"Tap photo";
         self.navigationItem.leftBarButtonItem = cameraButton;
         doneButton = [[UIBarButtonItem alloc]initWithTitle:@"Calculate" style:UIBarButtonItemStyleDone target:self action:@selector(showResultButton)];
         doneButton.tintColor = [UIColor blackColor];
@@ -117,16 +118,19 @@
 
 
 - (void) showActionSheet {
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:nil
+    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:nil
                                                                    message:nil
                                                             preferredStyle:UIAlertControllerStyleActionSheet];
-    alert.view.tintColor = Rgb2UIColor(205, 50, 100);
+    alertController.view.tintColor = Rgb2UIColor(205, 50, 100);
+    
+    //to support alertcontroller on ipad
+    alertController.popoverPresentationController.sourceView = self.view;
+    alertController.popoverPresentationController.sourceRect = CGRectMake(self.view.frame.size.width/2, 24, 1.0, 1.0);
     
     UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel
                                                          handler:^(UIAlertAction * action) {}];
     
-    [alert addAction:cancelAction];
-    
+    [alertController addAction:cancelAction];
     UIAlertAction* showCameraAction = [UIAlertAction actionWithTitle:@"Take new photo with camera" style:UIAlertActionStyleDefault
                                                              handler:^(UIAlertAction * action)
                                        {
@@ -134,17 +138,14 @@
                                            
                                        }];
     
-    [alert addAction:showCameraAction];
-    
+    [alertController addAction:showCameraAction];
     UIAlertAction* usePhotos = [UIAlertAction actionWithTitle:@"Use existing photos" style:UIAlertActionStyleDefault
                                                       handler:^(UIAlertAction * action) {
                                                           [self showPhotosAlbum];
                                                       }];
     
-    [alert addAction:usePhotos];
-    
-    [self presentViewController:alert animated:YES completion:nil];
-    
+    [alertController addAction:usePhotos];
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 

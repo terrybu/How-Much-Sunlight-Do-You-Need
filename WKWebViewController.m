@@ -18,10 +18,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.webView = [[WKWebView alloc]initWithFrame:self.containerViewForWeb.frame];
+    self.webView = [[WKWebView alloc] init];
     [self.webView loadRequest:[NSURLRequest requestWithURL: [NSURL URLWithString:@"http://nadir.nilu.no/~olaeng/fastrt/VitD-ez_quartMEDandMED_v2.html"]]];
     
-    [self.containerViewForWeb addSubview:self.webView];
+    self.view = self.webView;
     
 }
 
