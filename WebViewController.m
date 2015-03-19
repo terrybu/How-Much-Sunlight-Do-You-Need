@@ -6,32 +6,32 @@
 //  Copyright (c) 2015 Terry Bu. All rights reserved.
 //
 
-#import "WKWebViewController.h"
+#import "WebViewController.h"
 
-@interface WKWebViewController ()
+@interface WebViewController ()
 
 @end
 
-@implementation WKWebViewController
+@implementation WebViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.webView = [[WKWebView alloc] init];
     [self.webView loadRequest:[NSURLRequest requestWithURL: [NSURL URLWithString:@"http://nadir.nilu.no/~olaeng/fastrt/VitD-ez_quartMEDandMED_v2.html"]]];
-    self.webView.navigationDelegate = self;
-    
-    self.view = self.webView;
+    self.webView.delegate = self;
 }
 
-- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
-    [self.webView evaluateJavaScript:@"document.getElementsByName(\"skin_index\")[1].checked = true" completionHandler:^(NSString *result, NSError *error) {
-        if (result || error) {
-            NSLog(@"result: %@", result);
-            NSLog(@"error: %@", error);
-        }
-    }];
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    
+    if ([webView.request.URL.absoluteString isEqualToString:@"http://nadir.nilu.no/~olaeng/fastrt/VitD-ez_quartMEDandMED_v2.html"]){
+        [self.webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByName(\"skin_index\")[1].checked = true"];
+        [self.webView stringByEvaluatingJavaScriptFromString:@"var inputs = document.getElementsByTagName('input'); for(var i = 0; i < inputs.length; i++) {if(inputs[i].type.toLowerCase() == 'submit') {inputs[i].click();}}"];
+    }
+    
+    if ([webView.request.URL.absoluteString isEqualToString:@"http://nadir.nilu.no/cgi-bin/olaeng/VitD-ez_quartMEDandMED_v2.cgi"])
+        NSLog(@"found the submit result page");
+
 }
 
 - (void)didReceiveMemoryWarning {

@@ -10,7 +10,7 @@
 		D919D2ED1AB7495200D77F6C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D919D2EC1AB7495200D77F6C /* QuartzCore.framework */; };
 		D94660F51ABB16800087D347 /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D94660F21ABB16800087D347 /* FBShimmeringLayer.m */; };
 		D94660F61ABB16800087D347 /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = D94660F41ABB16800087D347 /* FBShimmeringView.m */; };
-		D964299D1ABB5C2900DDA435 /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D964299C1ABB5C2900DDA435 /* WKWebViewController.m */; };
+		D964299D1ABB5C2900DDA435 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D964299C1ABB5C2900DDA435 /* WebViewController.m */; };
 		D99CAA101AB76E5F00715D3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D99CA9FF1AB76E5F00715D3C /* AppDelegate.m */; };
 		D99CAA131AB76E5F00715D3C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D99CAA061AB76E5F00715D3C /* FirstViewController.m */; };
 		D99CAA141AB76E5F00715D3C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D99CAA071AB76E5F00715D3C /* Images.xcassets */; };
@@ -33,8 +33,8 @@
 		D94660F31ABB16800087D347 /* FBShimmeringView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringView.h; sourceTree = "<group>"; };
 		D94660F41ABB16800087D347 /* FBShimmeringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringView.m; sourceTree = "<group>"; };
 		D947AB0A1AB7289C00AEFEC9 /* FitzpatrickSkinTypeDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitzpatrickSkinTypeDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D964299B1ABB5C2900DDA435 /* WKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewController.h; sourceTree = "<group>"; };
-		D964299C1ABB5C2900DDA435 /* WKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewController.m; sourceTree = "<group>"; };
+		D964299B1ABB5C2900DDA435 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		D964299C1ABB5C2900DDA435 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		D99CA9FE1AB76E5F00715D3C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ColorDetector/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		D99CA9FF1AB76E5F00715D3C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ColorDetector/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		D99CAA041AB76E5F00715D3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
@@ -121,10 +121,8 @@
 				D99CAA061AB76E5F00715D3C /* FirstViewController.m */,
 				D99CAA0A1AB76E5F00715D3C /* ResultViewController.h */,
 				D99CAA0B1AB76E5F00715D3C /* ResultViewController.m */,
-				D964299B1ABB5C2900DDA435 /* WKWebViewController.h */,
-				D964299C1ABB5C2900DDA435 /* WKWebViewController.m */,
-				D99CAA231AB7897600715D3C /* FitzpatrickType.h */,
-				D99CAA241AB7897600715D3C /* FitzpatrickType.m */,
+				D964299B1ABB5C2900DDA435 /* WebViewController.h */,
+				D964299C1ABB5C2900DDA435 /* WebViewController.m */,
 				D99CAA031AB76E5F00715D3C /* Main.storyboard */,
 				D99CAA1B1AB7705500715D3C /* Custom */,
 				D947AB0D1AB7289C00AEFEC9 /* Supporting Files */,
@@ -135,6 +133,8 @@
 		D99CAA1B1AB7705500715D3C /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				D99CAA231AB7897600715D3C /* FitzpatrickType.h */,
+				D99CAA241AB7897600715D3C /* FitzpatrickType.m */,
 				D94660EE1ABB16800087D347 /* FBShimmering */,
 				D99CAA201AB77F8900715D3C /* ColorConstants.h */,
 				D99CAA211AB77F8900715D3C /* ColorConstants.m */,
@@ -221,7 +221,7 @@
 				D99CAA181AB76E5F00715D3C /* TouchPixelColorView.m in Sources */,
 				D94660F61ABB16800087D347 /* FBShimmeringView.m in Sources */,
 				D99CAA171AB76E5F00715D3C /* ResultViewController.m in Sources */,
-				D964299D1ABB5C2900DDA435 /* WKWebViewController.m in Sources */,
+				D964299D1ABB5C2900DDA435 /* WebViewController.m in Sources */,
 				D99CAA191AB76E5F00715D3C /* UIView+ColorOfPoint.m in Sources */,
 				D99CAA101AB76E5F00715D3C /* AppDelegate.m in Sources */,
 				D99CAA161AB76E5F00715D3C /* main.m in Sources */,

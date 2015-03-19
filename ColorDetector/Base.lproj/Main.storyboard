@@ -377,7 +377,7 @@
         <!--Web-->
         <scene sceneID="nW7-Jw-jLs">
             <objects>
-                <viewController id="xyw-PL-n7Y" customClass="WKWebViewController" sceneMemberID="viewController">
+                <viewController id="xyw-PL-n7Y" customClass="WebViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xN8-QF-MFP"/>
                         <viewControllerLayoutGuide type="bottom" id="SeL-X0-n18"/>
@@ -386,51 +386,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJB-XK-TDr">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHU-AR-sX5">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="iJB-XK-TDr" firstAttribute="leading" secondItem="o2p-5u-PoE" secondAttribute="leading" id="48M-Nb-uO1"/>
-                            <constraint firstItem="SeL-X0-n18" firstAttribute="top" secondItem="iJB-XK-TDr" secondAttribute="bottom" id="FcK-b0-gai"/>
-                            <constraint firstAttribute="trailing" secondItem="iJB-XK-TDr" secondAttribute="trailing" id="V0G-id-9gd"/>
-                            <constraint firstItem="iJB-XK-TDr" firstAttribute="top" secondItem="xN8-QF-MFP" secondAttribute="bottom" id="b5H-SN-o5N">
-                                <variation key="widthClass=regular" constant="0.0"/>
-                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="gHU-AR-sX5" secondAttribute="trailing" id="78q-lk-EWg"/>
+                            <constraint firstItem="gHU-AR-sX5" firstAttribute="leading" secondItem="o2p-5u-PoE" secondAttribute="leading" id="KZK-L6-0YA"/>
+                            <constraint firstItem="SeL-X0-n18" firstAttribute="top" secondItem="gHU-AR-sX5" secondAttribute="bottom" id="X8q-U7-teq"/>
+                            <constraint firstItem="gHU-AR-sX5" firstAttribute="top" secondItem="o2p-5u-PoE" secondAttribute="top" id="rAS-5t-Jwb"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="iJB-XK-TDr"/>
+                                <exclude reference="gHU-AR-sX5"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="FcK-b0-gai"/>
-                                <exclude reference="48M-Nb-uO1"/>
-                                <exclude reference="V0G-id-9gd"/>
-                                <exclude reference="b5H-SN-o5N"/>
+                                <exclude reference="X8q-U7-teq"/>
+                                <exclude reference="78q-lk-EWg"/>
+                                <exclude reference="KZK-L6-0YA"/>
+                                <exclude reference="rAS-5t-Jwb"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
                             <mask key="subviews">
-                                <include reference="iJB-XK-TDr"/>
+                                <include reference="gHU-AR-sX5"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="FcK-b0-gai"/>
-                                <include reference="48M-Nb-uO1"/>
-                                <include reference="V0G-id-9gd"/>
-                                <include reference="b5H-SN-o5N"/>
+                                <include reference="X8q-U7-teq"/>
+                                <include reference="78q-lk-EWg"/>
+                                <include reference="KZK-L6-0YA"/>
+                                <include reference="rAS-5t-Jwb"/>
                             </mask>
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Web" id="5sC-Jq-JaO"/>
                     <connections>
-                        <outlet property="containerViewForWeb" destination="o2p-5u-PoE" id="zlY-Wf-vbb"/>
+                        <outlet property="webView" destination="gHU-AR-sX5" id="3id-0H-1Nt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ivs-o6-e1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="205.5" y="611"/>
+            <point key="canvasLocation" x="215.25" y="586"/>
         </scene>
     </scenes>
     <resources>
