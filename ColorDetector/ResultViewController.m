@@ -51,5 +51,8 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)typeFoundActionButton:(id)sender {
+}
+
 
 @end

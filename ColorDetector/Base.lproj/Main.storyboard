@@ -161,7 +161,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Result Messages Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SR7-Tf-nZu">
-                                        <rect key="frame" x="0.0" y="333" width="600" height="32"/>
+                                        <rect key="frame" x="30" y="333" width="540" height="32"/>
                                         <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="25"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -210,7 +210,7 @@
                                     <constraint firstItem="cJo-gK-eW3" firstAttribute="top" secondItem="k4o-dW-Y4i" secondAttribute="bottom" constant="30" id="KPC-JI-El7"/>
                                     <constraint firstItem="ATA-yr-Yln" firstAttribute="top" secondItem="cJo-gK-eW3" secondAttribute="bottom" constant="8" id="Nhh-p1-GqG"/>
                                     <constraint firstAttribute="bottom" secondItem="SR7-Tf-nZu" secondAttribute="bottom" constant="50" id="QJf-Sw-nEw"/>
-                                    <constraint firstItem="SR7-Tf-nZu" firstAttribute="width" secondItem="dQ2-Zd-9F0" secondAttribute="width" id="QaX-0y-7Ao"/>
+                                    <constraint firstItem="SR7-Tf-nZu" firstAttribute="width" secondItem="dQ2-Zd-9F0" secondAttribute="width" multiplier="0.9" id="QaX-0y-7Ao"/>
                                     <constraint firstAttribute="centerX" secondItem="SR7-Tf-nZu" secondAttribute="centerX" id="Qpr-Tt-g1D"/>
                                     <constraint firstItem="tdQ-a0-5yw" firstAttribute="leading" secondItem="dQ2-Zd-9F0" secondAttribute="leading" id="Xis-20-Jh3"/>
                                     <constraint firstItem="tdQ-a0-5yw" firstAttribute="width" secondItem="dQ2-Zd-9F0" secondAttribute="width" id="Y8f-Qr-gVD"/>
@@ -288,6 +288,11 @@
                         <barButtonItem key="leftBarButtonItem" title="Back" style="done" id="nn6-Zk-wdr">
                             <connections>
                                 <action selector="backButton:" destination="qA9-J9-bhR" id="9dV-0P-Xap"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Vhn-nC-j5e">
+                            <connections>
+                                <action selector="typeFoundActionButton:" destination="qA9-J9-bhR" id="UoU-72-0vt"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -386,49 +391,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHU-AR-sX5">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8VC-nT-fxk">
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="gHU-AR-sX5" secondAttribute="trailing" id="78q-lk-EWg"/>
-                            <constraint firstItem="gHU-AR-sX5" firstAttribute="leading" secondItem="o2p-5u-PoE" secondAttribute="leading" id="KZK-L6-0YA"/>
-                            <constraint firstItem="SeL-X0-n18" firstAttribute="top" secondItem="gHU-AR-sX5" secondAttribute="bottom" id="X8q-U7-teq"/>
-                            <constraint firstItem="gHU-AR-sX5" firstAttribute="top" secondItem="o2p-5u-PoE" secondAttribute="top" id="rAS-5t-Jwb"/>
+                            <constraint firstItem="SeL-X0-n18" firstAttribute="top" secondItem="8VC-nT-fxk" secondAttribute="bottom" id="12k-B8-yna"/>
+                            <constraint firstAttribute="bottom" secondItem="8VC-nT-fxk" secondAttribute="bottom" id="9vg-hV-wG0"/>
+                            <constraint firstAttribute="trailing" secondItem="8VC-nT-fxk" secondAttribute="trailing" id="BcI-S5-Q5U"/>
+                            <constraint firstItem="8VC-nT-fxk" firstAttribute="leading" secondItem="o2p-5u-PoE" secondAttribute="leading" id="NFq-ZC-WvL"/>
+                            <constraint firstItem="8VC-nT-fxk" firstAttribute="top" secondItem="o2p-5u-PoE" secondAttribute="top" id="TT6-pn-H86"/>
+                            <constraint firstItem="8VC-nT-fxk" firstAttribute="top" secondItem="xN8-QF-MFP" secondAttribute="bottom" id="Xmh-N9-qqc"/>
                         </constraints>
                         <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="gHU-AR-sX5"/>
-                            </mask>
                             <mask key="constraints">
-                                <exclude reference="X8q-U7-teq"/>
-                                <exclude reference="78q-lk-EWg"/>
-                                <exclude reference="KZK-L6-0YA"/>
-                                <exclude reference="rAS-5t-Jwb"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=regular">
-                            <mask key="subviews">
-                                <include reference="gHU-AR-sX5"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="X8q-U7-teq"/>
-                                <include reference="78q-lk-EWg"/>
-                                <include reference="KZK-L6-0YA"/>
-                                <include reference="rAS-5t-Jwb"/>
+                                <exclude reference="9vg-hV-wG0"/>
+                                <exclude reference="TT6-pn-H86"/>
                             </mask>
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Web" id="5sC-Jq-JaO"/>
                     <connections>
-                        <outlet property="webView" destination="gHU-AR-sX5" id="3id-0H-1Nt"/>
+                        <outlet property="webView" destination="8VC-nT-fxk" id="oxB-Uq-7yJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ivs-o6-e1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="215.25" y="586"/>
+            <point key="canvasLocation" x="215" y="586"/>
         </scene>
     </scenes>
     <resources>

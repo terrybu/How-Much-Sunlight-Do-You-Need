@@ -30,5 +30,6 @@
 @property IBOutlet UIView *actualTypeColorView;
 
 - (IBAction) backButton:(id)sender;
+- (IBAction)typeFoundActionButton:(id)sender;
 
 @end
