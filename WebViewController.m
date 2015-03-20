@@ -35,7 +35,16 @@ static NSString* const kResultPageURL = @"http://nadir.nilu.no/cgi-bin/olaeng/Vi
     if ([webView.request.URL.absoluteString isEqualToString:kResultPageURL]) {
         NSLog(@"found the result page");
         NSString *resultPageHTML = [webView stringByEvaluatingJavaScriptFromString:@"document.body.innerHTML"];
-        NSLog(resultPageHTML);
+        NSArray *components = [resultPageHTML componentsSeparatedByString:@"<br>"];
+        NSString *sanitizedMinRecoString = [components[4] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        NSLog(@"min recommended time: %@, count: %lu", sanitizedMinRecoString, sanitizedMinRecoString.length); //gets minimum recommended exposure time
+        
+        NSLog(@"%@", components);
+        NSString *sanitizedUVExposureTimeToObtainSunburn = [components[components.count-1] stringByReplacingOccurrencesOfString:@"</p>" withString:@""];
+        sanitizedUVExposureTimeToObtainSunburn = [sanitizedUVExposureTimeToObtainSunburn stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+        NSLog(@"UV Exposure Time to Obtain Sunburn: %@, count: %lu", sanitizedUVExposureTimeToObtainSunburn, sanitizedUVExposureTimeToObtainSunburn.length);
+        
     }
 }
 
