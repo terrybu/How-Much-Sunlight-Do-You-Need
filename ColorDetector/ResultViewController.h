@@ -15,19 +15,17 @@
 @property (strong, nonatomic) FitzpatrickType *pickedFitzType;
 @property (strong, nonatomic) UIColor *pickedColor;
 
-
-
-
 @property IBOutlet UIScrollView *scrollView;
-
-
 @property IBOutlet FBShimmeringView *fbShimmerView;
 @property IBOutlet UILabel *typeLabel;
-
 @property IBOutlet UIImageView *selectionView;
-@property IBOutlet UILabel *resultMessageLabel;
 @property IBOutlet UILabel *actualTypeColorLabel;
 @property IBOutlet UIView *actualTypeColorView;
+
+@property IBOutlet UILabel *resultMessageLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *recommendedSunlightLabel;
+@property (weak, nonatomic) IBOutlet UILabel *sunburnLabel;
 
 - (IBAction) backButton:(id)sender;
 - (IBAction)typeFoundActionButton:(id)sender;

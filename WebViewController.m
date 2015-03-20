@@ -45,6 +45,9 @@ static NSString* const kResultPageURL = @"http://nadir.nilu.no/cgi-bin/olaeng/Vi
         
         NSLog(@"UV Exposure Time to Obtain Sunburn: %@, count: %lu", sanitizedUVExposureTimeToObtainSunburn, sanitizedUVExposureTimeToObtainSunburn.length);
         
+        
+        
+        
     }
 }
 

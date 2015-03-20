@@ -160,7 +160,7 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Result Messages Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SR7-Tf-nZu">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="SkinResultMessageLabel" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SR7-Tf-nZu" userLabel="SkinResultMessageLabel">
                                         <rect key="frame" x="30" y="333" width="540" height="32"/>
                                         <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="25"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -184,6 +184,18 @@
                                             <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="24"/>
                                         </variation>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended Sunlight Exposure: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swU-sA-KAH">
+                                        <rect key="frame" x="30" y="425" width="540" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expected Time Needed for Sunburn:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSc-jA-be1">
+                                        <rect key="frame" x="30" y="476" width="540" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="HTr-K4-xOo" firstAttribute="leading" secondItem="cJo-gK-eW3" secondAttribute="trailing" constant="53" id="2ji-fF-ncj">
@@ -197,12 +209,14 @@
                                     <constraint firstItem="k4o-dW-Y4i" firstAttribute="leading" secondItem="cJo-gK-eW3" secondAttribute="trailing" constant="-52" id="9R1-Sf-qof">
                                         <variation key="widthClass=regular" constant="-20"/>
                                     </constraint>
+                                    <constraint firstItem="swU-sA-KAH" firstAttribute="width" secondItem="dQ2-Zd-9F0" secondAttribute="width" multiplier="0.9" id="9xw-aD-ouU"/>
                                     <constraint firstItem="tdQ-a0-5yw" firstAttribute="width" secondItem="dQ2-Zd-9F0" secondAttribute="width" multiplier="0.8" id="9yc-h5-6Nv"/>
                                     <constraint firstAttribute="height" constant="800" id="Bqk-vU-Ekd"/>
                                     <constraint firstItem="cJo-gK-eW3" firstAttribute="leading" secondItem="rMs-Di-gQD" secondAttribute="leading" constant="-50" id="E5d-o6-Qem"/>
                                     <constraint firstItem="z40-8x-UIz" firstAttribute="leading" secondItem="ATA-yr-Yln" secondAttribute="trailing" constant="150" id="Fm2-bv-72m">
                                         <variation key="widthClass=regular" constant="75"/>
                                     </constraint>
+                                    <constraint firstItem="wSc-jA-be1" firstAttribute="width" secondItem="dQ2-Zd-9F0" secondAttribute="width" multiplier="0.9" id="HCv-C3-V3J"/>
                                     <constraint firstAttribute="trailing" secondItem="HTr-K4-xOo" secondAttribute="trailing" constant="147" id="I3W-rj-Izd">
                                         <variation key="widthClass=regular" constant="0.0"/>
                                     </constraint>
@@ -212,13 +226,17 @@
                                     <constraint firstAttribute="bottom" secondItem="SR7-Tf-nZu" secondAttribute="bottom" constant="50" id="QJf-Sw-nEw"/>
                                     <constraint firstItem="SR7-Tf-nZu" firstAttribute="width" secondItem="dQ2-Zd-9F0" secondAttribute="width" multiplier="0.9" id="QaX-0y-7Ao"/>
                                     <constraint firstAttribute="centerX" secondItem="SR7-Tf-nZu" secondAttribute="centerX" id="Qpr-Tt-g1D"/>
+                                    <constraint firstAttribute="centerX" secondItem="swU-sA-KAH" secondAttribute="centerX" id="WYc-nG-WFw"/>
                                     <constraint firstItem="tdQ-a0-5yw" firstAttribute="leading" secondItem="dQ2-Zd-9F0" secondAttribute="leading" id="Xis-20-Jh3"/>
                                     <constraint firstItem="tdQ-a0-5yw" firstAttribute="width" secondItem="dQ2-Zd-9F0" secondAttribute="width" id="Y8f-Qr-gVD"/>
                                     <constraint firstItem="rMs-Di-gQD" firstAttribute="trailing" secondItem="HTr-K4-xOo" secondAttribute="trailing" constant="-50" id="eEa-wg-3Eg"/>
                                     <constraint firstAttribute="centerX" secondItem="tdQ-a0-5yw" secondAttribute="centerX" id="fB9-fe-UBk"/>
+                                    <constraint firstAttribute="centerX" secondItem="wSc-jA-be1" secondAttribute="centerX" id="gZQ-Ns-MPG"/>
                                     <constraint firstItem="cJo-gK-eW3" firstAttribute="centerY" secondItem="HTr-K4-xOo" secondAttribute="centerY" id="k8t-D4-ESJ"/>
+                                    <constraint firstItem="swU-sA-KAH" firstAttribute="top" secondItem="SR7-Tf-nZu" secondAttribute="bottom" constant="60" id="kBp-Ze-WrX"/>
                                     <constraint firstItem="cJo-gK-eW3" firstAttribute="leading" secondItem="k4o-dW-Y4i" secondAttribute="leading" id="l77-ly-gb4"/>
                                     <constraint firstItem="z40-8x-UIz" firstAttribute="leading" secondItem="ATA-yr-Yln" secondAttribute="trailing" constant="-95" id="l9a-Tm-uad"/>
+                                    <constraint firstItem="wSc-jA-be1" firstAttribute="top" secondItem="swU-sA-KAH" secondAttribute="bottom" constant="30" id="lDF-YQ-eM3"/>
                                     <constraint firstItem="z40-8x-UIz" firstAttribute="centerX" secondItem="HTr-K4-xOo" secondAttribute="centerX" id="maK-7V-2AY"/>
                                     <constraint firstAttribute="trailing" secondItem="tdQ-a0-5yw" secondAttribute="trailing" id="rr9-Vp-5fz"/>
                                     <constraint firstItem="cJo-gK-eW3" firstAttribute="centerX" secondItem="ATA-yr-Yln" secondAttribute="centerX" id="tRb-wK-2qb"/>
@@ -302,9 +320,11 @@
                         <outlet property="actualTypeColorLabel" destination="HTr-K4-xOo" id="Uv2-sI-CDG"/>
                         <outlet property="actualTypeColorView" destination="z40-8x-UIz" id="FGj-O5-OQX"/>
                         <outlet property="fbShimmerView" destination="rMs-Di-gQD" id="wu6-a2-gcH"/>
+                        <outlet property="recommendedSunlightLabel" destination="swU-sA-KAH" id="5cg-He-uiB"/>
                         <outlet property="resultMessageLabel" destination="SR7-Tf-nZu" id="yCj-Uo-lNG"/>
                         <outlet property="scrollView" destination="dQ2-Zd-9F0" id="3pU-kB-oDG"/>
                         <outlet property="selectionView" destination="ATA-yr-Yln" id="2DJ-n4-wZO"/>
+                        <outlet property="sunburnLabel" destination="wSc-jA-be1" id="Yew-f7-F6r"/>
                         <outlet property="typeLabel" destination="k4o-dW-Y4i" id="ts1-xk-RTr"/>
                     </connections>
                 </viewController>
