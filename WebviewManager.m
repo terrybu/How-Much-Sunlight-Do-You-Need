@@ -29,6 +29,7 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     
     if ([webView.request.URL.absoluteString isEqualToString:kFormPageURL]){
+        [self webViewSetCorrectDate];
         [self webViewSetFitzgeraldSkinType: self.fitzType.typeNumber];
         [self webViewClickSubmitButton];
     }
@@ -49,15 +50,36 @@
     }
 }
 
+#pragma mark Custom JavaScript to Inject Correct Info to Form
+
+- (void) webViewSetCorrectDate {
+    NSDate *today = [NSDate date];
+    NSCalendar* calendar = [NSCalendar currentCalendar];
+    NSDateComponents* components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:today];
+    
+    
+    //setting month
+    NSLog(@"month num: %ld", [components month]);
+    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByName(\"month\")[0].options[%ld].selected = true", [components month]-1]]; //because the 0th index is january and 11th index is dec
+    
+    //setting day
+    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByName(\"mday\")[0].options[%ld].selected = true", [components day]-1]]; //because the 0th index is january and 11th index is dec
+}
+
+- (void) webViewSetFitzgeraldSkinType: (FitzpatrickTypeNum) typeNum {
+    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByName(\"skin_index\")[%d].checked = true", typeNum]]; //i was confused about indexing here but TypeNum correctly corresponds to the right index on the web side too, leave it
+}
+
+- (void) webViewClickSubmitButton {
+    [self.webView stringByEvaluatingJavaScriptFromString:@"var inputs = document.getElementsByTagName('input'); for(var i = 0; i < inputs.length; i++) {if(inputs[i].type.toLowerCase() == 'submit') {inputs[i].click();}}"];
+}
+
+#pragma mark Post-form methods (dealing with response time data)
+
 - (NSString *) stringParseIntoHoursMins: (NSString *) unformattedTimeString{
     NSArray *components = [unformattedTimeString componentsSeparatedByString:@":"];
-    NSLog(@"%@", components.description);
-    
     NSInteger hourDigits = [components[0] integerValue];
     NSInteger minuteDigits = [components[1] integerValue];
-    
-    NSLog(@"%ld hours %ld minutes", (long)hourDigits, minuteDigits);
-    
     NSString *resultString;
     
     if (hourDigits == 0)
@@ -69,20 +91,6 @@
     
     return resultString;
 }
-
-
-
-
-#pragma mark Custom JavaScript Methods
-
-- (void) webViewSetFitzgeraldSkinType: (FitzpatrickTypeNum) typeNum {
-    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByName(\"skin_index\")[%d].checked = true", typeNum]]; //i was confused about indexing here but TypeNum correctly corresponds to the right index on the web side too, leave it 
-}
-
-- (void) webViewClickSubmitButton {
-    [self.webView stringByEvaluatingJavaScriptFromString:@"var inputs = document.getElementsByTagName('input'); for(var i = 0; i < inputs.length; i++) {if(inputs[i].type.toLowerCase() == 'submit') {inputs[i].click();}}"];
-}
-
 
 
 
