@@ -51,11 +51,11 @@
                         <viewControllerLayoutGuide type="bottom" id="tsJ-nh-mlq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Q80-nb-frz">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1072"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dQ2-Zd-9F0">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="1072"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMs-Di-gQD" customClass="FBShimmeringView">
                                         <rect key="frame" x="198" y="85" width="205" height="45"/>
@@ -212,47 +212,40 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended Sunlight Exposure Today: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swU-sA-KAH">
-                                        <rect key="frame" x="30" y="425" width="540" height="21"/>
+                                        <rect key="frame" x="30" y="586" width="540" height="27"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now loading ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUs-tm-rEa" userLabel="ActualSunlightReco">
-                                        <rect key="frame" x="30" y="447" width="540" height="21"/>
+                                        <rect key="frame" x="30" y="614" width="540" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UV Exposure Needed for Sunburn Today:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSc-jA-be1">
-                                        <rect key="frame" x="30" y="480" width="540" height="21"/>
+                                        <rect key="frame" x="30" y="650" width="540" height="27"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now loading ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZiF-SG-r2R" userLabel="ActualSunlightReco">
-                                        <rect key="frame" x="30" y="502" width="540" height="21"/>
+                                        <rect key="frame" x="30" y="678" width="540" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdr-hD-dt8" userLabel="BasedOnLabel">
-                                        <rect key="frame" x="30" y="425" width="540" height="21"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
                                         <color key="textColor" red="1" green="0.50871196546052633" blue="0.17498458059210525" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="5jd-D7-jxT">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <rect key="frame" x="200" y="370" width="200" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="QVq-Ae-PeN"/>
                                             <constraint firstAttribute="height" constant="200" id="RVZ-7l-ps0"/>
                                         </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="QVq-Ae-PeN"/>
-                                                <exclude reference="RVZ-7l-ps0"/>
-                                            </mask>
-                                        </variation>
                                         <variation key="heightClass=regular-widthClass=regular">
                                             <mask key="constraints">
                                                 <include reference="QVq-Ae-PeN"/>
@@ -261,7 +254,7 @@
                                         </variation>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This information is from ..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPc-Zu-bzo" userLabel="ReferenceLabel">
-                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <rect key="frame" x="200" y="772" width="200" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -302,7 +295,6 @@
                                         <variation key="heightClass=regular-widthClass=regular" constant="40"/>
                                     </constraint>
                                     <constraint firstItem="ATA-yr-Yln" firstAttribute="top" secondItem="cJo-gK-eW3" secondAttribute="bottom" constant="8" id="Nhh-p1-GqG"/>
-                                    <constraint firstAttribute="bottom" secondItem="rPc-Zu-bzo" secondAttribute="bottom" id="Q39-5b-auZ"/>
                                     <constraint firstAttribute="bottom" secondItem="SR7-Tf-nZu" secondAttribute="bottom" constant="50" id="QJf-Sw-nEw"/>
                                     <constraint firstItem="SR7-Tf-nZu" firstAttribute="width" secondItem="dQ2-Zd-9F0" secondAttribute="width" multiplier="0.9" id="QaX-0y-7Ao"/>
                                     <constraint firstAttribute="centerX" secondItem="SR7-Tf-nZu" secondAttribute="centerX" id="Qpr-Tt-g1D"/>
@@ -334,8 +326,6 @@
                                     <constraint firstItem="z40-8x-UIz" firstAttribute="leading" secondItem="ATA-yr-Yln" secondAttribute="trailing" constant="-95" id="l9a-Tm-uad"/>
                                     <constraint firstItem="TUs-tm-rEa" firstAttribute="top" secondItem="swU-sA-KAH" secondAttribute="bottom" constant="1" id="lAE-Cv-c5P"/>
                                     <constraint firstItem="wSc-jA-be1" firstAttribute="top" secondItem="swU-sA-KAH" secondAttribute="bottom" constant="30" id="lDF-YQ-eM3"/>
-                                    <constraint firstAttribute="trailing" secondItem="rPc-Zu-bzo" secondAttribute="trailing" constant="279" id="lUC-Gj-x4g"/>
-                                    <constraint firstAttribute="trailing" secondItem="rPc-Zu-bzo" secondAttribute="trailing" constant="279" id="mIg-mc-Xuz"/>
                                     <constraint firstItem="z40-8x-UIz" firstAttribute="centerX" secondItem="HTr-K4-xOo" secondAttribute="centerX" id="maK-7V-2AY"/>
                                     <constraint firstItem="ZiF-SG-r2R" firstAttribute="top" secondItem="wSc-jA-be1" secondAttribute="bottom" constant="1" id="ni4-4I-wXV"/>
                                     <constraint firstItem="rPc-Zu-bzo" firstAttribute="centerX" secondItem="ZiF-SG-r2R" secondAttribute="centerX" id="rVh-by-Cmx"/>
@@ -351,11 +341,6 @@
                                     <constraint firstAttribute="centerX" secondItem="rMs-Di-gQD" secondAttribute="centerX" id="zvr-Ka-eTL"/>
                                 </constraints>
                                 <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="Zdr-hD-dt8"/>
-                                        <exclude reference="5jd-D7-jxT"/>
-                                        <exclude reference="rPc-Zu-bzo"/>
-                                    </mask>
                                     <mask key="constraints">
                                         <exclude reference="Bqk-vU-Ekd"/>
                                         <exclude reference="Xis-20-Jh3"/>
@@ -372,21 +357,12 @@
                                         <exclude reference="Fm2-bv-72m"/>
                                         <exclude reference="l9a-Tm-uad"/>
                                         <exclude reference="zW4-9k-Im2"/>
-                                        <exclude reference="RpQ-9Q-H1M"/>
-                                        <exclude reference="aJV-Vw-b4E"/>
-                                        <exclude reference="N3z-vv-xCE"/>
-                                        <exclude reference="NNI-YP-Mg7"/>
-                                        <exclude reference="Wmh-pd-K7G"/>
+                                        <exclude reference="kBp-Ze-WrX"/>
                                         <exclude reference="fVX-I2-ygQ"/>
                                         <exclude reference="lDF-YQ-eM3"/>
                                         <exclude reference="2Td-dk-QM7"/>
                                         <exclude reference="6hw-Kt-4uX"/>
                                         <exclude reference="Gqi-rj-FVo"/>
-                                        <exclude reference="Q39-5b-auZ"/>
-                                        <exclude reference="ahG-CB-jie"/>
-                                        <exclude reference="lUC-Gj-x4g"/>
-                                        <exclude reference="mIg-mc-Xuz"/>
-                                        <exclude reference="rVh-by-Cmx"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular" ambiguous="YES">
@@ -403,7 +379,7 @@
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="1136"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="1072"/>
                                     <mask key="subviews">
                                         <include reference="Zdr-hD-dt8"/>
                                         <include reference="5jd-D7-jxT"/>
@@ -422,10 +398,7 @@
                                         <exclude reference="2Td-dk-QM7"/>
                                         <exclude reference="6hw-Kt-4uX"/>
                                         <exclude reference="Gqi-rj-FVo"/>
-                                        <exclude reference="Q39-5b-auZ"/>
                                         <include reference="ahG-CB-jie"/>
-                                        <exclude reference="lUC-Gj-x4g"/>
-                                        <exclude reference="mIg-mc-Xuz"/>
                                         <include reference="rVh-by-Cmx"/>
                                     </mask>
                                 </variation>
@@ -462,7 +435,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="1200"/>
+                    <size key="freeformSize" width="600" height="1136"/>
                     <connections>
                         <outlet property="actualSunburnTimeLabel" destination="ZiF-SG-r2R" id="sXW-Mo-mNk"/>
                         <outlet property="actualSunlightTimeLabel" destination="TUs-tm-rEa" id="jIp-Uv-Z0H"/>

@@ -18,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+//    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, 2000);
 
     self.fbShimmerView.contentView = self.typeLabel;
     self.typeLabel.text = self.pickedFitzType.typeName;
