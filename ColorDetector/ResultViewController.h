@@ -36,6 +36,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *sunburnLabel;
 @property (weak, nonatomic) IBOutlet UILabel *actualSunburnTimeLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *referenceLabel;
+
 
 - (IBAction) backButton:(id)sender;
 

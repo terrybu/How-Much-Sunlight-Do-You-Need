@@ -104,9 +104,6 @@
     latitude = [[NSNumber numberWithFloat:myLocation.coordinate.latitude] stringValue];
     longitude = [[NSNumber numberWithFloat:myLocation.coordinate.longitude] stringValue];
     
-    NSLog(@"%@", latitude);
-    NSLog(@"%@", longitude);
-    
     CLGeocoder *geocoder = [[CLGeocoder alloc] init] ;
     [geocoder reverseGeocodeLocation:myLocation
                    completionHandler:^(NSArray *placemarks, NSError *error)
@@ -116,9 +113,6 @@
              return;
          }
          self.placemark = [placemarks objectAtIndex:0];
-         NSLog(@"placemark.ISOcountryCode %@",self.placemark.ISOcountryCode);
-         NSLog(@"locality %@",self.placemark.locality);
-         NSLog(@"postalCode %@",self.placemark.postalCode);
          [self.delegate didFinishGettingPlacemarkInfo];
      }];
 
