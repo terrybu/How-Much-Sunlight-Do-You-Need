@@ -12,6 +12,8 @@
 		D94660F61ABB16800087D347 /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = D94660F41ABB16800087D347 /* FBShimmeringView.m */; };
 		D95D3DCD1AC0811F00EFC773 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = D95D3DCC1AC0811F00EFC773 /* Constants.m */; };
 		D95D3DD01AC08B0300EFC773 /* WebviewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D95D3DCF1AC08B0300EFC773 /* WebviewManager.m */; };
+		D95D3DD51AC0A0EA00EFC773 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95D3DD31AC0A0D700EFC773 /* CoreLocation.framework */; };
+		D95D3DD61AC0A0F300EFC773 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B42B601AB86FFC00F3679C /* CoreText.framework */; };
 		D964299D1ABB5C2900DDA435 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D964299C1ABB5C2900DDA435 /* WebViewController.m */; };
 		D99CAA101AB76E5F00715D3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D99CA9FF1AB76E5F00715D3C /* AppDelegate.m */; };
 		D99CAA131AB76E5F00715D3C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D99CAA061AB76E5F00715D3C /* FirstViewController.m */; };
@@ -39,6 +41,7 @@
 		D95D3DCC1AC0811F00EFC773 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		D95D3DCE1AC08B0300EFC773 /* WebviewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebviewManager.h; sourceTree = "<group>"; };
 		D95D3DCF1AC08B0300EFC773 /* WebviewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebviewManager.m; sourceTree = "<group>"; };
+		D95D3DD31AC0A0D700EFC773 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D964299B1ABB5C2900DDA435 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		D964299C1ABB5C2900DDA435 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		D99CA9FE1AB76E5F00715D3C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ColorDetector/AppDelegate.h; sourceTree = SOURCE_ROOT; };
@@ -68,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D95D3DD61AC0A0F300EFC773 /* CoreText.framework in Frameworks */,
+				D95D3DD51AC0A0EA00EFC773 /* CoreLocation.framework in Frameworks */,
 				D919D2ED1AB7495200D77F6C /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -91,9 +96,7 @@
 		D947AB011AB7289C00AEFEC9 = {
 			isa = PBXGroup;
 			children = (
-				D9B42B601AB86FFC00F3679C /* CoreText.framework */,
 				D99CAA1A1AB76EC600715D3C /* FitzpatrickSkinTypeDetector */,
-				D919D2EC1AB7495200D77F6C /* QuartzCore.framework */,
 				D947AB0B1AB7289C00AEFEC9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,6 +112,7 @@
 		D947AB0D1AB7289C00AEFEC9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D95D3DD21AC0A0B800EFC773 /* Frameworks */,
 				D99CAA071AB76E5F00715D3C /* Images.xcassets */,
 				D99CAA1D1AB7722400715D3C /* LaunchScreen.xib */,
 				D99CAA081AB76E5F00715D3C /* Info.plist */,
@@ -116,6 +120,17 @@
 			);
 			name = "Supporting Files";
 			path = ColorPicker;
+			sourceTree = "<group>";
+		};
+		D95D3DD21AC0A0B800EFC773 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D95D3DD31AC0A0D700EFC773 /* CoreLocation.framework */,
+				D9B42B601AB86FFC00F3679C /* CoreText.framework */,
+				D919D2EC1AB7495200D77F6C /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		D99CAA1A1AB76EC600715D3C /* FitzpatrickSkinTypeDetector */ = {

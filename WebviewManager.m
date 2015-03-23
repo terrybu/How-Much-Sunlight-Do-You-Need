@@ -9,7 +9,13 @@
 #import "WebviewManager.h"
 #import "Constants.h"
 
-@implementation WebviewManager
+#define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+
+@implementation WebviewManager {
+    CLLocationManager *locationManager;
+    NSString *latitude;
+    NSString *longitude;
+}
 
 
 -(id) init {
@@ -30,8 +36,8 @@
     
     if ([webView.request.URL.absoluteString isEqualToString:kFormPageURL]){
         [self webViewSetCorrectDate];
+        [self webViewSetCorrectLocation];
         [self webViewSetFitzgeraldSkinType: self.fitzType.typeNumber];
-        [self webViewClickSubmitButton];
     }
     
     if ([webView.request.URL.absoluteString isEqualToString:kResultPageURL]) {
@@ -57,13 +63,29 @@
     NSCalendar* calendar = [NSCalendar currentCalendar];
     NSDateComponents* components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:today];
     
-    
     //setting month
-    NSLog(@"month num: %ld", [components month]);
-    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByName(\"month\")[0].options[%ld].selected = true", [components month]-1]]; //because the 0th index is january and 11th index is dec
+    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByName(\"month\")[0].options[%d].selected = true", [components month]-1]]; //because the 0th index is january and 11th index is dec
     
     //setting day
-    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByName(\"mday\")[0].options[%ld].selected = true", [components day]-1]]; //because the 0th index is january and 11th index is dec
+    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByName(\"mday\")[0].options[%d].selected = true", [components day]-1]]; //because the 0th index is january and 11th index is dec
+}
+
+- (void) webViewSetCorrectLocation {
+    locationManager = [[CLLocationManager alloc]init];
+    locationManager.delegate = self;
+    if(IS_OS_8_OR_LATER){
+        NSUInteger code = [CLLocationManager authorizationStatus];
+        if (code == kCLAuthorizationStatusNotDetermined && ([locationManager respondsToSelector:@selector(requestAlwaysAuthorization)] || [locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)])) {
+            if([[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSLocationAlwaysUsageDescription"]){
+                [locationManager requestAlwaysAuthorization];
+            } else if([[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSLocationWhenInUseUsageDescription"]) {
+                [locationManager  requestWhenInUseAuthorization];
+            } else {
+                NSLog(@"Info.plist does not contain NSLocationAlwaysUsageDescription or NSLocationWhenInUseUsageDescription");
+            }
+        }
+    }
+    [locationManager startMonitoringSignificantLocationChanges];
 }
 
 - (void) webViewSetFitzgeraldSkinType: (FitzpatrickTypeNum) typeNum {
@@ -74,6 +96,40 @@
     [self.webView stringByEvaluatingJavaScriptFromString:@"var inputs = document.getElementsByTagName('input'); for(var i = 0; i < inputs.length; i++) {if(inputs[i].type.toLowerCase() == 'submit') {inputs[i].click();}}"];
 }
 
+
+
+#pragma mark - CoreLocation Methods
+- (void)locationManager:(CLLocationManager *)locationManager didUpdateLocations:(NSArray *)locations {
+    CLLocation *myLocation = [locations lastObject];
+    latitude = [[NSNumber numberWithFloat:myLocation.coordinate.latitude] stringValue];
+    longitude = [[NSNumber numberWithFloat:myLocation.coordinate.longitude] stringValue];
+    
+    NSLog(@"%@", latitude);
+    NSLog(@"%@", longitude);
+    
+    [self webViewSetCorrectLocationWithActualJSManipulation];
+    [self webViewClickSubmitButton];
+}
+
+- (void) webViewSetCorrectLocationWithActualJSManipulation {
+    [self.webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByName(\"location_specification\")[1].checked = true"];
+    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByName(\"latitude\")[0].value = %@", latitude]];
+        [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByName(\"longitude\")[0].value = %@", longitude]];
+    
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWithError:(NSError *)error
+{
+    NSLog(@"Error while getting core location : %@",[error localizedFailureReason]);
+    if ([error code] == kCLErrorDenied) {
+        //you had denied
+    }
+    [manager stopUpdatingLocation];
+}
+
+
+
 #pragma mark Post-form methods (dealing with response time data)
 
 - (NSString *) stringParseIntoHoursMins: (NSString *) unformattedTimeString{
@@ -83,11 +139,11 @@
     NSString *resultString;
     
     if (hourDigits == 0)
-        resultString = [NSString stringWithFormat:@"%ld Minutes", minuteDigits];
+        resultString = [NSString stringWithFormat:@"%ld Minutes", (long)minuteDigits];
     else if (hourDigits == 1)
-        resultString = [NSString stringWithFormat:@"1 Hour %ld Minutes", minuteDigits];
+        resultString = [NSString stringWithFormat:@"1 Hour %ld Minutes", (long)minuteDigits];
     else
-        resultString = [NSString stringWithFormat:@"%ld Hours %ld Minutes", hourDigits, minuteDigits];
+        resultString = [NSString stringWithFormat:@"%ld Hours %ld Minutes", (long)hourDigits, (long)minuteDigits];
     
     return resultString;
 }
