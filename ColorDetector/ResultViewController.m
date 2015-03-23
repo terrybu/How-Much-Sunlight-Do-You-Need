@@ -35,11 +35,11 @@
     self.actualTypeColorView.layer.borderColor = [UIColor blackColor].CGColor;
     self.actualTypeColorView.layer.borderWidth = 1.5;
 
-    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sunlightRecoReceived:) name:kSunlightRecoTime object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sunburnTimeReceived:) name:kSunburnTime object:nil];
     
     self.webviewManager = [[WebviewManager alloc]init];
+    self.webviewManager.delegate = self;
     self.webviewManager.fitzType = self.pickedFitzType;
 }
 
@@ -53,10 +53,16 @@
     self.actualSunburnTimeLabel.text = [NSString stringWithFormat:@"%@", [info objectForKey:kSunburnTime]];
 }
 
-
 - (IBAction) backButton:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+
+
+- (void)didFinishGettingPlacemarkInfo {
+    self.basedOnLocationLabel.text = [NSString stringWithFormat:@"Based on your location at %@, %@ in %@", self.webviewManager.placemark.locality, self.webviewManager.placemark.postalCode, self.webviewManager.placemark.ISOcountryCode];
+}
+
 
 
 

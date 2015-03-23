@@ -11,11 +11,23 @@
 #import "FitzpatrickType.h"
 #import <CoreLocation/CoreLocation.h>
 
+@protocol WebviewManagerDelegate;
+
 @interface WebviewManager : NSObject  <UIWebViewDelegate, CLLocationManagerDelegate>
 
 @property (nonatomic, strong) UIWebView *webView;
 @property FitzpatrickType* fitzType;
+@property (nonatomic, strong) CLPlacemark *placemark;
+
+@property (nonatomic, weak) id <WebviewManagerDelegate> delegate;
 
 - (void) loadUp;
+
+@end
+
+
+@protocol WebviewManagerDelegate
+
+- (void) didFinishGettingPlacemarkInfo;
 
 @end

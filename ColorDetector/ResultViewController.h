@@ -11,7 +11,7 @@
 #import "FBShimmeringView.h"
 #import "WebviewManager.h"
 
-@interface ResultViewController : UIViewController
+@interface ResultViewController : UIViewController <WebviewManagerDelegate>
 
 @property (strong, nonatomic) WebviewManager *webviewManager;
 
@@ -27,6 +27,9 @@
 
 //Result Labels
 @property IBOutlet UILabel *resultMessageLabel;
+
+@property IBOutlet UILabel *basedOnLocationLabel; 
+
 @property (weak, nonatomic) IBOutlet UILabel *recommendedSunlightLabel;
 @property (weak, nonatomic) IBOutlet UILabel *actualSunlightTimeLabel;
 

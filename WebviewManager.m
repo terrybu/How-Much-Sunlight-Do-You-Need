@@ -107,6 +107,21 @@
     NSLog(@"%@", latitude);
     NSLog(@"%@", longitude);
     
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init] ;
+    [geocoder reverseGeocodeLocation:myLocation
+                   completionHandler:^(NSArray *placemarks, NSError *error)
+     {
+         if (error){
+             NSLog(@"Geocode failed with error: %@", error);
+             return;
+         }
+         self.placemark = [placemarks objectAtIndex:0];
+         NSLog(@"placemark.ISOcountryCode %@",self.placemark.ISOcountryCode);
+         NSLog(@"locality %@",self.placemark.locality);
+         NSLog(@"postalCode %@",self.placemark.postalCode);
+         [self.delegate didFinishGettingPlacemarkInfo];
+     }];
+
     [self webViewSetCorrectLocationWithActualJSManipulation];
     [self webViewClickSubmitButton];
 }
@@ -115,7 +130,6 @@
     [self.webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByName(\"location_specification\")[1].checked = true"];
     [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByName(\"latitude\")[0].value = %@", latitude]];
         [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByName(\"longitude\")[0].value = %@", longitude]];
-    
 }
 
 - (void)locationManager:(CLLocationManager *)manager
