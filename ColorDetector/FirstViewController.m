@@ -54,7 +54,6 @@
     [_touchPixelRectView.layer setShadowRadius:3.0];
     [_touchPixelRectView.layer setShadowOffset:CGSizeMake(3.0, 3.0)];
     [self.view addSubview:_touchPixelRectView];
-    
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -63,7 +62,6 @@
     if (self.imageView.image == nil) {
         self.navigationItem.title = @"Select or take photo";
         _touchPixelRectView.hidden = YES;
-        [self showActionSheet];
     }
     else if (self.imageView.image != nil) {
         self.navigationItem.title = @"Tap photo";
@@ -72,7 +70,6 @@
         doneButton.tintColor = [UIColor blackColor];
         
         self.navigationItem.rightBarButtonItem = (self.pickedColor != nil) ? doneButton : nil;
-        
     }
 }
 
@@ -86,7 +83,7 @@
         self.pickedColor = [self.view colorOfPoint:loc];
         
         [self.pickedColor getRed:&red green:&green blue:&blue alpha:&alpha];
-        NSLog(@"red %f green %f blue %f alpha %f", red, green, blue, alpha);
+//        NSLog(@"red %f green %f blue %f alpha %f", red, green, blue, alpha);
         
         self.touchPixelRectView.backgroundColor = self.pickedColor;
         _touchPixelRectView.hidden = NO;

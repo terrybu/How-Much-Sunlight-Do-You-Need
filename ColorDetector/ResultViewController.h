@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "FitzpatrickType.h"
 #import "FBShimmeringView.h"
+#import "WebviewManager.h"
 
-@interface ResultViewController : UIViewController <UINavigationBarDelegate>
+@interface ResultViewController : UIViewController
+
+@property (strong, nonatomic) WebviewManager *webviewManager;
 
 @property (strong, nonatomic) FitzpatrickType *pickedFitzType;
 @property (strong, nonatomic) UIColor *pickedColor;
@@ -22,12 +25,15 @@
 @property IBOutlet UILabel *actualTypeColorLabel;
 @property IBOutlet UIView *actualTypeColorView;
 
+//Result Labels
 @property IBOutlet UILabel *resultMessageLabel;
-
 @property (weak, nonatomic) IBOutlet UILabel *recommendedSunlightLabel;
+@property (weak, nonatomic) IBOutlet UILabel *actualSunlightTimeLabel;
+
 @property (weak, nonatomic) IBOutlet UILabel *sunburnLabel;
+@property (weak, nonatomic) IBOutlet UILabel *actualSunburnTimeLabel;
+
 
 - (IBAction) backButton:(id)sender;
-- (IBAction)typeFoundActionButton:(id)sender;
 
 @end

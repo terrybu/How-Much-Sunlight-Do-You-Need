@@ -187,13 +187,19 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended Sunlight Exposure: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swU-sA-KAH">
                                         <rect key="frame" x="30" y="425" width="540" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expected Time Needed for Sunburn:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSc-jA-be1">
-                                        <rect key="frame" x="30" y="476" width="540" height="21"/>
+                                        <rect key="frame" x="30" y="480" width="540" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now loading ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUs-tm-rEa">
+                                        <rect key="frame" x="30" y="447" width="540" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -226,16 +232,20 @@
                                     <constraint firstAttribute="bottom" secondItem="SR7-Tf-nZu" secondAttribute="bottom" constant="50" id="QJf-Sw-nEw"/>
                                     <constraint firstItem="SR7-Tf-nZu" firstAttribute="width" secondItem="dQ2-Zd-9F0" secondAttribute="width" multiplier="0.9" id="QaX-0y-7Ao"/>
                                     <constraint firstAttribute="centerX" secondItem="SR7-Tf-nZu" secondAttribute="centerX" id="Qpr-Tt-g1D"/>
+                                    <constraint firstAttribute="centerX" secondItem="TUs-tm-rEa" secondAttribute="centerX" id="TAj-9x-g92"/>
                                     <constraint firstAttribute="centerX" secondItem="swU-sA-KAH" secondAttribute="centerX" id="WYc-nG-WFw"/>
                                     <constraint firstItem="tdQ-a0-5yw" firstAttribute="leading" secondItem="dQ2-Zd-9F0" secondAttribute="leading" id="Xis-20-Jh3"/>
                                     <constraint firstItem="tdQ-a0-5yw" firstAttribute="width" secondItem="dQ2-Zd-9F0" secondAttribute="width" id="Y8f-Qr-gVD"/>
                                     <constraint firstItem="rMs-Di-gQD" firstAttribute="trailing" secondItem="HTr-K4-xOo" secondAttribute="trailing" constant="-50" id="eEa-wg-3Eg"/>
                                     <constraint firstAttribute="centerX" secondItem="tdQ-a0-5yw" secondAttribute="centerX" id="fB9-fe-UBk"/>
+                                    <constraint firstItem="wSc-jA-be1" firstAttribute="top" secondItem="TUs-tm-rEa" secondAttribute="bottom" constant="12" id="gTz-Sf-Hje"/>
                                     <constraint firstAttribute="centerX" secondItem="wSc-jA-be1" secondAttribute="centerX" id="gZQ-Ns-MPG"/>
+                                    <constraint firstItem="TUs-tm-rEa" firstAttribute="width" secondItem="dQ2-Zd-9F0" secondAttribute="width" multiplier="0.9" id="jvp-go-RAI"/>
                                     <constraint firstItem="cJo-gK-eW3" firstAttribute="centerY" secondItem="HTr-K4-xOo" secondAttribute="centerY" id="k8t-D4-ESJ"/>
                                     <constraint firstItem="swU-sA-KAH" firstAttribute="top" secondItem="SR7-Tf-nZu" secondAttribute="bottom" constant="60" id="kBp-Ze-WrX"/>
                                     <constraint firstItem="cJo-gK-eW3" firstAttribute="leading" secondItem="k4o-dW-Y4i" secondAttribute="leading" id="l77-ly-gb4"/>
                                     <constraint firstItem="z40-8x-UIz" firstAttribute="leading" secondItem="ATA-yr-Yln" secondAttribute="trailing" constant="-95" id="l9a-Tm-uad"/>
+                                    <constraint firstItem="TUs-tm-rEa" firstAttribute="top" secondItem="swU-sA-KAH" secondAttribute="bottom" constant="1" id="lAE-Cv-c5P"/>
                                     <constraint firstItem="wSc-jA-be1" firstAttribute="top" secondItem="swU-sA-KAH" secondAttribute="bottom" constant="30" id="lDF-YQ-eM3"/>
                                     <constraint firstItem="z40-8x-UIz" firstAttribute="centerX" secondItem="HTr-K4-xOo" secondAttribute="centerX" id="maK-7V-2AY"/>
                                     <constraint firstAttribute="trailing" secondItem="tdQ-a0-5yw" secondAttribute="trailing" id="rr9-Vp-5fz"/>
@@ -262,6 +272,7 @@
                                         <exclude reference="I3W-rj-Izd"/>
                                         <exclude reference="Fm2-bv-72m"/>
                                         <exclude reference="l9a-Tm-uad"/>
+                                        <exclude reference="lDF-YQ-eM3"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular" ambiguous="YES">
@@ -308,15 +319,11 @@
                                 <action selector="backButton:" destination="qA9-J9-bhR" id="9dV-0P-Xap"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Vhn-nC-j5e">
-                            <connections>
-                                <action selector="typeFoundActionButton:" destination="qA9-J9-bhR" id="UoU-72-0vt"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="800"/>
                     <connections>
+                        <outlet property="actualSunlightTimeLabel" destination="TUs-tm-rEa" id="jIp-Uv-Z0H"/>
                         <outlet property="actualTypeColorLabel" destination="HTr-K4-xOo" id="Uv2-sI-CDG"/>
                         <outlet property="actualTypeColorView" destination="z40-8x-UIz" id="FGj-O5-OQX"/>
                         <outlet property="fbShimmerView" destination="rMs-Di-gQD" id="wu6-a2-gcH"/>

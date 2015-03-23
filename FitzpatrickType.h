@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 
 typedef enum {
-    Type1,
+    Type1 = 0,
     Type2,
     Type3,
     Type4,
