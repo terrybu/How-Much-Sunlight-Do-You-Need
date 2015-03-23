@@ -53,10 +53,6 @@
     self.actualSunburnTimeLabel.text = [NSString stringWithFormat:@"%@", [info objectForKey:kSunburnTime]];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 - (IBAction) backButton:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -64,7 +60,10 @@
 
 
 
-
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];

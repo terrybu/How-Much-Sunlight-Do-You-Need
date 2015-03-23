@@ -34,27 +34,44 @@
     }
     
     if ([webView.request.URL.absoluteString isEqualToString:kResultPageURL]) {
-        //        NSLog(@"found the result page");
         NSString *resultPageHTML = [webView stringByEvaluatingJavaScriptFromString:@"document.body.innerHTML"];
         NSArray *components = [resultPageHTML componentsSeparatedByString:@"<br>"];
         NSString *sanitizedMinRecoString = [components[4] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        NSString *resultMinRecoString = [self stringParseIntoHoursMins:sanitizedMinRecoString];
         
-//        NSLog(@"min recommended time: %@, count: %lu", sanitizedMinRecoString, sanitizedMinRecoString.length);
-        //gets minimum recommended exposure time
-        //        NSLog(@"%@", components);
-        
-        [[NSNotificationCenter defaultCenter]postNotificationName:kSunlightRecoTime object:nil userInfo:@{ kSunlightRecoTime : sanitizedMinRecoString }];
+        [[NSNotificationCenter defaultCenter]postNotificationName:kSunlightRecoTime object:nil userInfo:@{ kSunlightRecoTime : resultMinRecoString }];
         
         NSString *sanitizedUVExposureTimeToObtainSunburn = [components[components.count-1] stringByReplacingOccurrencesOfString:@"</p>" withString:@""];
         sanitizedUVExposureTimeToObtainSunburn = [sanitizedUVExposureTimeToObtainSunburn stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        NSString *resultSunburnString = [self stringParseIntoHoursMins:sanitizedUVExposureTimeToObtainSunburn];
         
-        
-        [[NSNotificationCenter defaultCenter]postNotificationName:kSunburnTime object:nil userInfo:@{ kSunburnTime : sanitizedUVExposureTimeToObtainSunburn }];
-
-//        NSLog(@"UV Exposure Time to Obtain Sunburn: %@, count: %lu", sanitizedUVExposureTimeToObtainSunburn, sanitizedUVExposureTimeToObtainSunburn.length);
-        
+        [[NSNotificationCenter defaultCenter]postNotificationName:kSunburnTime object:nil userInfo:@{ kSunburnTime : resultSunburnString }];
     }
 }
+
+- (NSString *) stringParseIntoHoursMins: (NSString *) unformattedTimeString{
+    NSArray *components = [unformattedTimeString componentsSeparatedByString:@":"];
+    NSLog(@"%@", components.description);
+    
+    NSInteger hourDigits = [components[0] integerValue];
+    NSInteger minuteDigits = [components[1] integerValue];
+    
+    NSLog(@"%ld hours %ld minutes", (long)hourDigits, minuteDigits);
+    
+    NSString *resultString;
+    
+    if (hourDigits == 0)
+        resultString = [NSString stringWithFormat:@"%ld Minutes", minuteDigits];
+    else if (hourDigits == 1)
+        resultString = [NSString stringWithFormat:@"1 Hour %ld Minutes", minuteDigits];
+    else
+        resultString = [NSString stringWithFormat:@"%ld Hours %ld Minutes", hourDigits, minuteDigits];
+    
+    return resultString;
+}
+
+
+
 
 #pragma mark Custom JavaScript Methods
 
