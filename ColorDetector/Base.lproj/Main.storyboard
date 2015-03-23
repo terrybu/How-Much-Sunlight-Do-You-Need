@@ -186,18 +186,24 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended Sunlight Exposure: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swU-sA-KAH">
                                         <rect key="frame" x="30" y="425" width="540" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expected Time Needed for Sunburn:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSc-jA-be1">
-                                        <rect key="frame" x="30" y="480" width="540" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now loading ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUs-tm-rEa">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now loading ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUs-tm-rEa" userLabel="ActualSunlightReco">
                                         <rect key="frame" x="30" y="447" width="540" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Needed for Sunburn:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSc-jA-be1">
+                                        <rect key="frame" x="30" y="480" width="540" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now loading ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZiF-SG-r2R" userLabel="ActualSunlightReco">
+                                        <rect key="frame" x="30" y="502" width="540" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -236,6 +242,8 @@
                                     <constraint firstAttribute="centerX" secondItem="swU-sA-KAH" secondAttribute="centerX" id="WYc-nG-WFw"/>
                                     <constraint firstItem="tdQ-a0-5yw" firstAttribute="leading" secondItem="dQ2-Zd-9F0" secondAttribute="leading" id="Xis-20-Jh3"/>
                                     <constraint firstItem="tdQ-a0-5yw" firstAttribute="width" secondItem="dQ2-Zd-9F0" secondAttribute="width" id="Y8f-Qr-gVD"/>
+                                    <constraint firstItem="ZiF-SG-r2R" firstAttribute="width" secondItem="dQ2-Zd-9F0" secondAttribute="width" multiplier="0.9" id="cf7-65-p1J"/>
+                                    <constraint firstAttribute="centerX" secondItem="ZiF-SG-r2R" secondAttribute="centerX" id="d8w-HJ-Qzu"/>
                                     <constraint firstItem="rMs-Di-gQD" firstAttribute="trailing" secondItem="HTr-K4-xOo" secondAttribute="trailing" constant="-50" id="eEa-wg-3Eg"/>
                                     <constraint firstAttribute="centerX" secondItem="tdQ-a0-5yw" secondAttribute="centerX" id="fB9-fe-UBk"/>
                                     <constraint firstItem="wSc-jA-be1" firstAttribute="top" secondItem="TUs-tm-rEa" secondAttribute="bottom" constant="12" id="gTz-Sf-Hje"/>
@@ -248,6 +256,7 @@
                                     <constraint firstItem="TUs-tm-rEa" firstAttribute="top" secondItem="swU-sA-KAH" secondAttribute="bottom" constant="1" id="lAE-Cv-c5P"/>
                                     <constraint firstItem="wSc-jA-be1" firstAttribute="top" secondItem="swU-sA-KAH" secondAttribute="bottom" constant="30" id="lDF-YQ-eM3"/>
                                     <constraint firstItem="z40-8x-UIz" firstAttribute="centerX" secondItem="HTr-K4-xOo" secondAttribute="centerX" id="maK-7V-2AY"/>
+                                    <constraint firstItem="ZiF-SG-r2R" firstAttribute="top" secondItem="wSc-jA-be1" secondAttribute="bottom" constant="1" id="ni4-4I-wXV"/>
                                     <constraint firstAttribute="trailing" secondItem="tdQ-a0-5yw" secondAttribute="trailing" id="rr9-Vp-5fz"/>
                                     <constraint firstItem="cJo-gK-eW3" firstAttribute="centerX" secondItem="ATA-yr-Yln" secondAttribute="centerX" id="tRb-wK-2qb"/>
                                     <constraint firstItem="cJo-gK-eW3" firstAttribute="leading" secondItem="dQ2-Zd-9F0" secondAttribute="leading" constant="148" id="wH8-KB-iyC">
@@ -323,6 +332,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="800"/>
                     <connections>
+                        <outlet property="actualSunburnTimeLabel" destination="ZiF-SG-r2R" id="sXW-Mo-mNk"/>
                         <outlet property="actualSunlightTimeLabel" destination="TUs-tm-rEa" id="jIp-Uv-Z0H"/>
                         <outlet property="actualTypeColorLabel" destination="HTr-K4-xOo" id="Uv2-sI-CDG"/>
                         <outlet property="actualTypeColorView" destination="z40-8x-UIz" id="FGj-O5-OQX"/>

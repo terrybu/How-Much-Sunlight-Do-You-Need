@@ -47,7 +47,10 @@
         
         NSString *sanitizedUVExposureTimeToObtainSunburn = [components[components.count-1] stringByReplacingOccurrencesOfString:@"</p>" withString:@""];
         sanitizedUVExposureTimeToObtainSunburn = [sanitizedUVExposureTimeToObtainSunburn stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-//        
+        
+        
+        [[NSNotificationCenter defaultCenter]postNotificationName:kSunburnTime object:nil userInfo:@{ kSunburnTime : sanitizedUVExposureTimeToObtainSunburn }];
+
 //        NSLog(@"UV Exposure Time to Obtain Sunburn: %@, count: %lu", sanitizedUVExposureTimeToObtainSunburn, sanitizedUVExposureTimeToObtainSunburn.length);
         
     }

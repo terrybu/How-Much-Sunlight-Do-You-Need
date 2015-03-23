@@ -37,6 +37,7 @@
 
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sunlightRecoReceived:) name:kSunlightRecoTime object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sunburnTimeReceived:) name:kSunburnTime object:nil];
     
     self.webviewManager = [[WebviewManager alloc]init];
     self.webviewManager.fitzType = self.pickedFitzType;
@@ -45,6 +46,11 @@
 - (void) sunlightRecoReceived: (NSNotification *) notification {
     NSDictionary *info = notification.userInfo;
     self.actualSunlightTimeLabel.text = [NSString stringWithFormat:@"%@", [info objectForKey:kSunlightRecoTime]];
+}
+
+- (void) sunburnTimeReceived: (NSNotification *) notification {
+    NSDictionary *info = notification.userInfo;
+    self.actualSunburnTimeLabel.text = [NSString stringWithFormat:@"%@", [info objectForKey:kSunburnTime]];
 }
 
 - (void)didReceiveMemoryWarning {
