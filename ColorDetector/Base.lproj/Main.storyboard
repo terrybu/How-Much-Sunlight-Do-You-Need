@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pIO-v6-fUv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pIO-v6-fUv">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -22,19 +22,38 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l1C-Se-gPM">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunGlasses" translatesAutoresizingMaskIntoConstraints="NO" id="n5h-pV-chw" userLabel="sunGlassesView">
+                                <rect key="frame" x="250" y="146" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="28P-a4-mBU"/>
+                                    <constraint firstAttribute="width" constant="100" id="WEv-LZ-DT2"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Anywhere for Camera Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VgI-tx-H5i">
+                                <rect key="frame" x="174" y="258" width="252" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="n5h-pV-chw" secondAttribute="centerX" id="EHu-LE-xT1"/>
                             <constraint firstAttribute="trailing" secondItem="l1C-Se-gPM" secondAttribute="trailing" id="VXY-DR-VcQ"/>
+                            <constraint firstAttribute="centerX" secondItem="VgI-tx-H5i" secondAttribute="centerX" id="dnN-HH-N9B"/>
+                            <constraint firstAttribute="centerY" secondItem="VgI-tx-H5i" secondAttribute="centerY" id="esH-BX-Swd"/>
                             <constraint firstItem="l1C-Se-gPM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="pzb-Rv-tEh"/>
                             <constraint firstItem="l1C-Se-gPM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sXW-lz-o5l"/>
                             <constraint firstItem="l1C-Se-gPM" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="vwd-18-abr"/>
+                            <constraint firstItem="VgI-tx-H5i" firstAttribute="top" secondItem="n5h-pV-chw" secondAttribute="bottom" constant="12" id="xnH-nX-IwN"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Tap on Photo" id="Uof-Me-Ek2"/>
                     <connections>
                         <outlet property="imageView" destination="l1C-Se-gPM" id="fWq-EK-17n"/>
+                        <outlet property="sunGlassesView" destination="n5h-pV-chw" id="Ce2-cC-doa"/>
+                        <outlet property="tapAnywhereLabel" destination="VgI-tx-H5i" id="8Fn-em-jW3"/>
                         <segue destination="4hl-3F-abS" kind="presentation" identifier="resultSegue" modalTransitionStyle="flipHorizontal" id="m0s-gX-bfc"/>
                     </connections>
                 </viewController>
@@ -587,6 +606,7 @@
         <image name="camera30" width="30" height="30"/>
         <image name="questionmark30x30" width="30" height="30"/>
         <image name="sun" width="1200" height="1200"/>
+        <image name="sunGlasses" width="700" height="700"/>
         <image name="webIcon" width="30" height="31"/>
     </resources>
 </document>

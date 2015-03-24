@@ -18,6 +18,7 @@
 @interface FirstViewController () {
     UIBarButtonItem *cameraButton;
     UIBarButtonItem *doneButton;
+    bool imagePicked;
 }
 
 @property (strong, nonatomic) UIColor *pickedColor;
@@ -34,7 +35,6 @@
     self.title = @"Camera";
     
     self.imageView.backgroundColor = [UIColor blackColor];
-    
     cameraButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(cameraButton:)];
     self.navigationItem.rightBarButtonItem = cameraButton;
     
@@ -45,10 +45,12 @@
     float sameLengthForRectSide = self.view.frame.size.width/6;
     _touchPixelRectView = [[TouchPixelColorView alloc]initWithFrame:CGRectMake(0, 0, sameLengthForRectSide, sameLengthForRectSide )];
     _touchPixelRectView.backgroundColor = [UIColor blackColor];
+    
     //border
     _touchPixelRectView.layer.borderColor = [UIColor lightGrayColor].CGColor;
     _touchPixelRectView.layer.borderWidth = 1.5f;
-    // drop shadow
+    
+    //drop shadow
     [_touchPixelRectView.layer setShadowColor:[UIColor grayColor].CGColor];
     [_touchPixelRectView.layer setShadowOpacity:3.0];
     [_touchPixelRectView.layer setShadowRadius:3.0];
@@ -59,40 +61,34 @@
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
     
-    if (self.imageView.image == nil) {
+    if (!imagePicked) {
         self.navigationItem.title = @"Select or Take Photo";
         _touchPixelRectView.hidden = YES;
-        self.imageView.image = [UIImage imageNamed:@"sunGlasses"];
-        self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     }
-    else if (self.imageView.image != nil) {
+    else {
+        self.sunGlassesView.hidden = YES;
+        self.tapAnywhereLabel.hidden = YES;
         self.navigationItem.title = @"Tap photo";
         self.navigationItem.leftBarButtonItem = cameraButton;
         doneButton = [[UIBarButtonItem alloc]initWithTitle:@"Calculate" style:UIBarButtonItemStyleDone target:self action:@selector(showResultButton)];
         doneButton.tintColor = [UIColor blackColor];
-        
         self.navigationItem.rightBarButtonItem = (self.pickedColor != nil) ? doneButton : nil;
     }
 }
 
-#pragma mark Touch and Navigation
 
+#pragma mark Touch and Navigation
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    if (self.imageView.image != nil) {
+    if (imagePicked) {
         CGFloat red, green, blue, alpha;
         UITouch *touch = [[event allTouches] anyObject];
         CGPoint loc = [touch locationInView:self.view];
         self.pickedColor = [self.view colorOfPoint:loc];
         [self.pickedColor getRed:&red green:&green blue:&blue alpha:&alpha];
-//        NSLog(@"red %f green %f blue %f alpha %f", red, green, blue, alpha);
-        
         self.touchPixelRectView.backgroundColor = self.pickedColor;
         _touchPixelRectView.hidden = NO;
         self.navigationItem.rightBarButtonItem = doneButton;
-        
         _mostSimilarType = [FitzpatrickType comparePickedColorToFitzpatrickTypes:self.pickedColor];
-        
-        //    [self showRGBInPreview:red green:green blue:blue];
     }
 }
 
@@ -183,11 +179,13 @@
     UIImage *img = [info objectForKey:UIImagePickerControllerOriginalImage];
     if (img) {
         self.imageView.image = img;
+        imagePicked = true;
     }
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    imagePicked = false;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

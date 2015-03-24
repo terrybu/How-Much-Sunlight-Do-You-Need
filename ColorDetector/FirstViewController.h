@@ -11,6 +11,12 @@
 @interface FirstViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate>
 
 @property IBOutlet UIImageView *imageView;
+@property IBOutlet UIImageView *sunGlassesView;
+@property IBOutlet UILabel *tapAnywhereLabel;
+
+
+
+
 - (IBAction)cameraButton:(id)sender;
 
 
