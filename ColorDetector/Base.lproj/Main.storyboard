@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -39,7 +40,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1082" y="271"/>
+            <point key="canvasLocation" x="1032" y="-373"/>
         </scene>
         <!--ResultViewController-->
         <scene sceneID="lZg-ki-GuA">
@@ -183,13 +184,13 @@
                                                 </variation>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="SkinResultMessageLabel" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SR7-Tf-nZu" userLabel="SkinResultMessageLabel">
-                                                <rect key="frame" x="15" y="327" width="570" height="32"/>
+                                                <rect key="frame" x="15" y="327" width="570" height="259"/>
                                                 <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="25"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="5jd-D7-jxT">
-                                                <rect key="frame" x="200" y="371" width="200" height="200"/>
+                                                <rect key="frame" x="200" y="598" width="200" height="200"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="QVq-Ae-PeN"/>
                                                     <constraint firstAttribute="height" constant="200" id="RVZ-7l-ps0"/>
@@ -202,25 +203,25 @@
                                                 </variation>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="placeholder" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdr-hD-dt8" userLabel="BasedOnLabel">
-                                                <rect key="frame" x="30" y="621" width="540" height="33"/>
+                                                <rect key="frame" x="30" y="848" width="540" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
                                                 <color key="textColor" red="1" green="0.50871196546052633" blue="0.17498458059210525" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended Sunlight Exposure Today: " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swU-sA-KAH">
-                                                <rect key="frame" x="15" y="666" width="570" height="27"/>
+                                                <rect key="frame" x="15" y="893" width="570" height="27"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UV Exposure Needed for Sunburn Today:" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSc-jA-be1">
-                                                <rect key="frame" x="-15" y="759" width="631" height="27"/>
+                                                <rect key="frame" x="-15" y="986" width="631" height="27"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now loading ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZiF-SG-r2R" userLabel="ActualSunburnReco">
-                                                <rect key="frame" x="231" y="794" width="138" height="24"/>
+                                                <rect key="frame" x="231" y="1021" width="138" height="24"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -233,7 +234,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now loading ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUs-tm-rEa" userLabel="ActualSunlightReco">
-                                                <rect key="frame" x="231" y="701" width="138" height="24"/>
+                                                <rect key="frame" x="231" y="928" width="138" height="24"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -263,6 +264,7 @@
                                             <constraint firstItem="Zdr-hD-dt8" firstAttribute="top" secondItem="5jd-D7-jxT" secondAttribute="bottom" constant="50" id="au4-Gp-gmu"/>
                                             <constraint firstAttribute="centerX" secondItem="rPc-Zu-bzo" secondAttribute="centerX" id="ays-PY-Rmg"/>
                                             <constraint firstAttribute="centerX" secondItem="swU-sA-KAH" secondAttribute="centerX" id="b6k-f2-MvG"/>
+                                            <constraint firstItem="rPc-Zu-bzo" firstAttribute="top" secondItem="ZiF-SG-r2R" secondAttribute="bottom" constant="150" id="cfB-tW-VZn"/>
                                             <constraint firstItem="wSc-jA-be1" firstAttribute="top" secondItem="TUs-tm-rEa" secondAttribute="bottom" constant="34" id="dA3-Zk-qgB"/>
                                             <constraint firstAttribute="centerX" secondItem="TUs-tm-rEa" secondAttribute="centerX" id="fWw-Lk-lVC"/>
                                             <constraint firstAttribute="centerX" secondItem="SR7-Tf-nZu" secondAttribute="centerX" id="iD7-sR-C8m"/>
@@ -338,7 +340,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uzj-YB-vl9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2685.75" y="264.75"/>
+            <point key="canvasLocation" x="3493" y="-378"/>
         </scene>
         <!--NavFirst-->
         <scene sceneID="Dpc-xy-Lq7">
@@ -363,7 +365,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fjt-4U-5bh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="205.5" y="-95"/>
+            <point key="canvasLocation" x="205" y="-373"/>
         </scene>
         <!--NavResult-->
         <scene sceneID="Clu-VZ-psC">
@@ -386,7 +388,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7fO-dQ-HsV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1900" y="265"/>
+            <point key="canvasLocation" x="1872" y="-373"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Mi4-JP-kFP">
@@ -400,12 +402,13 @@
                     </tabBar>
                     <connections>
                         <segue destination="lcx-wc-jan" kind="relationship" relationship="viewControllers" id="wIr-Tc-LTc"/>
+                        <segue destination="n1K-qv-fQc" kind="relationship" relationship="viewControllers" id="v2t-rN-0Ye"/>
                         <segue destination="xyw-PL-n7Y" kind="relationship" relationship="viewControllers" id="u4i-2A-2cI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qJz-SU-upk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-492" y="278"/>
+            <point key="canvasLocation" x="-680" y="278"/>
         </scene>
         <!--Web-->
         <scene sceneID="nW7-Jw-jLs">
@@ -440,18 +443,139 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Web" id="5sC-Jq-JaO"/>
+                    <tabBarItem key="tabBarItem" title="Web" image="webIcon" id="5sC-Jq-JaO"/>
                     <connections>
                         <outlet property="webView" destination="8VC-nT-fxk" id="oxB-Uq-7yJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ivs-o6-e1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="215" y="586"/>
+            <point key="canvasLocation" x="190" y="1235"/>
+        </scene>
+        <!--Help Page-->
+        <scene sceneID="TA6-fw-VMs">
+            <objects>
+                <viewController id="eSF-PO-Pew" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MES-Zp-FJS"/>
+                        <viewControllerLayoutGuide type="bottom" id="J2V-l3-FU6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6P1-fK-Npk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cKd-Gy-yo4">
+                                <rect key="frame" x="16" y="0.0" width="568" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Thank you for using this app. This app is designed to help you figure out how much sunlight you need to get a healthy daily dosage of Vitamin D. 
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Directions are as follows:
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">1) In a normal room-lighting setting, take a picture of anywhere on your skin (preferably arm or face) or choose an existing photo from your Photos album 2) When the photo shows up on the screen, tap anywhere on the photo and a small preview rectangle will show focusing on the color of that pixel. Tap on a pixel that most accurately reflects your skin color and press "Calculate"  </string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Extra Information:">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> 1) Please allow this app to use your location data for most accurate data. Sunlight data will dramatically differ depending on your location and weather
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">References:
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">This app could not have been possible without the existing web application at http://nadir.nilu.no/~olaeng/fastrt/VitD-ez_quartMEDandMED_v2.html. The Web tab will take you directly to this link in a web browser
+
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cKd-Gy-yo4" firstAttribute="leading" secondItem="6P1-fK-Npk" secondAttribute="leadingMargin" id="A4e-f2-4kT"/>
+                            <constraint firstItem="cKd-Gy-yo4" firstAttribute="top" secondItem="MES-Zp-FJS" secondAttribute="bottom" id="UZe-zF-T03"/>
+                            <constraint firstItem="J2V-l3-FU6" firstAttribute="top" secondItem="cKd-Gy-yo4" secondAttribute="bottom" id="biJ-PB-Uq4"/>
+                            <constraint firstItem="cKd-Gy-yo4" firstAttribute="top" secondItem="6P1-fK-Npk" secondAttribute="topMargin" id="dKc-Un-KGZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cKd-Gy-yo4" secondAttribute="trailing" id="jkX-Ep-z5B"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="UZe-zF-T03"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Help Page" id="LcG-zo-DDB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8A3-Vh-5KG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1017" y="289"/>
+        </scene>
+        <!--Help-->
+        <scene sceneID="Iab-m5-h17">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n1K-qv-fQc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Help" image="questionmark30x30" id="dSc-og-6jR"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lcQ-xK-4cS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eSF-PO-Pew" kind="relationship" relationship="rootViewController" id="gzq-DY-5Ak"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vyp-Gq-y5c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="205" y="289"/>
         </scene>
     </scenes>
     <resources>
         <image name="camera30" width="30" height="30"/>
+        <image name="questionmark30x30" width="30" height="30"/>
         <image name="sun" width="1200" height="1200"/>
+        <image name="webIcon" width="30" height="31"/>
     </resources>
 </document>

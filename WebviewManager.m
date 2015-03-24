@@ -56,18 +56,18 @@
     }
 }
 
-#pragma mark Custom JavaScript to Inject Correct Info to Form
 
+#pragma mark Custom JavaScript to Inject Correct Info to Form
 - (void) webViewSetCorrectDate {
     NSDate *today = [NSDate date];
     NSCalendar* calendar = [NSCalendar currentCalendar];
     NSDateComponents* components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:today];
     
     //setting month
-    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByName(\"month\")[0].options[%d].selected = true", [components month]-1]]; //because the 0th index is january and 11th index is dec
+    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByName(\"month\")[0].options[%d].selected = true", (int) [components month]-1]]; //because the 0th index is january and 11th index is dec
     
     //setting day
-    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByName(\"mday\")[0].options[%d].selected = true", [components day]-1]]; //because the 0th index is january and 11th index is dec
+    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByName(\"mday\")[0].options[%d].selected = true", (int) [components day]-1]]; //because the 0th index is january and 11th index is dec
 }
 
 - (void) webViewSetCorrectLocation {

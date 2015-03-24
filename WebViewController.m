@@ -25,34 +25,6 @@
     self.webView.delegate = self;
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-    
-    if ([webView.request.URL.absoluteString isEqualToString:kFormPageURL]){
-        [self webViewSetFitzgeraldSkinType];
-        [self webViewClickSubmitButton];
-    }
-    
-    if ([webView.request.URL.absoluteString isEqualToString:kResultPageURL]) {
-        NSString *resultPageHTML = [webView stringByEvaluatingJavaScriptFromString:@"document.body.innerHTML"];
-        NSArray *components = [resultPageHTML componentsSeparatedByString:@"<br>"];
-        NSString *sanitizedMinRecoString = [components[4] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
-        [[NSNotificationCenter defaultCenter]postNotificationName:kSunlightRecoTime object:nil userInfo:@{ kSunlightRecoTime : sanitizedMinRecoString }];
-        
-        NSString *sanitizedUVExposureTimeToObtainSunburn = [components[components.count-1] stringByReplacingOccurrencesOfString:@"</p>" withString:@""];
-        sanitizedUVExposureTimeToObtainSunburn = [sanitizedUVExposureTimeToObtainSunburn stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    }
-}
-
-#pragma mark Custom JavaScript Methods
-
-- (void) webViewSetFitzgeraldSkinType {
-    [self.webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByName(\"skin_index\")[1].checked = true"];
-}
-
-- (void) webViewClickSubmitButton {
-    [self.webView stringByEvaluatingJavaScriptFromString:@"var inputs = document.getElementsByTagName('input'); for(var i = 0; i < inputs.length; i++) {if(inputs[i].type.toLowerCase() == 'submit') {inputs[i].click();}}"];
-}
 
 
 - (void)didReceiveMemoryWarning {

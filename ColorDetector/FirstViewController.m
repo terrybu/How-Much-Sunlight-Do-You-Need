@@ -60,7 +60,7 @@
     [super viewWillAppear:YES];
     
     if (self.imageView.image == nil) {
-        self.navigationItem.title = @"Select or take photo";
+        self.navigationItem.title = @"Select or Take Photo";
         _touchPixelRectView.hidden = YES;
     }
     else if (self.imageView.image != nil) {
