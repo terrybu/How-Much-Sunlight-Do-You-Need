@@ -90,6 +90,9 @@
         self.navigationItem.rightBarButtonItem = doneButton;
         _mostSimilarType = [FitzpatrickType comparePickedColorToFitzpatrickTypes:self.pickedColor];
     }
+    else {
+        [self showAlertController];
+    }
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -107,11 +110,11 @@
 
 #pragma mark IBAction and other actions related
 - (IBAction)cameraButton:(id)sender {
-    [self showActionSheet];
+    [self showAlertController];
 }
 
 
-- (void) showActionSheet {
+- (void) showAlertController {
     UIAlertController* alertController = [UIAlertController alertControllerWithTitle:nil
                                                                    message:nil
                                                             preferredStyle:UIAlertControllerStyleActionSheet];

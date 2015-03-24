@@ -13,7 +13,7 @@
 
 @protocol WebviewManagerDelegate;
 
-@interface WebviewManager : NSObject  <UIWebViewDelegate, CLLocationManagerDelegate>
+@interface WebviewManager : NSObject  <UIWebViewDelegate, CLLocationManagerDelegate, NSURLConnectionDelegate>
 
 @property (nonatomic, strong) UIWebView *webView;
 @property FitzpatrickType* fitzType;
