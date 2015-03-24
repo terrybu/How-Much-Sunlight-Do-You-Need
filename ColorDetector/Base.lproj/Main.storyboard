@@ -403,14 +403,14 @@
                     <connections>
                         <segue destination="lcx-wc-jan" kind="relationship" relationship="viewControllers" id="wIr-Tc-LTc"/>
                         <segue destination="n1K-qv-fQc" kind="relationship" relationship="viewControllers" id="v2t-rN-0Ye"/>
-                        <segue destination="xyw-PL-n7Y" kind="relationship" relationship="viewControllers" id="u4i-2A-2cI"/>
+                        <segue destination="HgV-RR-pc8" kind="relationship" relationship="viewControllers" id="u4i-2A-2cI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qJz-SU-upk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-680" y="278"/>
         </scene>
-        <!--Web-->
+        <!--Web View Controller-->
         <scene sceneID="nW7-Jw-jLs">
             <objects>
                 <viewController id="xyw-PL-n7Y" customClass="WebViewController" sceneMemberID="viewController">
@@ -423,34 +423,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8VC-nT-fxk">
-                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="SeL-X0-n18" firstAttribute="top" secondItem="8VC-nT-fxk" secondAttribute="bottom" id="12k-B8-yna"/>
-                            <constraint firstAttribute="bottom" secondItem="8VC-nT-fxk" secondAttribute="bottom" id="9vg-hV-wG0"/>
                             <constraint firstAttribute="trailing" secondItem="8VC-nT-fxk" secondAttribute="trailing" id="BcI-S5-Q5U"/>
                             <constraint firstItem="8VC-nT-fxk" firstAttribute="leading" secondItem="o2p-5u-PoE" secondAttribute="leading" id="NFq-ZC-WvL"/>
-                            <constraint firstItem="8VC-nT-fxk" firstAttribute="top" secondItem="o2p-5u-PoE" secondAttribute="top" id="TT6-pn-H86"/>
-                            <constraint firstItem="8VC-nT-fxk" firstAttribute="top" secondItem="xN8-QF-MFP" secondAttribute="bottom" id="Xmh-N9-qqc"/>
+                            <constraint firstAttribute="bottom" secondItem="8VC-nT-fxk" secondAttribute="bottom" id="Usv-4h-nYk"/>
+                            <constraint firstItem="8VC-nT-fxk" firstAttribute="top" secondItem="o2p-5u-PoE" secondAttribute="top" id="kZF-Em-q0n"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="9vg-hV-wG0"/>
-                                <exclude reference="TT6-pn-H86"/>
-                            </mask>
-                        </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Web" image="webIcon" id="5sC-Jq-JaO"/>
+                    <navigationItem key="navigationItem" id="qvi-x0-cBp"/>
                     <connections>
                         <outlet property="webView" destination="8VC-nT-fxk" id="oxB-Uq-7yJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ivs-o6-e1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="190" y="1235"/>
+            <point key="canvasLocation" x="1012" y="978"/>
         </scene>
         <!--Help Page-->
         <scene sceneID="TA6-fw-VMs">
@@ -570,6 +562,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vyp-Gq-y5c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="205" y="289"/>
+        </scene>
+        <!--Web-->
+        <scene sceneID="Nxd-JS-udd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HgV-RR-pc8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Web" image="webIcon" id="5sC-Jq-JaO"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WAW-lS-s9E">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xyw-PL-n7Y" kind="relationship" relationship="rootViewController" id="7SB-FT-iPK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wje-PF-BHR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="200" y="978"/>
         </scene>
     </scenes>
     <resources>

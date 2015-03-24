@@ -62,6 +62,8 @@
     if (self.imageView.image == nil) {
         self.navigationItem.title = @"Select or Take Photo";
         _touchPixelRectView.hidden = YES;
+        self.imageView.image = [UIImage imageNamed:@"sunGlasses"];
+        self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     }
     else if (self.imageView.image != nil) {
         self.navigationItem.title = @"Tap photo";
@@ -81,7 +83,6 @@
         UITouch *touch = [[event allTouches] anyObject];
         CGPoint loc = [touch locationInView:self.view];
         self.pickedColor = [self.view colorOfPoint:loc];
-        
         [self.pickedColor getRed:&red green:&green blue:&blue alpha:&alpha];
 //        NSLog(@"red %f green %f blue %f alpha %f", red, green, blue, alpha);
         
