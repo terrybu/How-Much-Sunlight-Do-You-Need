@@ -517,6 +517,7 @@
                                     </fragment>
                                     <fragment>
                                         <string key="content"> 1) Please allow this app to use your location data for most accurate data. Sunlight data will dramatically differ depending on your location and weather
+2) Although this app tries to make an accurate estimate of your skin type, due to vast differences that can happen in a photo depending on light conditions, it could have fluctuations. Please choose a photo under regular light conditions and the one that most accurately displays your skin color. 
 
 </string>
                                         <attributes>
@@ -534,7 +535,7 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">This app could not have been possible without the existing web application at http://nadir.nilu.no/~olaeng/fastrt/VitD-ez_quartMEDandMED_v2.html. The Web tab will take you directly to this link in a web browser
+                                        <string key="content">This app could not have been possible without the existing web application at http://nadir.nilu.no/~olaeng/fastrt/VitD-ez_quartMEDandMED_v2.html. All relevant medical research that backs this data is accessible through there. The Web tab will take you directly to this link in a web browser
 
 
 </string>
