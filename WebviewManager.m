@@ -118,10 +118,11 @@
      }];
 
     [self webViewSetCorrectLocationWithActualJSManipulation];
-    [self webViewClickSubmitButton];
     
     WeatherManager *weatherManager = [WeatherManager sharedWeatherManager];
     [weatherManager makeWeatherCallToOpenWeatherMapAPI: latitude longitude:longitude];
+    
+    [self webViewClickSubmitButton];
 }
 
 

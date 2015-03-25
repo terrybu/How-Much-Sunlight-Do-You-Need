@@ -30,6 +30,7 @@
 @property IBOutlet UILabel *resultMessageLabel;
 
 @property (weak, nonatomic) IBOutlet UIImageView *sunCloudsIconImageView;
+@property (weak, nonatomic) IBOutlet UILabel *cloudsStatusLabel;
 
 @property IBOutlet UILabel *basedOnLocationLabel; 
 

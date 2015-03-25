@@ -80,6 +80,7 @@
     else if (weatherManager.clouds >= [NSNumber numberWithInt:50]) {
         self.sunCloudsIconImageView.image = [UIImage imageNamed:@"clouds"];
     }
+    self.cloudsStatusLabel.text = weatherManager.weatherDescriptionString;
 }
 
 

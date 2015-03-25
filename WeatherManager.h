@@ -13,10 +13,12 @@
 @interface WeatherManager : NSObject
 
 @property (nonatomic, strong) NSNumber *clouds;
-- (void) makeWeatherCallToOpenWeatherMapAPI: (NSString *) latitude longitude: (NSString *) longitude;
-
+@property (nonatomic, strong) NSString *weatherDescriptionString;
 @property (nonatomic, weak) id <WeatherManagerDelegate> delegate;
 
+
+
+- (void) makeWeatherCallToOpenWeatherMapAPI: (NSString *) latitude longitude: (NSString *) longitude;
 + (WeatherManager*) sharedWeatherManager;
 
 

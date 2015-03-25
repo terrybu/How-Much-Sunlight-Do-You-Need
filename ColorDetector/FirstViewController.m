@@ -33,10 +33,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.title = @"Camera";
-    
     self.imageView.backgroundColor = [UIColor blackColor];
     cameraButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(cameraButton:)];
     self.navigationItem.rightBarButtonItem = cameraButton;
+    self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
     
     [self setUpPreviewRect];
 }
