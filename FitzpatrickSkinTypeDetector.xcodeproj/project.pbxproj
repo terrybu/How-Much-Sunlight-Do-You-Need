@@ -148,16 +148,12 @@
 				D99CAA061AB76E5F00715D3C /* FirstViewController.m */,
 				D99CAA0A1AB76E5F00715D3C /* ResultViewController.h */,
 				D99CAA0B1AB76E5F00715D3C /* ResultViewController.m */,
-				D947FA991AC323A400021949 /* Reachability.h */,
-				D947FA9A1AC323A400021949 /* Reachability.m */,
 				D95D3DCE1AC08B0300EFC773 /* WebviewManager.h */,
 				D95D3DCF1AC08B0300EFC773 /* WebviewManager.m */,
 				D947FA961AC2FE8800021949 /* WeatherManager.h */,
 				D947FA971AC2FE8800021949 /* WeatherManager.m */,
 				D964299B1ABB5C2900DDA435 /* WebViewController.h */,
 				D964299C1ABB5C2900DDA435 /* WebViewController.m */,
-				D95D3DCB1AC0811F00EFC773 /* Constants.h */,
-				D95D3DCC1AC0811F00EFC773 /* Constants.m */,
 				D99CAA031AB76E5F00715D3C /* Main.storyboard */,
 				D99CAA1B1AB7705500715D3C /* Custom */,
 				D947AB0D1AB7289C00AEFEC9 /* Supporting Files */,
@@ -168,6 +164,10 @@
 		D99CAA1B1AB7705500715D3C /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				D95D3DCB1AC0811F00EFC773 /* Constants.h */,
+				D95D3DCC1AC0811F00EFC773 /* Constants.m */,
+				D947FA991AC323A400021949 /* Reachability.h */,
+				D947FA9A1AC323A400021949 /* Reachability.m */,
 				D99CAA231AB7897600715D3C /* FitzpatrickType.h */,
 				D99CAA241AB7897600715D3C /* FitzpatrickType.m */,
 				D94660EE1ABB16800087D347 /* FBShimmering */,

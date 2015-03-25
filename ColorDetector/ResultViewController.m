@@ -51,6 +51,13 @@
     }
     else {
         NSLog(@"internet UNREACHABLE");
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"No Internet"
+                                                                       message:@"Some functionality like location-based and weather-based sunlight calculation will not work without internet."
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction* okayAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                             handler:^(UIAlertAction * action) {}];
+        [alert addAction:okayAction];
+        [self presentViewController:alert animated:YES completion:nil];
     }
 }
 
