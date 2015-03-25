@@ -10,8 +10,9 @@
 #import "FitzpatrickType.h"
 #import "FBShimmeringView.h"
 #import "WebviewManager.h"
+#import "WeatherManager.h"
 
-@interface ResultViewController : UIViewController <WebviewManagerDelegate>
+@interface ResultViewController : UIViewController <WebviewManagerDelegate, WeatherManagerDelegate>
 
 @property (strong, nonatomic) WebviewManager *webviewManager;
 

@@ -18,7 +18,6 @@
 @property (nonatomic, strong) UIWebView *webView;
 @property FitzpatrickType* fitzType;
 @property (nonatomic, strong) CLPlacemark *placemark;
-@property (nonatomic, strong) NSNumber *clouds;
 
 @property (nonatomic, weak) id <WebviewManagerDelegate> delegate;
 
@@ -30,6 +29,5 @@
 @protocol WebviewManagerDelegate
 
 - (void) didFinishGettingPlacemarkInfo;
-- (void) didFinishGettingWeatherCloudsInfo;
 
 @end

@@ -19,8 +19,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-//    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, 2000);
-
     self.fbShimmerView.contentView = self.typeLabel;
     self.typeLabel.text = self.pickedFitzType.typeName;
     self.fbShimmerView.shimmering = YES;
@@ -43,6 +41,9 @@
     self.webviewManager = [[WebviewManager alloc]init];
     self.webviewManager.delegate = self;
     self.webviewManager.fitzType = self.pickedFitzType;
+
+    WeatherManager *weatherManager = [WeatherManager sharedWeatherManager];
+    weatherManager.delegate = self;
     
     self.referenceLabel.text = @"This information was made possible by http://nadir.nilu.no/~olaeng/fastrt/VitD-ez_quartMEDandMED_v2.html, Norwegian Institute for Air Research, Ola Engelsen";
 }
@@ -62,13 +63,23 @@
 }
 
 
-
+#pragma mark WebViewManager Delegate
 - (void)didFinishGettingPlacemarkInfo {
     self.basedOnLocationLabel.text = [NSString stringWithFormat:@"Based on your location at %@, %@ in %@", self.webviewManager.placemark.locality, self.webviewManager.placemark.postalCode, self.webviewManager.placemark.ISOcountryCode];
 }
 
+#pragma mark WeatherManager Delegate
 - (void) didFinishGettingWeatherCloudsInfo {
-    self.sunCloudsIconImageView.image = [UIImage imageNamed:@"clouds"];
+    WeatherManager *weatherManager = [WeatherManager sharedWeatherManager];
+    if (weatherManager.clouds < [NSNumber numberWithInt:20]) {
+        //do nothing? leave default sun
+    }
+    else if (weatherManager.clouds >= [NSNumber numberWithInt:20]) {
+        self.sunCloudsIconImageView.image = [UIImage imageNamed:@"broken"];
+    }
+    else if (weatherManager.clouds >= [NSNumber numberWithInt:50]) {
+        self.sunCloudsIconImageView.image = [UIImage imageNamed:@"clouds"];
+    }
 }
 
 

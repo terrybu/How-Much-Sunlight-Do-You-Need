@@ -10,6 +10,7 @@
 		D919D2ED1AB7495200D77F6C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D919D2EC1AB7495200D77F6C /* QuartzCore.framework */; };
 		D94660F51ABB16800087D347 /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D94660F21ABB16800087D347 /* FBShimmeringLayer.m */; };
 		D94660F61ABB16800087D347 /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = D94660F41ABB16800087D347 /* FBShimmeringView.m */; };
+		D947FA981AC2FE8800021949 /* WeatherManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D947FA971AC2FE8800021949 /* WeatherManager.m */; };
 		D95D3DCD1AC0811F00EFC773 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = D95D3DCC1AC0811F00EFC773 /* Constants.m */; };
 		D95D3DD01AC08B0300EFC773 /* WebviewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D95D3DCF1AC08B0300EFC773 /* WebviewManager.m */; };
 		D95D3DD51AC0A0EA00EFC773 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95D3DD31AC0A0D700EFC773 /* CoreLocation.framework */; };
@@ -37,6 +38,8 @@
 		D94660F31ABB16800087D347 /* FBShimmeringView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringView.h; sourceTree = "<group>"; };
 		D94660F41ABB16800087D347 /* FBShimmeringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringView.m; sourceTree = "<group>"; };
 		D947AB0A1AB7289C00AEFEC9 /* FitzpatrickSkinTypeDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitzpatrickSkinTypeDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D947FA961AC2FE8800021949 /* WeatherManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherManager.h; sourceTree = "<group>"; };
+		D947FA971AC2FE8800021949 /* WeatherManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherManager.m; sourceTree = "<group>"; };
 		D95D3DCB1AC0811F00EFC773 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		D95D3DCC1AC0811F00EFC773 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		D95D3DCE1AC08B0300EFC773 /* WebviewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebviewManager.h; sourceTree = "<group>"; };
@@ -144,6 +147,8 @@
 				D99CAA0B1AB76E5F00715D3C /* ResultViewController.m */,
 				D95D3DCE1AC08B0300EFC773 /* WebviewManager.h */,
 				D95D3DCF1AC08B0300EFC773 /* WebviewManager.m */,
+				D947FA961AC2FE8800021949 /* WeatherManager.h */,
+				D947FA971AC2FE8800021949 /* WeatherManager.m */,
 				D964299B1ABB5C2900DDA435 /* WebViewController.h */,
 				D964299C1ABB5C2900DDA435 /* WebViewController.m */,
 				D95D3DCB1AC0811F00EFC773 /* Constants.h */,
@@ -247,6 +252,7 @@
 				D94660F61ABB16800087D347 /* FBShimmeringView.m in Sources */,
 				D99CAA171AB76E5F00715D3C /* ResultViewController.m in Sources */,
 				D964299D1ABB5C2900DDA435 /* WebViewController.m in Sources */,
+				D947FA981AC2FE8800021949 /* WeatherManager.m in Sources */,
 				D99CAA191AB76E5F00715D3C /* UIView+ColorOfPoint.m in Sources */,
 				D99CAA101AB76E5F00715D3C /* AppDelegate.m in Sources */,
 				D99CAA161AB76E5F00715D3C /* main.m in Sources */,
