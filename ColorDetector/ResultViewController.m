@@ -67,6 +67,10 @@
     self.basedOnLocationLabel.text = [NSString stringWithFormat:@"Based on your location at %@, %@ in %@", self.webviewManager.placemark.locality, self.webviewManager.placemark.postalCode, self.webviewManager.placemark.ISOcountryCode];
 }
 
+- (void) didFinishGettingWeatherCloudsInfo {
+    self.sunCloudsIconImageView.image = [UIImage imageNamed:@"clouds"];
+}
+
 
 
 

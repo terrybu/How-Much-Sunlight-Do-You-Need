@@ -28,6 +28,8 @@
 //Result Labels
 @property IBOutlet UILabel *resultMessageLabel;
 
+@property (weak, nonatomic) IBOutlet UIImageView *sunCloudsIconImageView;
+
 @property IBOutlet UILabel *basedOnLocationLabel; 
 
 @property (weak, nonatomic) IBOutlet UILabel *recommendedSunlightLabel;

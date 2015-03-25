@@ -202,14 +202,8 @@
                                                     </mask>
                                                 </variation>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="SkinResultMessageLabel" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SR7-Tf-nZu" userLabel="SkinResultMessageLabel">
-                                                <rect key="frame" x="15" y="327" width="570" height="259"/>
-                                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="25"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="5jd-D7-jxT">
-                                                <rect key="frame" x="200" y="598" width="200" height="200"/>
+                                                <rect key="frame" x="200" y="678" width="200" height="200"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="QVq-Ae-PeN"/>
                                                     <constraint firstAttribute="height" constant="200" id="RVZ-7l-ps0"/>
@@ -221,12 +215,6 @@
                                                     </mask>
                                                 </variation>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="placeholder" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdr-hD-dt8" userLabel="BasedOnLabel">
-                                                <rect key="frame" x="30" y="848" width="540" height="33"/>
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
-                                                <color key="textColor" red="1" green="0.50871196546052633" blue="0.17498458059210525" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended Sunlight Exposure Today: " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swU-sA-KAH">
                                                 <rect key="frame" x="15" y="893" width="570" height="27"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -258,6 +246,18 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="placeholder" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdr-hD-dt8" userLabel="BasedOnLabel">
+                                                <rect key="frame" x="30" y="630" width="540" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                                <color key="textColor" red="1" green="0.50871196546052633" blue="0.17498458059210525" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="SkinResultMessageLabel" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SR7-Tf-nZu" userLabel="SkinResultMessageLabel">
+                                                <rect key="frame" x="15" y="327" width="570" height="258"/>
+                                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="25"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -266,29 +266,27 @@
                                             <constraint firstAttribute="centerX" secondItem="Zdr-hD-dt8" secondAttribute="centerX" id="21O-ZQ-rff"/>
                                             <constraint firstAttribute="bottom" secondItem="rPc-Zu-bzo" secondAttribute="bottom" constant="20" id="3bx-fu-fz4"/>
                                             <constraint firstItem="ZiF-SG-r2R" firstAttribute="top" secondItem="wSc-jA-be1" secondAttribute="bottom" constant="8" id="4mB-cv-aQm"/>
-                                            <constraint firstItem="HTr-K4-xOo" firstAttribute="trailing" secondItem="k4o-dW-Y4i" secondAttribute="trailing" constant="90" id="5Ai-tN-gtl"/>
                                             <constraint firstItem="rPc-Zu-bzo" firstAttribute="width" secondItem="BBA-8i-fYM" secondAttribute="width" id="6SM-AL-TVb"/>
                                             <constraint firstItem="SR7-Tf-nZu" firstAttribute="width" secondItem="BBA-8i-fYM" secondAttribute="width" multiplier="0.95" id="Ajk-Ar-slf"/>
                                             <constraint firstItem="z40-8x-UIz" firstAttribute="centerX" secondItem="HTr-K4-xOo" secondAttribute="centerX" id="Avp-UN-FE3"/>
-                                            <constraint firstItem="z40-8x-UIz" firstAttribute="leading" secondItem="ATA-yr-Yln" secondAttribute="trailing" constant="100" id="H2t-Kk-EU8"/>
+                                            <constraint firstItem="swU-sA-KAH" firstAttribute="top" secondItem="5jd-D7-jxT" secondAttribute="bottom" constant="15" id="HZp-yF-RlE"/>
                                             <constraint firstItem="z40-8x-UIz" firstAttribute="leading" secondItem="ATA-yr-Yln" secondAttribute="trailing" constant="45" id="IdH-yy-UrH"/>
                                             <constraint firstItem="z40-8x-UIz" firstAttribute="top" secondItem="HTr-K4-xOo" secondAttribute="bottom" constant="8" id="Is2-1x-oVE"/>
                                             <constraint firstAttribute="centerX" secondItem="rMs-Di-gQD" secondAttribute="centerX" id="Khe-i8-BKl"/>
                                             <constraint firstItem="tdQ-a0-5yw" firstAttribute="width" secondItem="BBA-8i-fYM" secondAttribute="width" multiplier="0.9" id="LJK-iJ-tA3"/>
-                                            <constraint firstItem="swU-sA-KAH" firstAttribute="top" secondItem="Zdr-hD-dt8" secondAttribute="bottom" constant="12" id="LjR-S2-bdJ"/>
                                             <constraint firstItem="rMs-Di-gQD" firstAttribute="top" secondItem="tdQ-a0-5yw" secondAttribute="bottom" constant="6" id="Myl-5F-HHX"/>
                                             <constraint firstAttribute="centerX" secondItem="wSc-jA-be1" secondAttribute="centerX" id="PKX-DU-poE"/>
                                             <constraint firstAttribute="height" constant="1236" id="Re4-th-GAZ"/>
                                             <constraint firstItem="cJo-gK-eW3" firstAttribute="centerX" secondItem="ATA-yr-Yln" secondAttribute="centerX" id="UbJ-ey-ZpL"/>
-                                            <constraint firstItem="Zdr-hD-dt8" firstAttribute="top" secondItem="5jd-D7-jxT" secondAttribute="bottom" constant="50" id="au4-Gp-gmu"/>
                                             <constraint firstAttribute="centerX" secondItem="rPc-Zu-bzo" secondAttribute="centerX" id="ays-PY-Rmg"/>
                                             <constraint firstAttribute="centerX" secondItem="swU-sA-KAH" secondAttribute="centerX" id="b6k-f2-MvG"/>
                                             <constraint firstItem="rPc-Zu-bzo" firstAttribute="top" secondItem="ZiF-SG-r2R" secondAttribute="bottom" constant="150" id="cfB-tW-VZn"/>
                                             <constraint firstItem="wSc-jA-be1" firstAttribute="top" secondItem="TUs-tm-rEa" secondAttribute="bottom" constant="34" id="dA3-Zk-qgB"/>
+                                            <constraint firstItem="5jd-D7-jxT" firstAttribute="top" secondItem="Zdr-hD-dt8" secondAttribute="bottom" constant="15" id="dhQ-5d-OXD"/>
+                                            <constraint firstItem="Zdr-hD-dt8" firstAttribute="top" secondItem="SR7-Tf-nZu" secondAttribute="bottom" constant="45" id="eKa-uL-8YY"/>
                                             <constraint firstAttribute="centerX" secondItem="TUs-tm-rEa" secondAttribute="centerX" id="fWw-Lk-lVC"/>
                                             <constraint firstAttribute="centerX" secondItem="SR7-Tf-nZu" secondAttribute="centerX" id="iD7-sR-C8m"/>
                                             <constraint firstAttribute="centerX" secondItem="tdQ-a0-5yw" secondAttribute="centerX" id="jIi-jm-Wff"/>
-                                            <constraint firstItem="5jd-D7-jxT" firstAttribute="top" secondItem="SR7-Tf-nZu" secondAttribute="bottom" constant="12" id="kKB-bT-0VD"/>
                                             <constraint firstItem="HTr-K4-xOo" firstAttribute="centerY" secondItem="cJo-gK-eW3" secondAttribute="centerY" id="lfm-ZC-2DR"/>
                                             <constraint firstAttribute="width" secondItem="wSc-jA-be1" secondAttribute="width" multiplier="0.95" id="loq-lE-dy7"/>
                                             <constraint firstItem="TUs-tm-rEa" firstAttribute="top" secondItem="swU-sA-KAH" secondAttribute="bottom" constant="8" id="mZM-sd-udh"/>
@@ -300,12 +298,6 @@
                                             <constraint firstItem="cJo-gK-eW3" firstAttribute="top" secondItem="k4o-dW-Y4i" secondAttribute="bottom" constant="38" id="xuD-7s-CNh"/>
                                             <constraint firstItem="Zdr-hD-dt8" firstAttribute="width" secondItem="BBA-8i-fYM" secondAttribute="width" multiplier="0.9" id="zUE-zK-rvV"/>
                                         </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="5Ai-tN-gtl"/>
-                                                <exclude reference="H2t-Kk-EU8"/>
-                                            </mask>
-                                        </variation>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -353,6 +345,7 @@
                         <outlet property="resultMessageLabel" destination="SR7-Tf-nZu" id="yCj-Uo-lNG"/>
                         <outlet property="scrollView" destination="dQ2-Zd-9F0" id="3pU-kB-oDG"/>
                         <outlet property="selectionView" destination="ATA-yr-Yln" id="2DJ-n4-wZO"/>
+                        <outlet property="sunCloudsIconImageView" destination="5jd-D7-jxT" id="ubW-oi-VEk"/>
                         <outlet property="sunburnLabel" destination="wSc-jA-be1" id="Yew-f7-F6r"/>
                         <outlet property="typeLabel" destination="k4o-dW-Y4i" id="ts1-xk-RTr"/>
                     </connections>

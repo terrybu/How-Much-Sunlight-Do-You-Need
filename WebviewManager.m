@@ -119,8 +119,12 @@
 
     [self webViewSetCorrectLocationWithActualJSManipulation];
     [self webViewClickSubmitButton];
+
+    [self makeWeatherCallToOpenWeatherMapAPI];
     
-    
+}
+
+- (void) makeWeatherCallToOpenWeatherMapAPI {
     //For Weather API Call
     NSString *urlstring = [NSString stringWithFormat: @"http://api.openweathermap.org/data/2.5/weather?lat=%@&lon=%@", latitude, longitude];
     NSURL *requestURL = [NSURL URLWithString:urlstring];
@@ -131,9 +135,6 @@
     //create url connection and fire the request you made above
     NSURLConnection *connect = [[NSURLConnection alloc] initWithRequest: myURLRequest delegate: self];
     connect = nil;
-    
-    
-    
 }
 
 - (void) webViewSetCorrectLocationWithActualJSManipulation {
@@ -187,8 +188,8 @@
     NSLog(@"%@", responseDataInNSDictionary);
     
     NSDictionary *cloudsDict = responseDataInNSDictionary[@"clouds"];
-    NSNumber *clouds = cloudsDict[@"all"];
-    NSLog(@"clouds - %@", clouds);
+    self.clouds = cloudsDict[@"all"];
+    [self.delegate didFinishGettingWeatherCloudsInfo];
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
