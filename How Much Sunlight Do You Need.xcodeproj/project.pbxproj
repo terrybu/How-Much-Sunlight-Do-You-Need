@@ -38,7 +38,7 @@
 		D94660F21ABB16800087D347 /* FBShimmeringLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringLayer.m; sourceTree = "<group>"; };
 		D94660F31ABB16800087D347 /* FBShimmeringView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringView.h; sourceTree = "<group>"; };
 		D94660F41ABB16800087D347 /* FBShimmeringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringView.m; sourceTree = "<group>"; };
-		D947AB0A1AB7289C00AEFEC9 /* FitzpatrickSkinTypeDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitzpatrickSkinTypeDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D947AB0A1AB7289C00AEFEC9 /* How Much Sunlight Do You Need.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "How Much Sunlight Do You Need.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D947FA961AC2FE8800021949 /* WeatherManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherManager.h; sourceTree = "<group>"; };
 		D947FA971AC2FE8800021949 /* WeatherManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherManager.m; sourceTree = "<group>"; };
 		D947FA991AC323A400021949 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 		D947AB0B1AB7289C00AEFEC9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D947AB0A1AB7289C00AEFEC9 /* FitzpatrickSkinTypeDetector.app */,
+				D947AB0A1AB7289C00AEFEC9 /* How Much Sunlight Do You Need.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -184,9 +184,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D947AB091AB7289C00AEFEC9 /* FitzpatrickSkinTypeDetector */ = {
+		D947AB091AB7289C00AEFEC9 /* How Much Sunlight Do You Need */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D947AB2D1AB7289C00AEFEC9 /* Build configuration list for PBXNativeTarget "FitzpatrickSkinTypeDetector" */;
+			buildConfigurationList = D947AB2D1AB7289C00AEFEC9 /* Build configuration list for PBXNativeTarget "How Much Sunlight Do You Need" */;
 			buildPhases = (
 				D947AB061AB7289C00AEFEC9 /* Sources */,
 				D947AB071AB7289C00AEFEC9 /* Frameworks */,
@@ -196,9 +196,9 @@
 			);
 			dependencies = (
 			);
-			name = FitzpatrickSkinTypeDetector;
+			name = "How Much Sunlight Do You Need";
 			productName = ColorPicker;
-			productReference = D947AB0A1AB7289C00AEFEC9 /* FitzpatrickSkinTypeDetector.app */;
+			productReference = D947AB0A1AB7289C00AEFEC9 /* How Much Sunlight Do You Need.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -215,7 +215,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D947AB051AB7289C00AEFEC9 /* Build configuration list for PBXProject "FitzpatrickSkinTypeDetector" */;
+			buildConfigurationList = D947AB051AB7289C00AEFEC9 /* Build configuration list for PBXProject "How Much Sunlight Do You Need" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -228,7 +228,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D947AB091AB7289C00AEFEC9 /* FitzpatrickSkinTypeDetector */,
+				D947AB091AB7289C00AEFEC9 /* How Much Sunlight Do You Need */,
 			);
 		};
 /* End PBXProject section */
@@ -376,7 +376,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/ColorDetector/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = FitzpatrickSkinTypeDetector;
+				PRODUCT_NAME = "How Much Sunlight Do You Need";
 			};
 			name = Debug;
 		};
@@ -386,14 +386,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/ColorDetector/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = FitzpatrickSkinTypeDetector;
+				PRODUCT_NAME = "How Much Sunlight Do You Need";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D947AB051AB7289C00AEFEC9 /* Build configuration list for PBXProject "FitzpatrickSkinTypeDetector" */ = {
+		D947AB051AB7289C00AEFEC9 /* Build configuration list for PBXProject "How Much Sunlight Do You Need" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D947AB2B1AB7289C00AEFEC9 /* Debug */,
@@ -402,7 +402,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D947AB2D1AB7289C00AEFEC9 /* Build configuration list for PBXNativeTarget "FitzpatrickSkinTypeDetector" */ = {
+		D947AB2D1AB7289C00AEFEC9 /* Build configuration list for PBXNativeTarget "How Much Sunlight Do You Need" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D947AB2E1AB7289C00AEFEC9 /* Debug */,
