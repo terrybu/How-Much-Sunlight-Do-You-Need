@@ -12,7 +12,7 @@
 #import "WebviewManager.h"
 #import "WeatherManager.h"
 
-@interface ResultViewController : UIViewController <WebviewManagerDelegate, WeatherManagerDelegate>
+@interface ResultViewController : UIViewController <WebviewManagerDelegate>
 
 @property (strong, nonatomic) WebviewManager *webviewManager;
 

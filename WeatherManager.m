@@ -74,7 +74,7 @@
     NSLog(@"%@", responseDataInNSDictionary);
     
     NSDictionary *cloudsDict = responseDataInNSDictionary[@"clouds"];
-    self.clouds = cloudsDict[@"all"];
+    self.cloudsLevel = [cloudsDict[@"all"] longValue];
     NSDictionary *weatherDict = [responseDataInNSDictionary[@"weather"] objectAtIndex:0];
     self.weatherDescriptionString = weatherDict[@"description"];
     [self.delegate didFinishGettingWeatherCloudsInfo];

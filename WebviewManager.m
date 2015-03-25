@@ -120,12 +120,31 @@
     [self webViewSetCorrectLocationWithActualJSManipulation];
     
     WeatherManager *weatherManager = [WeatherManager sharedWeatherManager];
+    weatherManager.delegate = self;
     [weatherManager makeWeatherCallToOpenWeatherMapAPI: latitude longitude:longitude];
-    
+}
+
+- (void) didFinishGettingWeatherCloudsInfo {
+    [self webViewSetCorrectCloudsLevel];
+    [self.delegate didFinishGettingAllWeatherData];
     [self webViewClickSubmitButton];
 }
 
-
+- (void) webViewSetCorrectCloudsLevel {
+    WeatherManager *weatherManager = [WeatherManager sharedWeatherManager];
+    if (weatherManager.cloudsLevel < 20) {
+        [self.webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByName(\"sky_condition\")[0][0].selected = true"];
+    }
+    else if (weatherManager.cloudsLevel >= 25 && weatherManager.cloudsLevel < 50) {
+        [self.webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByName(\"sky_condition\")[0][1].selected = true"];
+    }
+    else if (weatherManager.cloudsLevel >= 50 && weatherManager.cloudsLevel < 75) {
+        [self.webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByName(\"sky_condition\")[0][2].selected = true"];
+    }
+    else if (weatherManager.cloudsLevel >= 75) {
+        [self.webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByName(\"sky_condition\")[0][3].selected = true"];
+    }
+}
 
 - (void) webViewSetCorrectLocationWithActualJSManipulation {
     [self.webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByName(\"location_specification\")[1].checked = true"];

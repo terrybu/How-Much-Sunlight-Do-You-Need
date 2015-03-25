@@ -8,6 +8,7 @@
 
 #import "ResultViewController.h"
 #import "Constants.h"
+#import "Reachability.h"
 
 @interface ResultViewController ()
 
@@ -40,12 +41,17 @@
     
     self.webviewManager = [[WebviewManager alloc]init];
     self.webviewManager.delegate = self;
-    self.webviewManager.fitzType = self.pickedFitzType;
-
-    WeatherManager *weatherManager = [WeatherManager sharedWeatherManager];
-    weatherManager.delegate = self;
-    
+    self.webviewManager.fitzType = self.pickedFitzType;    
     self.referenceLabel.text = @"This information was made possible by http://nadir.nilu.no/~olaeng/fastrt/VitD-ez_quartMEDandMED_v2.html, Norwegian Institute for Air Research, Ola Engelsen";
+    
+    Reachability* curReach = [Reachability reachabilityForInternetConnection];
+    NetworkStatus internetStatus = [curReach currentReachabilityStatus];
+    if (internetStatus != NotReachable) {
+        NSLog(@"internet reachable");
+    }
+    else {
+        NSLog(@"internet UNREACHABLE");
+    }
 }
 
 - (void) sunlightRecoReceived: (NSNotification *) notification {
@@ -68,16 +74,15 @@
     self.basedOnLocationLabel.text = [NSString stringWithFormat:@"Based on your location at %@, %@ in %@", self.webviewManager.placemark.locality, self.webviewManager.placemark.postalCode, self.webviewManager.placemark.ISOcountryCode];
 }
 
-#pragma mark WeatherManager Delegate
-- (void) didFinishGettingWeatherCloudsInfo {
+- (void) didFinishGettingAllWeatherData {
     WeatherManager *weatherManager = [WeatherManager sharedWeatherManager];
-    if (weatherManager.clouds < [NSNumber numberWithInt:20]) {
-        //do nothing? leave default sun
+    if (weatherManager.cloudsLevel <= 20) {
+        self.sunCloudsIconImageView.image = [UIImage imageNamed:@"sun"];
     }
-    else if (weatherManager.clouds >= [NSNumber numberWithInt:20]) {
+    else if (weatherManager.cloudsLevel > 20 && weatherManager.cloudsLevel < 60) {
         self.sunCloudsIconImageView.image = [UIImage imageNamed:@"broken"];
     }
-    else if (weatherManager.clouds >= [NSNumber numberWithInt:50]) {
+    else if (weatherManager.cloudsLevel >= 60) {
         self.sunCloudsIconImageView.image = [UIImage imageNamed:@"clouds"];
     }
     self.cloudsStatusLabel.text = weatherManager.weatherDescriptionString;

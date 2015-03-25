@@ -12,7 +12,7 @@
 
 @interface WeatherManager : NSObject
 
-@property (nonatomic, strong) NSNumber *clouds;
+@property long cloudsLevel;
 @property (nonatomic, strong) NSString *weatherDescriptionString;
 @property (nonatomic, weak) id <WeatherManagerDelegate> delegate;
 

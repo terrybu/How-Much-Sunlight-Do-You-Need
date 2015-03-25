@@ -10,10 +10,11 @@
 #import <UIKit/UIKit.h>
 #import "FitzpatrickType.h"
 #import <CoreLocation/CoreLocation.h>
+#import "WeatherManager.h"
 
 @protocol WebviewManagerDelegate;
 
-@interface WebviewManager : NSObject  <UIWebViewDelegate, CLLocationManagerDelegate, NSURLConnectionDelegate>
+@interface WebviewManager : NSObject  <WeatherManagerDelegate, UIWebViewDelegate, CLLocationManagerDelegate, NSURLConnectionDelegate>
 
 @property (nonatomic, strong) UIWebView *webView;
 @property FitzpatrickType* fitzType;
@@ -29,5 +30,7 @@
 @protocol WebviewManagerDelegate
 
 - (void) didFinishGettingPlacemarkInfo;
+- (void) didFinishGettingAllWeatherData;
+
 
 @end
