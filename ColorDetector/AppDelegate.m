@@ -18,6 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //Don't delete AlwaysUsage description string from Info.plist because otherwise, diddUpdateLocations doesn't fire when we first get to that screen
+    
+    
     [[UITabBar appearance] setTintColor:[UIColor blackColor]];
     [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor whiteColor] }
                                              forState:UIControlStateNormal];
