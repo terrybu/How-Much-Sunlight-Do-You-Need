@@ -86,7 +86,7 @@
             }
         }
     }
-    [locationManager startMonitoringSignificantLocationChanges];
+    [locationManager startUpdatingLocation];
 }
 
 - (void) webViewSetFitzgeraldSkinType: (FitzpatrickTypeNum) typeNum {

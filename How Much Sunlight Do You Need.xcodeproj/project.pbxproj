@@ -15,7 +15,6 @@
 		D95D3DCD1AC0811F00EFC773 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = D95D3DCC1AC0811F00EFC773 /* Constants.m */; };
 		D95D3DD01AC08B0300EFC773 /* WebviewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D95D3DCF1AC08B0300EFC773 /* WebviewManager.m */; };
 		D95D3DD51AC0A0EA00EFC773 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95D3DD31AC0A0D700EFC773 /* CoreLocation.framework */; };
-		D95D3DD61AC0A0F300EFC773 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B42B601AB86FFC00F3679C /* CoreText.framework */; };
 		D964299D1ABB5C2900DDA435 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D964299C1ABB5C2900DDA435 /* WebViewController.m */; };
 		D99CAA101AB76E5F00715D3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D99CA9FF1AB76E5F00715D3C /* AppDelegate.m */; };
 		D99CAA131AB76E5F00715D3C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D99CAA061AB76E5F00715D3C /* FirstViewController.m */; };
@@ -77,7 +76,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D95D3DD61AC0A0F300EFC773 /* CoreText.framework in Frameworks */,
 				D95D3DD51AC0A0EA00EFC773 /* CoreLocation.framework in Frameworks */,
 				D919D2ED1AB7495200D77F6C /* QuartzCore.framework in Frameworks */,
 			);
