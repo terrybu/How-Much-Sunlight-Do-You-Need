@@ -10,8 +10,8 @@
 
 NSString* const kSunlightRecoTime = @"sunlightRecoTime";
 NSString* const kSunburnTime = @"sunburnTime";
-NSString* const kFormPageURL = @"http://nadir.nilu.no/~olaeng/fastrt/VitD-ez_quartMEDandMED_v2.html";
-NSString* const kResultPageURL = @"http://nadir.nilu.no/cgi-bin/olaeng/VitD-ez_quartMEDandMED_v2.cgi";
+NSString* const kFormPageURL = @"http://zardoz.nilu.no/~olaeng/fastrt/VitD-ez_quartMEDandMED_v2.html";
+NSString* const kResultPageURL = @"http://zardoz.nilu.no/cgi-bin/olaeng/VitD-ez_quartMEDandMED_v2.cgi";
 
 @implementation Constants
 

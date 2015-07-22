@@ -22,9 +22,7 @@
 -(id) init {
     self = [super init];
     self.webView = [[UIWebView alloc]init];
-    
-    [self loadUp];
-    
+        
     return self;
 }
 
@@ -34,6 +32,8 @@
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
+    
+    NSLog(webView.request.URL.absoluteString);
     
     if ([webView.request.URL.absoluteString isEqualToString:kFormPageURL]){
         [self webViewSetCorrectDate];

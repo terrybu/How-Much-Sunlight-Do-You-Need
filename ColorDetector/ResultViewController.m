@@ -41,7 +41,9 @@
     
     self.webviewManager = [[WebviewManager alloc]init];
     self.webviewManager.delegate = self;
-    self.webviewManager.fitzType = self.pickedFitzType;    
+    self.webviewManager.fitzType = self.pickedFitzType;
+    [self.webviewManager loadUp];
+    
     self.referenceLabel.text = @"This information was made possible by http://nadir.nilu.no/~olaeng/fastrt/VitD-ez_quartMEDandMED_v2.html, Norwegian Institute for Air Research, Ola Engelsen";
     
     Reachability* curReach = [Reachability reachabilityForInternetConnection];
