@@ -9,8 +9,11 @@
 #import "ResultViewController.h"
 #import "Constants.h"
 #import "Reachability.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
-@interface ResultViewController ()
+@interface ResultViewController () {
+    MBProgressHUD *hud;
+}
 
 @end
 
@@ -39,17 +42,26 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sunlightRecoReceived:) name:kSunlightRecoTime object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sunburnTimeReceived:) name:kSunburnTime object:nil];
     
+    self.referenceLabel.text = @"This information was made possible by http://nadir.nilu.no/~olaeng/fastrt/VitD-ez_quartMEDandMED_v2.html, Norwegian Institute for Air Research, Ola Engelsen";
+    
     self.webviewManager = [[WebviewManager alloc]init];
     self.webviewManager.delegate = self;
     self.webviewManager.fitzType = self.pickedFitzType;
     [self.webviewManager loadUp];
     
-    self.referenceLabel.text = @"This information was made possible by http://nadir.nilu.no/~olaeng/fastrt/VitD-ez_quartMEDandMED_v2.html, Norwegian Institute for Air Research, Ola Engelsen";
-    
     Reachability* curReach = [Reachability reachabilityForInternetConnection];
     NetworkStatus internetStatus = [curReach currentReachabilityStatus];
     if (internetStatus != NotReachable) {
-        NSLog(@"internet reachable");
+//        NSLog(@"internet reachable");
+//        hud = [[MBProgressHUD alloc] initWithView:self.view];
+//        [hud setLabelText:@"Getting yo sunlight info"];
+//        [hud setDetailsLabelText:@"Please wait..."];
+//        [hud setDimBackground:YES];
+//        [hud setOpacity:0.5f];
+//        [hud show:YES];
+//        [hud hide:YES afterDelay:10.0];
+        
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     }
     else {
         NSLog(@"internet UNREACHABLE");
@@ -71,6 +83,12 @@
 - (void) sunburnTimeReceived: (NSNotification *) notification {
     NSDictionary *info = notification.userInfo;
     self.actualSunburnTimeLabel.text = [NSString stringWithFormat:@"%@", [info objectForKey:kSunburnTime]];
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        // Do something...
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
+    });
 }
 
 - (IBAction) backButton:(id)sender {

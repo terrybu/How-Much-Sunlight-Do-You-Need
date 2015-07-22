@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		425782115A2614D62CEC9383 /* libPods-How Much Sunlight Do You Need.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F25F38B4E0EC480A8BE28B24 /* libPods-How Much Sunlight Do You Need.a */; };
 		D919D2ED1AB7495200D77F6C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D919D2EC1AB7495200D77F6C /* QuartzCore.framework */; };
 		D94660F51ABB16800087D347 /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D94660F21ABB16800087D347 /* FBShimmeringLayer.m */; };
 		D94660F61ABB16800087D347 /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = D94660F41ABB16800087D347 /* FBShimmeringView.m */; };
@@ -30,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10BEFDB1E0D413F1E9F3EA7F /* Pods-How Much Sunlight Do You Need.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-How Much Sunlight Do You Need.debug.xcconfig"; path = "Pods/Target Support Files/Pods-How Much Sunlight Do You Need/Pods-How Much Sunlight Do You Need.debug.xcconfig"; sourceTree = "<group>"; };
+		7EFDD6D0D1EB032B42790F9F /* Pods-How Much Sunlight Do You Need.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-How Much Sunlight Do You Need.release.xcconfig"; path = "Pods/Target Support Files/Pods-How Much Sunlight Do You Need/Pods-How Much Sunlight Do You Need.release.xcconfig"; sourceTree = "<group>"; };
 		D919D2EC1AB7495200D77F6C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D94660EF1ABB16800087D347 /* FBShimmering-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBShimmering-Prefix.pch"; sourceTree = "<group>"; };
 		D94660F01ABB16800087D347 /* FBShimmering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmering.h; sourceTree = "<group>"; };
@@ -69,6 +72,7 @@
 		D99CAA231AB7897600715D3C /* FitzpatrickType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitzpatrickType.h; sourceTree = "<group>"; };
 		D99CAA241AB7897600715D3C /* FitzpatrickType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitzpatrickType.m; sourceTree = "<group>"; };
 		D9B42B601AB86FFC00F3679C /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		F25F38B4E0EC480A8BE28B24 /* libPods-How Much Sunlight Do You Need.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-How Much Sunlight Do You Need.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,12 +82,30 @@
 			files = (
 				D95D3DD51AC0A0EA00EFC773 /* CoreLocation.framework in Frameworks */,
 				D919D2ED1AB7495200D77F6C /* QuartzCore.framework in Frameworks */,
+				425782115A2614D62CEC9383 /* libPods-How Much Sunlight Do You Need.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		583B35616669DC2406DF3877 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				10BEFDB1E0D413F1E9F3EA7F /* Pods-How Much Sunlight Do You Need.debug.xcconfig */,
+				7EFDD6D0D1EB032B42790F9F /* Pods-How Much Sunlight Do You Need.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8C35ABCAEF9FD4299CF97915 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F25F38B4E0EC480A8BE28B24 /* libPods-How Much Sunlight Do You Need.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D94660EE1ABB16800087D347 /* FBShimmering */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +124,8 @@
 			children = (
 				D99CAA1A1AB76EC600715D3C /* FitzpatrickSkinTypeDetector */,
 				D947AB0B1AB7289C00AEFEC9 /* Products */,
+				583B35616669DC2406DF3877 /* Pods */,
+				8C35ABCAEF9FD4299CF97915 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -186,9 +210,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D947AB2D1AB7289C00AEFEC9 /* Build configuration list for PBXNativeTarget "How Much Sunlight Do You Need" */;
 			buildPhases = (
+				AFA67382F1231FCE1A425E29 /* Check Pods Manifest.lock */,
 				D947AB061AB7289C00AEFEC9 /* Sources */,
 				D947AB071AB7289C00AEFEC9 /* Frameworks */,
 				D947AB081AB7289C00AEFEC9 /* Resources */,
+				04806621A998FBF69123AA81 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,6 +270,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04806621A998FBF69123AA81 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-How Much Sunlight Do You Need/Pods-How Much Sunlight Do You Need-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFA67382F1231FCE1A425E29 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D947AB061AB7289C00AEFEC9 /* Sources */ = {
@@ -371,6 +430,7 @@
 		};
 		D947AB2E1AB7289C00AEFEC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10BEFDB1E0D413F1E9F3EA7F /* Pods-How Much Sunlight Do You Need.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -382,6 +442,7 @@
 		};
 		D947AB2F1AB7289C00AEFEC9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EFDD6D0D1EB032B42790F9F /* Pods-How Much Sunlight Do You Need.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
