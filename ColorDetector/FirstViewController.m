@@ -12,6 +12,7 @@
 #import "ColorConstants.h"
 #import "FitzpatrickType.h"
 #import "ResultViewController.h"
+@import Photos;
 
 #define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
 
@@ -131,14 +132,14 @@
     UIAlertAction* showCameraAction = [UIAlertAction actionWithTitle:@"Take new photo with camera" style:UIAlertActionStyleDefault
                                                              handler:^(UIAlertAction * action)
                                        {
-                                           [self showCamera];
+                                           [self authorizationCheckBeforeSHowingUIImagePickerForCamera];
                                            
                                        }];
     
     [alertController addAction:showCameraAction];
     UIAlertAction* usePhotos = [UIAlertAction actionWithTitle:@"Use existing photos" style:UIAlertActionStyleDefault
                                                       handler:^(UIAlertAction * action) {
-                                                          [self showPhotosAlbum];
+                                                          [self authorizationCheckBeforeShowingUIImagePickerForPhotosAlbum];
                                                       }];
     
     [alertController addAction:usePhotos];
@@ -152,19 +153,67 @@
 
 
 #pragma mark Camera Methods
+
+- (void) authorizationCheckBeforeSHowingUIImagePickerForCamera {
+    AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+    
+    if(status == AVAuthorizationStatusAuthorized) { // authorized
+        [self showCamera];
+    }
+    else if(status == AVAuthorizationStatusDenied){ // denied
+        NSLog(@"Access to Camera is denied.");
+    }
+    else if(status == AVAuthorizationStatusRestricted){ // restricted
+        NSLog(@"You need to enable access to camera.  Apple Settings > Privacy > Camera.");
+    }
+    else if(status == AVAuthorizationStatusNotDetermined){ // not determined
+        [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
+            if(granted){ // Access has been granted ..do something
+                [self showCamera];
+            } else { // Access denied ..do something
+                
+            }
+        }];
+    }
+}
+
 - (void) showCamera {
     if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
-        UIImagePickerController *imagePickerController = [[UIImagePickerController alloc]init];
-        imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+       UIImagePickerController *imagePickerController = [[UIImagePickerController alloc]init];
+       imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
         imagePickerController.allowsEditing = NO;
         imagePickerController.editing = NO;
         imagePickerController.delegate = self;
-        
         [self presentViewController:imagePickerController animated:YES completion:nil];
     }
-    else{
-        NSLog(@"camera invalid");
-    }
+}
+
+- (void) authorizationCheckBeforeShowingUIImagePickerForPhotosAlbum {
+    [PHPhotoLibrary requestAuthorization: ^(PHAuthorizationStatus status) {
+        dispatch_async (dispatch_get_main_queue(), ^{   // continue work on main thread
+            [self showPhotosAlbum];
+        });
+    }];
+    switch ([PHPhotoLibrary authorizationStatus]) {
+        case PHAuthorizationStatusRestricted:
+            NSLog(@"Access to photo library is restricted.");
+            break;
+        case PHAuthorizationStatusDenied:
+            NSLog(@"You need to enable access to photos.  Apple Settings > Privacy > Photos.");
+            break;
+        case PHAuthorizationStatusNotDetermined: {
+            [PHPhotoLibrary requestAuthorization: ^(PHAuthorizationStatus status) {
+                dispatch_async (dispatch_get_main_queue(), ^{   // continue work on main thread
+                    [self showPhotosAlbum];
+                });
+            }];
+            break;
+        }
+        case PHAuthorizationStatusAuthorized: {
+            [self showPhotosAlbum];
+            break;
+        }
+    } 
 }
 
 - (void) showPhotosAlbum {

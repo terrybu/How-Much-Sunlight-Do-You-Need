@@ -7,267 +7,266 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		33E02315662927811A80DC9A /* Pods-How Much Sunlight Do You Need-MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 945BEF362A37802BF963D097 /* Pods-How Much Sunlight Do You Need-MBProgressHUD-dummy.m */; };
-		3E2D1D76B03E492D06258D3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5725744D507F95BF4D1D19F /* Foundation.framework */; };
-		5B291C6137F842ACA0746DDF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7BE0D2A2559DFE5A3E6636E /* CoreGraphics.framework */; };
-		936D7B8D00930A3E92DEA869 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF4F0711E201F46CCD661F7 /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		A9C2E231C0C646102AFA9985 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = E2ECFFEE8E4D7708E11D7F96 /* MBProgressHUD.h */; };
-		AA831BEDE840A6C5233D1A85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5725744D507F95BF4D1D19F /* Foundation.framework */; };
-		DAB1113862BF2ADF4993D29B /* Pods-How Much Sunlight Do You Need-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F4DD8DBDE4B5F8DC5CBCCE /* Pods-How Much Sunlight Do You Need-dummy.m */; };
+		1DD48B4358A6DEAA289E7F76BE30B447 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = E60EE466D77AD475656D905DC4230481 /* MBProgressHUD.h */; };
+		437B6691F29D0E6D03783BFFFE61EC30 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11D6273E2EAC3A7A2BBAB91C4ADA6AE7 /* Foundation.framework */; };
+		58DC868720EA8C2EC7A19295E102CAB6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2524F88E628BC8F3C682E7F0C62CF7 /* CoreGraphics.framework */; };
+		692612535D157B79DB8487CDDFA84376 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFAD91233CAE0E551972D9E72166446 /* MBProgressHUD-dummy.m */; };
+		793D68CAE85B1A6D31A49D36C625AD46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11D6273E2EAC3A7A2BBAB91C4ADA6AE7 /* Foundation.framework */; };
+		80BA3F82101AD0073BD00330F42B5BA5 /* Pods-How Much Sunlight Do You Need-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2597DEB66285BE57F1C272BBD03319 /* Pods-How Much Sunlight Do You Need-dummy.m */; };
+		AE5BB5C54C4D253677AA5EFB3CCACC1E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D835D817845022328D65161672C03A41 /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		34C4F246ECDD8F5135E8B7D7 /* PBXContainerItemProxy */ = {
+		8424682C7DDB2FE2057393625BC6E181 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 30B0D1FCD1F435280DA0CE06 /* Project object */;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 905CD64C0279B4FB4B7C8AFF;
-			remoteInfo = "Pods-How Much Sunlight Do You Need-MBProgressHUD";
+			remoteGlobalIDString = 2354ACBE25420D5C5891ACA273D1E8FF;
+			remoteInfo = MBProgressHUD;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04935D35526D2768408FCE3D /* libPods-How Much Sunlight Do You Need.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-How Much Sunlight Do You Need.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		197B99CB3341BD96B1C438AE /* Pods-How Much Sunlight Do You Need-MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-How Much Sunlight Do You Need-MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
-		1BE22DDE5AFA820287447CA6 /* Pods-How Much Sunlight Do You Need-MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-How Much Sunlight Do You Need-MBProgressHUD.xcconfig"; sourceTree = "<group>"; };
-		2C448DB8B732D0D891BAFDBE /* Pods-How Much Sunlight Do You Need-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-How Much Sunlight Do You Need-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3D202F08CE3190FF07AFE85D /* Pods-How Much Sunlight Do You Need-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-How Much Sunlight Do You Need-acknowledgements.plist"; sourceTree = "<group>"; };
-		4446F9252701039FE681A1FF /* libPods-How Much Sunlight Do You Need-MBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-How Much Sunlight Do You Need-MBProgressHUD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6BF4F0711E201F46CCD661F7 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		70FF23DD6DB1D8FF739D5520 /* Pods-How Much Sunlight Do You Need-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-How Much Sunlight Do You Need-resources.sh"; sourceTree = "<group>"; };
-		7536091F78AA8FEDF978D3ED /* Pods-How Much Sunlight Do You Need-MBProgressHUD-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-How Much Sunlight Do You Need-MBProgressHUD-Private.xcconfig"; sourceTree = "<group>"; };
-		85F4DD8DBDE4B5F8DC5CBCCE /* Pods-How Much Sunlight Do You Need-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-How Much Sunlight Do You Need-dummy.m"; sourceTree = "<group>"; };
-		945BEF362A37802BF963D097 /* Pods-How Much Sunlight Do You Need-MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-How Much Sunlight Do You Need-MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
-		A86376A28C506EA8CE88C33D /* Pods-How Much Sunlight Do You Need.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-How Much Sunlight Do You Need.debug.xcconfig"; sourceTree = "<group>"; };
-		B7BE0D2A2559DFE5A3E6636E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		C5725744D507F95BF4D1D19F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D08FEC06F5621C4309121F17 /* Pods-How Much Sunlight Do You Need-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-How Much Sunlight Do You Need-environment.h"; sourceTree = "<group>"; };
-		E2ECFFEE8E4D7708E11D7F96 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		EF9EEF1549802CC09C58A426 /* Pods-How Much Sunlight Do You Need.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-How Much Sunlight Do You Need.release.xcconfig"; sourceTree = "<group>"; };
-		F765D847B14906A63059FD56 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		03962D96531F48D2FDBB398025E3C351 /* Pods-How Much Sunlight Do You Need.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-How Much Sunlight Do You Need.debug.xcconfig"; sourceTree = "<group>"; };
+		07AD4B9ABE64559057ACB13C3AD38BC1 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		11D6273E2EAC3A7A2BBAB91C4ADA6AE7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		1F2597DEB66285BE57F1C272BBD03319 /* Pods-How Much Sunlight Do You Need-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-How Much Sunlight Do You Need-dummy.m"; sourceTree = "<group>"; };
+		2EECA9E5FC5C1950D17881CC8F7009E1 /* MBProgressHUD-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "MBProgressHUD-Private.xcconfig"; sourceTree = "<group>"; };
+		316F8ED8A71132644EB23F82F7BD978A /* Pods-How Much Sunlight Do You Need-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-How Much Sunlight Do You Need-resources.sh"; sourceTree = "<group>"; };
+		4DFAD91233CAE0E551972D9E72166446 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		5E4BF43B127B7DC9BA7EAA4B8BF87F58 /* Pods-How Much Sunlight Do You Need-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-How Much Sunlight Do You Need-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D3CA17F008BDE7E35186725C94E95709 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
+		D835D817845022328D65161672C03A41 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		DDE0DA71D8BA5ABCABFF6EFC50F32040 /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1921FE968569469CD22F4432DF93C83 /* libPods-How Much Sunlight Do You Need.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-How Much Sunlight Do You Need.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E223FB430EBD7B8969B876F3B6DD9F8C /* Pods-How Much Sunlight Do You Need-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-How Much Sunlight Do You Need-acknowledgements.plist"; sourceTree = "<group>"; };
+		E60EE466D77AD475656D905DC4230481 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		E69020BB409379B4D756F2A3BD682604 /* Pods-How Much Sunlight Do You Need.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-How Much Sunlight Do You Need.release.xcconfig"; sourceTree = "<group>"; };
+		ED2524F88E628BC8F3C682E7F0C62CF7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0B1BD71962F0BAFD62D1353D /* Frameworks */ = {
+		705BC404EAED8F611ABC58AB06B3969D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E2D1D76B03E492D06258D3F /* Foundation.framework in Frameworks */,
+				58DC868720EA8C2EC7A19295E102CAB6 /* CoreGraphics.framework in Frameworks */,
+				437B6691F29D0E6D03783BFFFE61EC30 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		612786DD73244962CADC1F01 /* Frameworks */ = {
+		C6673E7ADF14BFA525BF2E1C3003B6C9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B291C6137F842ACA0746DDF /* CoreGraphics.framework in Frameworks */,
-				AA831BEDE840A6C5233D1A85 /* Foundation.framework in Frameworks */,
+				793D68CAE85B1A6D31A49D36C625AD46 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D53B76C5C23D8AD3616285B /* Products */ = {
+		2B778B6D99A2829C44A35CD875EB3CA0 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				04935D35526D2768408FCE3D /* libPods-How Much Sunlight Do You Need.a */,
-				4446F9252701039FE681A1FF /* libPods-How Much Sunlight Do You Need-MBProgressHUD.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		0E6E47CE7D901108E210CD07 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C9ADE2DC29D65147E9E06A1A /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		21E79E64A27BFF3A2D18035A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				82FE44B06D1B93F496D3D4B2 /* MBProgressHUD */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		733894C904C7931AD2D04827 = {
-			isa = PBXGroup;
-			children = (
-				F765D847B14906A63059FD56 /* Podfile */,
-				0E6E47CE7D901108E210CD07 /* Frameworks */,
-				21E79E64A27BFF3A2D18035A /* Pods */,
-				0D53B76C5C23D8AD3616285B /* Products */,
-				7C6CF4086EEC49E22C37C1E2 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		7C6CF4086EEC49E22C37C1E2 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C57F82AAD3D8E3F29F1EA847 /* Pods-How Much Sunlight Do You Need */,
+				9F09D64207055504044069C7644AFE37 /* Pods-How Much Sunlight Do You Need */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		82FE44B06D1B93F496D3D4B2 /* MBProgressHUD */ = {
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E2ECFFEE8E4D7708E11D7F96 /* MBProgressHUD.h */,
-				6BF4F0711E201F46CCD661F7 /* MBProgressHUD.m */,
-				B7F60C8E867D281612A01E8E /* Support Files */,
+				9394A58D265A8CD1DEB9085F67D2619C /* iOS */,
 			);
-			path = MBProgressHUD;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B7F60C8E867D281612A01E8E /* Support Files */ = {
+		5836A44A75C427EBF4739C55E2315758 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1BE22DDE5AFA820287447CA6 /* Pods-How Much Sunlight Do You Need-MBProgressHUD.xcconfig */,
-				7536091F78AA8FEDF978D3ED /* Pods-How Much Sunlight Do You Need-MBProgressHUD-Private.xcconfig */,
-				945BEF362A37802BF963D097 /* Pods-How Much Sunlight Do You Need-MBProgressHUD-dummy.m */,
-				197B99CB3341BD96B1C438AE /* Pods-How Much Sunlight Do You Need-MBProgressHUD-prefix.pch */,
+				CF6EEEE3FF4CD2F10C5EE4833F69B01E /* MBProgressHUD */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-How Much Sunlight Do You Need-MBProgressHUD";
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		C57F82AAD3D8E3F29F1EA847 /* Pods-How Much Sunlight Do You Need */ = {
+		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
-				2C448DB8B732D0D891BAFDBE /* Pods-How Much Sunlight Do You Need-acknowledgements.markdown */,
-				3D202F08CE3190FF07AFE85D /* Pods-How Much Sunlight Do You Need-acknowledgements.plist */,
-				85F4DD8DBDE4B5F8DC5CBCCE /* Pods-How Much Sunlight Do You Need-dummy.m */,
-				D08FEC06F5621C4309121F17 /* Pods-How Much Sunlight Do You Need-environment.h */,
-				70FF23DD6DB1D8FF739D5520 /* Pods-How Much Sunlight Do You Need-resources.sh */,
-				A86376A28C506EA8CE88C33D /* Pods-How Much Sunlight Do You Need.debug.xcconfig */,
-				EF9EEF1549802CC09C58A426 /* Pods-How Much Sunlight Do You Need.release.xcconfig */,
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				5836A44A75C427EBF4739C55E2315758 /* Pods */,
+				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
+				2B778B6D99A2829C44A35CD875EB3CA0 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9394A58D265A8CD1DEB9085F67D2619C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				ED2524F88E628BC8F3C682E7F0C62CF7 /* CoreGraphics.framework */,
+				11D6273E2EAC3A7A2BBAB91C4ADA6AE7 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		9F09D64207055504044069C7644AFE37 /* Pods-How Much Sunlight Do You Need */ = {
+			isa = PBXGroup;
+			children = (
+				5E4BF43B127B7DC9BA7EAA4B8BF87F58 /* Pods-How Much Sunlight Do You Need-acknowledgements.markdown */,
+				E223FB430EBD7B8969B876F3B6DD9F8C /* Pods-How Much Sunlight Do You Need-acknowledgements.plist */,
+				1F2597DEB66285BE57F1C272BBD03319 /* Pods-How Much Sunlight Do You Need-dummy.m */,
+				316F8ED8A71132644EB23F82F7BD978A /* Pods-How Much Sunlight Do You Need-resources.sh */,
+				03962D96531F48D2FDBB398025E3C351 /* Pods-How Much Sunlight Do You Need.debug.xcconfig */,
+				E69020BB409379B4D756F2A3BD682604 /* Pods-How Much Sunlight Do You Need.release.xcconfig */,
 			);
 			name = "Pods-How Much Sunlight Do You Need";
 			path = "Target Support Files/Pods-How Much Sunlight Do You Need";
 			sourceTree = "<group>";
 		};
-		C9ADE2DC29D65147E9E06A1A /* iOS */ = {
+		B2D9C82D44BB2D2B2D3A0FC2FE67B8EC /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				B7BE0D2A2559DFE5A3E6636E /* CoreGraphics.framework */,
-				C5725744D507F95BF4D1D19F /* Foundation.framework */,
+				D3CA17F008BDE7E35186725C94E95709 /* MBProgressHUD.xcconfig */,
+				2EECA9E5FC5C1950D17881CC8F7009E1 /* MBProgressHUD-Private.xcconfig */,
+				4DFAD91233CAE0E551972D9E72166446 /* MBProgressHUD-dummy.m */,
+				07AD4B9ABE64559057ACB13C3AD38BC1 /* MBProgressHUD-prefix.pch */,
 			);
-			name = iOS;
+			name = "Support Files";
+			path = "../Target Support Files/MBProgressHUD";
+			sourceTree = "<group>";
+		};
+		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DDE0DA71D8BA5ABCABFF6EFC50F32040 /* libMBProgressHUD.a */,
+				E1921FE968569469CD22F4432DF93C83 /* libPods-How Much Sunlight Do You Need.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF6EEEE3FF4CD2F10C5EE4833F69B01E /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				E60EE466D77AD475656D905DC4230481 /* MBProgressHUD.h */,
+				D835D817845022328D65161672C03A41 /* MBProgressHUD.m */,
+				B2D9C82D44BB2D2B2D3A0FC2FE67B8EC /* Support Files */,
+			);
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		6A2B057BDBEC8B8701DEBA21 /* Headers */ = {
+		3E8CE0B881D9656E38BFF10CB9DD60F3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9C2E231C0C646102AFA9985 /* MBProgressHUD.h in Headers */,
+				1DD48B4358A6DEAA289E7F76BE30B447 /* MBProgressHUD.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1D324A56B492D23DEDC6EBC0 /* Pods-How Much Sunlight Do You Need */ = {
+		147F75AE09EC563033433518BD9389F2 /* Pods-How Much Sunlight Do You Need */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C66B127709AB49AC90DF45E4 /* Build configuration list for PBXNativeTarget "Pods-How Much Sunlight Do You Need" */;
+			buildConfigurationList = 1D7B4F2F1F206DB4907926DF698AC4AB /* Build configuration list for PBXNativeTarget "Pods-How Much Sunlight Do You Need" */;
 			buildPhases = (
-				694EC130F89177E4989A8B45 /* Sources */,
-				0B1BD71962F0BAFD62D1353D /* Frameworks */,
+				AB63E99C5B34EEF9EC35F84BE992E770 /* Sources */,
+				C6673E7ADF14BFA525BF2E1C3003B6C9 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9A58562F90E19EB21E3FEAAD /* PBXTargetDependency */,
+				0F40CB51AA391A5F27796A3983FCA349 /* PBXTargetDependency */,
 			);
 			name = "Pods-How Much Sunlight Do You Need";
 			productName = "Pods-How Much Sunlight Do You Need";
-			productReference = 04935D35526D2768408FCE3D /* libPods-How Much Sunlight Do You Need.a */;
+			productReference = E1921FE968569469CD22F4432DF93C83 /* libPods-How Much Sunlight Do You Need.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		905CD64C0279B4FB4B7C8AFF /* Pods-How Much Sunlight Do You Need-MBProgressHUD */ = {
+		2354ACBE25420D5C5891ACA273D1E8FF /* MBProgressHUD */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9DF79943F4B4262FCF5115A9 /* Build configuration list for PBXNativeTarget "Pods-How Much Sunlight Do You Need-MBProgressHUD" */;
+			buildConfigurationList = 7720C88D3D0433B6D1658F6EF129C79E /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
 			buildPhases = (
-				E9430D8770F9BEF6A582AC81 /* Sources */,
-				612786DD73244962CADC1F01 /* Frameworks */,
-				6A2B057BDBEC8B8701DEBA21 /* Headers */,
+				F7E6339B82C6612B56F6721FA9ED11F1 /* Sources */,
+				705BC404EAED8F611ABC58AB06B3969D /* Frameworks */,
+				3E8CE0B881D9656E38BFF10CB9DD60F3 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-How Much Sunlight Do You Need-MBProgressHUD";
-			productName = "Pods-How Much Sunlight Do You Need-MBProgressHUD";
-			productReference = 4446F9252701039FE681A1FF /* libPods-How Much Sunlight Do You Need-MBProgressHUD.a */;
+			name = MBProgressHUD;
+			productName = MBProgressHUD;
+			productReference = DDE0DA71D8BA5ABCABFF6EFC50F32040 /* libMBProgressHUD.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		30B0D1FCD1F435280DA0CE06 /* Project object */ = {
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 			};
-			buildConfigurationList = 2BD010CDB018CBFFFC662A66 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 733894C904C7931AD2D04827;
-			productRefGroup = 0D53B76C5C23D8AD3616285B /* Products */;
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D324A56B492D23DEDC6EBC0 /* Pods-How Much Sunlight Do You Need */,
-				905CD64C0279B4FB4B7C8AFF /* Pods-How Much Sunlight Do You Need-MBProgressHUD */,
+				2354ACBE25420D5C5891ACA273D1E8FF /* MBProgressHUD */,
+				147F75AE09EC563033433518BD9389F2 /* Pods-How Much Sunlight Do You Need */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		694EC130F89177E4989A8B45 /* Sources */ = {
+		AB63E99C5B34EEF9EC35F84BE992E770 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAB1113862BF2ADF4993D29B /* Pods-How Much Sunlight Do You Need-dummy.m in Sources */,
+				80BA3F82101AD0073BD00330F42B5BA5 /* Pods-How Much Sunlight Do You Need-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E9430D8770F9BEF6A582AC81 /* Sources */ = {
+		F7E6339B82C6612B56F6721FA9ED11F1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				936D7B8D00930A3E92DEA869 /* MBProgressHUD.m in Sources */,
-				33E02315662927811A80DC9A /* Pods-How Much Sunlight Do You Need-MBProgressHUD-dummy.m in Sources */,
+				692612535D157B79DB8487CDDFA84376 /* MBProgressHUD-dummy.m in Sources */,
+				AE5BB5C54C4D253677AA5EFB3CCACC1E /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9A58562F90E19EB21E3FEAAD /* PBXTargetDependency */ = {
+		0F40CB51AA391A5F27796A3983FCA349 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-How Much Sunlight Do You Need-MBProgressHUD";
-			target = 905CD64C0279B4FB4B7C8AFF /* Pods-How Much Sunlight Do You Need-MBProgressHUD */;
-			targetProxy = 34C4F246ECDD8F5135E8B7D7 /* PBXContainerItemProxy */;
+			name = MBProgressHUD;
+			target = 2354ACBE25420D5C5891ACA273D1E8FF /* MBProgressHUD */;
+			targetProxy = 8424682C7DDB2FE2057393625BC6E181 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1ABABF6A5068B746F915B7CB /* Debug */ = {
+		574E6708AA41B5E28386E14C8088FFC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7536091F78AA8FEDF978D3ED /* Pods-How Much Sunlight Do You Need-MBProgressHUD-Private.xcconfig */;
+			baseConfigurationReference = 2EECA9E5FC5C1950D17881CC8F7009E1 /* MBProgressHUD-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-How Much Sunlight Do You Need-MBProgressHUD/Pods-How Much Sunlight Do You Need-MBProgressHUD-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
@@ -278,75 +277,9 @@
 			};
 			name = Debug;
 		};
-		6717F5404A7A53698AAD59DA /* Release */ = {
+		8A01DBF1834836D2614C01361D3E1B43 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		8C382AAC174A06432770CD4F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7536091F78AA8FEDF978D3ED /* Pods-How Much Sunlight Do You Need-MBProgressHUD-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-How Much Sunlight Do You Need-MBProgressHUD/Pods-How Much Sunlight Do You Need-MBProgressHUD-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		B52FF1DB7E5B7C2A32326AA6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF9EEF1549802CC09C58A426 /* Pods-How Much Sunlight Do You Need.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		C8F041A96F130C2552210E61 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A86376A28C506EA8CE88C33D /* Pods-How Much Sunlight Do You Need.debug.xcconfig */;
+			baseConfigurationReference = 03962D96531F48D2FDBB398025E3C351 /* Pods-How Much Sunlight Do You Need.debug.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
@@ -360,7 +293,7 @@
 			};
 			name = Debug;
 		};
-		DA74C97400EBA95D5A98A36D /* Debug */ = {
+		A2A3FCA6599E8034578E80B9179C76CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -399,37 +332,103 @@
 			};
 			name = Debug;
 		};
+		AB66C978656E240C917407B296597F92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF196DA81E258CD3CCF7042F17B0F93C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EECA9E5FC5C1950D17881CC8F7009E1 /* MBProgressHUD-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D5B748F6E2315E4CA2942ED8EC3FE25F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E69020BB409379B4D756F2A3BD682604 /* Pods-How Much Sunlight Do You Need.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2BD010CDB018CBFFFC662A66 /* Build configuration list for PBXProject "Pods" */ = {
+		1D7B4F2F1F206DB4907926DF698AC4AB /* Build configuration list for PBXNativeTarget "Pods-How Much Sunlight Do You Need" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DA74C97400EBA95D5A98A36D /* Debug */,
-				6717F5404A7A53698AAD59DA /* Release */,
+				8A01DBF1834836D2614C01361D3E1B43 /* Debug */,
+				D5B748F6E2315E4CA2942ED8EC3FE25F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9DF79943F4B4262FCF5115A9 /* Build configuration list for PBXNativeTarget "Pods-How Much Sunlight Do You Need-MBProgressHUD" */ = {
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1ABABF6A5068B746F915B7CB /* Debug */,
-				8C382AAC174A06432770CD4F /* Release */,
+				A2A3FCA6599E8034578E80B9179C76CD /* Debug */,
+				AB66C978656E240C917407B296597F92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C66B127709AB49AC90DF45E4 /* Build configuration list for PBXNativeTarget "Pods-How Much Sunlight Do You Need" */ = {
+		7720C88D3D0433B6D1658F6EF129C79E /* Build configuration list for PBXNativeTarget "MBProgressHUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C8F041A96F130C2552210E61 /* Debug */,
-				B52FF1DB7E5B7C2A32326AA6 /* Release */,
+				574E6708AA41B5E28386E14C8088FFC7 /* Debug */,
+				CF196DA81E258CD3CCF7042F17B0F93C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 30B0D1FCD1F435280DA0CE06 /* Project object */;
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 }

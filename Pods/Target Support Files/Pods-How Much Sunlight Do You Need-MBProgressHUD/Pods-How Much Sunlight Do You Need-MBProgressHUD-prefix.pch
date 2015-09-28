@@ -1,5 +1,0 @@
-#ifdef __OBJC__
-#import <UIKit/UIKit.h>
-#endif
-
-#import "Pods-How Much Sunlight Do You Need-environment.h"
