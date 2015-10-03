@@ -52,16 +52,10 @@
     Reachability* curReach = [Reachability reachabilityForInternetConnection];
     NetworkStatus internetStatus = [curReach currentReachabilityStatus];
     if (internetStatus != NotReachable) {
-//        NSLog(@"internet reachable");
-//        hud = [[MBProgressHUD alloc] initWithView:self.view];
-//        [hud setLabelText:@"Getting yo sunlight info"];
-//        [hud setDetailsLabelText:@"Please wait..."];
-//        [hud setDimBackground:YES];
-//        [hud setOpacity:0.5f];
-//        [hud show:YES];
-//        [hud hide:YES afterDelay:10.0];
+        hud = [MBProgressHUD showHUDAddedTo:self.view animated:true];
+        [hud setLabelText:@"Loading.."];
+        [hud setDetailsLabelText:@"Please wait while we calculate your sunlight needs"];
         
-        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     }
     else {
         NSLog(@"internet UNREACHABLE");
@@ -83,11 +77,8 @@
 - (void) sunburnTimeReceived: (NSNotification *) notification {
     NSDictionary *info = notification.userInfo;
     self.actualSunburnTimeLabel.text = [NSString stringWithFormat:@"%@", [info objectForKey:kSunburnTime]];
-    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-        // Do something...
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
-        });
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
     });
 }
 
