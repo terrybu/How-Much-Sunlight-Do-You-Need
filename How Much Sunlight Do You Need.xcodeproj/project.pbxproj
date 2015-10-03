@@ -17,6 +17,7 @@
 		D95D3DD01AC08B0300EFC773 /* WebviewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D95D3DCF1AC08B0300EFC773 /* WebviewManager.m */; };
 		D95D3DD51AC0A0EA00EFC773 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95D3DD31AC0A0D700EFC773 /* CoreLocation.framework */; };
 		D964299D1ABB5C2900DDA435 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D964299C1ABB5C2900DDA435 /* WebViewController.m */; };
+		D97116D61BC073AB001AAAE9 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97116D51BC073AB001AAAE9 /* HelpViewController.m */; settings = {ASSET_TAGS = (); }; };
 		D99CAA101AB76E5F00715D3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D99CA9FF1AB76E5F00715D3C /* AppDelegate.m */; };
 		D99CAA131AB76E5F00715D3C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D99CAA061AB76E5F00715D3C /* FirstViewController.m */; };
 		D99CAA141AB76E5F00715D3C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D99CAA071AB76E5F00715D3C /* Images.xcassets */; };
@@ -52,6 +53,8 @@
 		D95D3DD31AC0A0D700EFC773 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D964299B1ABB5C2900DDA435 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		D964299C1ABB5C2900DDA435 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		D97116D41BC073AB001AAAE9 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		D97116D51BC073AB001AAAE9 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
 		D99CA9FE1AB76E5F00715D3C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ColorDetector/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		D99CA9FF1AB76E5F00715D3C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ColorDetector/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		D99CAA041AB76E5F00715D3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
@@ -177,6 +180,8 @@
 				D964299B1ABB5C2900DDA435 /* WebViewController.h */,
 				D964299C1ABB5C2900DDA435 /* WebViewController.m */,
 				D99CAA031AB76E5F00715D3C /* Main.storyboard */,
+				D97116D41BC073AB001AAAE9 /* HelpViewController.h */,
+				D97116D51BC073AB001AAAE9 /* HelpViewController.m */,
 				D99CAA1B1AB7705500715D3C /* Custom */,
 				D947AB0D1AB7289C00AEFEC9 /* Supporting Files */,
 			);
@@ -231,7 +236,7 @@
 		D947AB021AB7289C00AEFEC9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0620;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Terry Bu";
 				TargetAttributes = {
 					D947AB091AB7289C00AEFEC9 = {
@@ -316,6 +321,7 @@
 				D947FA9B1AC323A400021949 /* Reachability.m in Sources */,
 				D99CAA171AB76E5F00715D3C /* ResultViewController.m in Sources */,
 				D964299D1ABB5C2900DDA435 /* WebViewController.m in Sources */,
+				D97116D61BC073AB001AAAE9 /* HelpViewController.m in Sources */,
 				D947FA981AC2FE8800021949 /* WeatherManager.m in Sources */,
 				D99CAA191AB76E5F00715D3C /* UIView+ColorOfPoint.m in Sources */,
 				D99CAA101AB76E5F00715D3C /* AppDelegate.m in Sources */,
@@ -370,6 +376,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -384,7 +391,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -420,7 +427,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -435,7 +442,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/ColorDetector/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.terrybu.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "How Much Sunlight Do You Need";
 			};
 			name = Debug;
@@ -447,7 +456,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/ColorDetector/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.terrybu.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "How Much Sunlight Do You Need";
 			};
 			name = Release;

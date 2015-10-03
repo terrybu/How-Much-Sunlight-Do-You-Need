@@ -128,18 +128,16 @@
                                                          handler:^(UIAlertAction * action) {}];
     
     [alertController addAction:cancelAction];
-    UIAlertAction* showCameraAction = [UIAlertAction actionWithTitle:@"Take new photo with camera" style:UIAlertActionStyleDefault
-                                                             handler:^(UIAlertAction * action)
-                                       {
-                                           [self showCamera];
-                                           
-                                       }];
+    UIAlertAction* showCameraAction = [UIAlertAction actionWithTitle:@"Take new photo with camera" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action)
+        {
+            [self showCamera];
+        }];
     
     [alertController addAction:showCameraAction];
-    UIAlertAction* usePhotos = [UIAlertAction actionWithTitle:@"Use existing photos" style:UIAlertActionStyleDefault
-                                                      handler:^(UIAlertAction * action) {
-                                                          [self showPhotosAlbum];
-                                                      }];
+    UIAlertAction* usePhotos = [UIAlertAction actionWithTitle:@"Use existing photos" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+        
+            [self showPhotosAlbum];
+        }];
     
     [alertController addAction:usePhotos];
     [self presentViewController:alertController animated:YES completion:nil];
@@ -170,11 +168,21 @@
 - (void) showPhotosAlbum {
     UIImagePickerController *imagePickerController = [[UIImagePickerController alloc]init];
     imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    imagePickerController.allowsEditing = NO;
     imagePickerController.editing = NO;
     imagePickerController.delegate = self;
     
-    [self presentViewController:imagePickerController animated:YES completion:nil];
+    if([[[UIDevice currentDevice] systemVersion] floatValue]>=8.0)
+    {
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            
+            [self presentViewController:imagePickerController animated:true completion:nil];
+        }];
+        
+    }
+    else{
+        [self presentViewController:imagePickerController animated:true completion:nil];
+    }
+    
 }
 
 // This method is called when an image has been chosen from the library or taken from the camera.
